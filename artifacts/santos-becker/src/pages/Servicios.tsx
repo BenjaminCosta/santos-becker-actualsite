@@ -30,35 +30,50 @@ export function Servicios() {
   ];
 
   return (
-    <div className="bg-background pt-24">
-      {/* Inner Hero */}
-      <section className="bg-foreground text-white py-32 px-6">
-        <div className="max-w-7xl mx-auto">
+    <div className="bg-background">
+      {/* Inner Hero — full-width image, centered */}
+      <section className="relative h-[65vh] w-full flex items-center justify-center pt-20">
+        <div
+          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80")' }}
+        >
+          <div className="absolute inset-0 bg-black/65"></div>
+          {/* Subtle yellow warm tint */}
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(235,215,35,0.05) 0%, transparent 55%)' }}></div>
+        </div>
+
+        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <FadeIn>
-            <h1 className="font-heading text-6xl md:text-8xl font-bold tracking-tight mb-8">
-              Nuestros<br/>Servicios
+            <p className="font-heading text-primary uppercase tracking-[0.35em] text-xs mb-6 font-semibold">
+              Soluciones Integrales
+            </p>
+            <h1 className="font-heading text-6xl md:text-8xl text-white font-bold tracking-tight leading-[0.9] mb-6">
+              Nuestros Servicios
             </h1>
-            <p className="font-sans text-2xl text-white/80 max-w-3xl italic">
+            <p className="font-sans text-xl md:text-2xl text-white/75 max-w-2xl mx-auto italic leading-relaxed">
               Soluciones diseñadas a la medida de las exigencias corporativas globales.
             </p>
           </FadeIn>
         </div>
+
+        {/* Yellow gradient line at bottom */}
+        <div className="absolute bottom-0 left-0 w-full h-[3px]" style={{ background: 'linear-gradient(90deg, #EBD723 0%, transparent 50%)' }}></div>
       </section>
 
       {/* Editorial Rows */}
-      <section className="py-24">
+      <section className="py-0">
         {services.map((service, index) => {
           const isEven = index % 2 !== 0;
           return (
-            <div key={index} className={`w-full ${isEven ? 'bg-gray-50' : 'bg-white'}`}>
-              <div className="max-w-7xl mx-auto px-6 py-24">
-                <div className={`flex flex-col lg:flex-row gap-16 items-center ${isEven ? 'lg:flex-row-reverse' : ''}`}>
-                  
+            <div key={index} className={`w-full ${isEven ? 'bg-gray-50/70' : 'bg-white'}`}>
+              <div className="max-w-7xl mx-auto px-6 md:px-12 py-24 md:py-32">
+                <div className={`flex flex-col lg:flex-row gap-12 lg:gap-20 items-center ${isEven ? 'lg:flex-row-reverse' : ''}`}>
+
                   {/* Image Block */}
-                  <div className="lg:w-1/2 w-full h-[500px] relative overflow-hidden">
+                  <div className="lg:w-1/2 w-full h-[480px] relative overflow-hidden">
                     <FadeIn direction={isEven ? "left" : "right"} className="w-full h-full">
-                      <div 
-                        className="w-full h-full bg-cover bg-center"
+                      <div
+                        className="w-full h-full bg-cover bg-center transition-transform duration-700 hover:scale-[1.02]"
                         style={{ backgroundImage: `url("${service.img}")` }}
                       />
                     </FadeIn>
@@ -67,23 +82,26 @@ export function Servicios() {
                   {/* Text Block */}
                   <div className="lg:w-1/2">
                     <FadeIn direction={isEven ? "right" : "left"}>
-                      <span className="font-heading text-5xl font-bold block mb-2" style={{ color: '#EBD723', opacity: 0.3 }}>0{index + 1}</span>
-                      <h2 className="font-heading text-4xl md:text-5xl text-foreground font-bold mb-6">
+                      <span className="font-heading text-[4rem] font-bold block mb-1 leading-none" style={{ color: '#EBD723', opacity: 0.25 }}>
+                        0{index + 1}
+                      </span>
+                      <h2 className="font-heading text-4xl md:text-5xl text-foreground font-bold mb-6 leading-tight">
                         {service.title}
                       </h2>
-                      <p className="font-sans text-xl text-muted-foreground mb-8">
+                      <p className="font-sans text-xl text-muted-foreground mb-8 leading-relaxed">
                         {service.desc}
                       </p>
-                      <ul className="space-y-4 mb-10">
+                      <ul className="space-y-3 mb-10">
                         {service.bullets.map((bullet, i) => (
-                          <li key={i} className="flex items-center font-sans text-lg text-foreground">
-                            <span className="w-2 h-2 bg-accent mr-4"></span>
+                          <li key={i} className="flex items-center font-sans text-lg text-foreground gap-3">
+                            <span className="w-[6px] h-[6px] shrink-0 bg-accent"></span>
                             {bullet}
                           </li>
                         ))}
                       </ul>
-                      <Link href="/contacto" className="inline-block border-b-2 border-primary pb-1 font-heading uppercase tracking-widest text-sm text-foreground hover:text-primary transition-colors">
+                      <Link href="/contacto" className="inline-flex items-center gap-2 border-b border-foreground/30 pb-1 font-heading uppercase tracking-[0.15em] text-[11px] text-foreground hover:text-primary hover:border-primary transition-colors group">
                         Solicitar Información
+                        <span className="transform group-hover:translate-x-1 transition-transform">→</span>
                       </Link>
                     </FadeIn>
                   </div>
@@ -94,17 +112,18 @@ export function Servicios() {
           );
         })}
       </section>
-      
-      {/* Final CTA Strip */}
-      <section className="bg-primary py-16 px-6 text-center text-white">
-         <FadeIn>
-            <h2 className="font-heading text-4xl mb-6">¿Requiere un servicio personalizado?</h2>
-            <Link href="/contacto" className="inline-block px-8 py-3 bg-white text-primary font-heading uppercase tracking-widest text-sm hover:bg-gray-100 transition-colors">
-              Contacte a un Socio
-            </Link>
-         </FadeIn>
-      </section>
 
+      {/* Final CTA Strip */}
+      <section className="bg-foreground py-20 px-6 text-center text-white relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(135deg, rgba(235,215,35,0.04) 0%, transparent 60%)' }}></div>
+        <FadeIn>
+          <p className="font-heading text-xs uppercase tracking-[0.3em] text-white/40 mb-4">Servicio Premium</p>
+          <h2 className="font-heading text-4xl md:text-5xl mb-8 font-bold">¿Requiere un servicio personalizado?</h2>
+          <Link href="/contacto" className="inline-block px-10 py-4 bg-primary text-white font-heading uppercase tracking-[0.15em] text-[11px] hover:bg-primary/90 transition-colors">
+            Contacte a un Socio
+          </Link>
+        </FadeIn>
+      </section>
     </div>
   );
 }
