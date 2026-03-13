@@ -17,12 +17,13 @@ export function Home() {
         
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12">
           <FadeIn>
-            <p className="font-heading text-primary uppercase tracking-[0.3em] text-sm md:text-base mb-6 font-semibold">
+            <p className="font-heading text-primary uppercase tracking-[0.3em] text-sm md:text-base mb-6 font-semibold flex items-center">
+              <span className="w-1 h-4 bg-accent mr-3"></span>
               Consultoría Estratégica
             </p>
             <h1 className="font-heading text-6xl md:text-8xl lg:text-[10rem] text-white font-bold leading-[0.9] tracking-tight mb-8">
               Estrategia migratoria<br/>
-              <span className="text-white/90">sin fronteras</span>
+              <span className="text-white/90" style={{ borderBottom: '2px solid #EBD723' }}>sin fronteras</span>
             </h1>
             <p className="font-sans text-xl md:text-3xl text-white/80 max-w-3xl mb-12 leading-relaxed">
               Asesoría premium en inmigración corporativa y cumplimiento normativo para empresas globales y talentos de alto perfil.
@@ -39,6 +40,7 @@ export function Home() {
           </FadeIn>
         </div>
 
+        <div className="absolute bottom-16 left-0 right-0 h-[1px] bg-accent/20"></div>
         <div className="absolute bottom-0 left-0 right-0 flex justify-center pb-8 z-10">
           <div className="w-[1px] h-16 bg-white/30 relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-1/2 bg-white animate-[bounce_2s_infinite]"></div>
@@ -83,8 +85,9 @@ export function Home() {
       </section>
 
       {/* 3. PROPÓSITO */}
-      <section className="bg-foreground text-white py-32 px-6">
-        <div className="max-w-5xl mx-auto text-center">
+      <section className="bg-foreground text-white py-32 px-6 relative overflow-hidden" style={{ borderTop: '2px solid #EBD723' }}>
+        <div className="absolute top-0 left-4 text-[200px] font-heading text-white/5 leading-none select-none">"</div>
+        <div className="max-w-5xl mx-auto text-center relative z-10">
           <FadeIn>
             <p className="font-heading uppercase tracking-[0.2em] text-sm mb-12 text-white/50">
               Propósito
@@ -93,17 +96,19 @@ export function Home() {
               "Transformamos la complejidad migratoria en ventaja competitiva para organizaciones que operan sin fronteras."
             </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 border-t border-white/10 pt-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 border-t border-white/10 pt-16 relative">
+              <div className="hidden md:block absolute top-1/2 left-1/3 w-1 h-1 bg-accent transform -translate-x-1/2 -translate-y-1/2"></div>
+              <div className="hidden md:block absolute top-1/2 left-2/3 w-1 h-1 bg-accent transform -translate-x-1/2 -translate-y-1/2"></div>
               <div>
-                <p className="font-heading text-6xl md:text-7xl text-primary font-bold mb-4">+500</p>
+                <p className="font-heading text-6xl md:text-7xl font-bold mb-4" style={{ color: '#EBD723' }}>+500</p>
                 <p className="font-heading uppercase tracking-widest text-sm text-white/70">Casos Resueltos</p>
               </div>
               <div>
-                <p className="font-heading text-6xl md:text-7xl text-primary font-bold mb-4">+20</p>
+                <p className="font-heading text-6xl md:text-7xl font-bold mb-4" style={{ color: '#EBD723' }}>+20</p>
                 <p className="font-heading uppercase tracking-widest text-sm text-white/70">Países Operados</p>
               </div>
               <div>
-                <p className="font-heading text-6xl md:text-7xl text-primary font-bold mb-4">98%</p>
+                <p className="font-heading text-6xl md:text-7xl font-bold mb-4" style={{ color: '#EBD723' }}>98%</p>
                 <p className="font-heading uppercase tracking-widest text-sm text-white/70">Tasa de Éxito</p>
               </div>
             </div>
@@ -142,9 +147,14 @@ export function Home() {
                 desc: "Conexiones con firmas líderes en múltiples jurisdicciones para facilitar procesos multinacionales."
               }
             ].map((item, i) => (
-              <div key={i} className="accent-top-border pt-8">
-                <h3 className="font-heading text-2xl font-bold mb-4">{item.title}</h3>
-                <p className="font-sans text-lg text-muted-foreground">{item.desc}</p>
+              <div key={i} className="pt-8 border-t border-accent relative overflow-hidden z-1">
+                <div className="absolute -top-4 -right-4 text-[120px] font-heading font-bold text-foreground opacity-[0.04] pointer-events-none z-0">
+                  0{i + 1}
+                </div>
+                <div className="relative z-10">
+                  <h3 className="font-heading text-2xl font-bold mb-4">{item.title}</h3>
+                  <p className="font-sans text-lg text-muted-foreground">{item.desc}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -186,7 +196,7 @@ export function Home() {
                     <h3 className="font-heading text-3xl text-white font-bold mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                       {service.title}
                     </h3>
-                    <div className="w-12 h-1 bg-primary transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></div>
+                    <div className="w-12 h-1 bg-accent transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></div>
                   </div>
                 </Link>
               ))}
@@ -245,13 +255,14 @@ export function Home() {
       <section className="py-24 px-6 border-y border-border bg-white">
         <div className="max-w-7xl mx-auto">
           <FadeIn>
-            <div className="text-center mb-16">
+            <div className="text-center mb-16 flex flex-col items-center">
               <p className="font-heading text-primary uppercase tracking-[0.2em] text-sm mb-4 font-semibold">
                 Alianzas Estratégicas
               </p>
               <h2 className="font-heading text-4xl text-foreground font-bold mb-4">
                 Red global de partners
               </h2>
+              <div className="w-12 h-[2px] bg-accent mb-4"></div>
               <p className="font-sans text-lg text-muted-foreground">
                 Colaboramos con firmas líderes en jurisdicciones clave a nivel mundial
               </p>
@@ -275,7 +286,8 @@ export function Home() {
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat bg-fixed"
           style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1920&q=80")' }}
         >
-          <div className="absolute inset-0 bg-black/80"></div>
+          <div className="absolute inset-0 bg-black/65"></div>
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(235,215,35,0.06) 0%, transparent 60%)' }}></div>
         </div>
         
         <div className="relative z-10 max-w-4xl mx-auto text-center">
@@ -298,22 +310,27 @@ export function Home() {
       </section>
 
       {/* 9. CTA FINAL */}
-      <section className="py-32 px-6 bg-white text-center">
-        <div className="max-w-3xl mx-auto">
+      <section className="py-32 px-6 bg-white relative overflow-hidden" style={{ borderTop: '2px solid #EBD723' }}>
+        <div className="absolute -top-20 right-0 text-foreground opacity-[0.03] font-heading text-[300px] pointer-events-none select-none leading-none">
+          →
+        </div>
+        <div className="max-w-7xl mx-auto lg:px-12 relative z-10">
           <FadeIn>
-            <h2 className="font-heading text-5xl md:text-6xl text-foreground font-bold mb-6">
-              ¿Listo para comenzar?
-            </h2>
-            <p className="font-sans text-2xl text-muted-foreground mb-12">
-              Agenda una consulta inicial y descubra cómo podemos transformar su estrategia migratoria.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-6">
-              <Link href="/contacto" className="px-10 py-4 bg-primary text-white font-heading uppercase tracking-widest text-sm hover:bg-primary/90 transition-colors">
-                Agendar Consulta
-              </Link>
-              <a href="tel:+525512345678" className="px-10 py-4 border border-foreground text-foreground font-heading uppercase tracking-widest text-sm hover:bg-foreground hover:text-white transition-colors">
-                Llamar ahora
-              </a>
+            <div className="max-w-3xl">
+              <h2 className="font-heading text-5xl md:text-6xl text-foreground font-bold mb-6">
+                ¿Listo para comenzar?
+              </h2>
+              <p className="font-sans text-2xl text-muted-foreground mb-12">
+                Agenda una consulta inicial y descubra cómo podemos transformar su estrategia migratoria.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-6">
+                <Link href="/contacto" className="px-10 py-4 bg-primary text-white font-heading uppercase tracking-widest text-sm hover:bg-primary/90 transition-colors text-center">
+                  Agendar Consulta
+                </Link>
+                <a href="tel:+525512345678" className="px-10 py-4 border border-foreground text-foreground font-heading uppercase tracking-widest text-sm hover:bg-foreground hover:text-white transition-colors text-center">
+                  Llamar ahora
+                </a>
+              </div>
             </div>
           </FadeIn>
         </div>

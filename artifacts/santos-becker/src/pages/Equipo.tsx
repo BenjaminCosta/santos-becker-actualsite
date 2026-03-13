@@ -61,10 +61,10 @@ export function Equipo() {
       <section className="py-32 px-6 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
           {team.map((member, index) => (
-            <FadeIn key={index} delay={index * 0.1}>
+            <FadeIn key={index} delay={index * 0.1} className={index < 2 ? "lg:col-span-1" : ""}>
               <div className="group cursor-pointer">
                 {/* Image strict rectangle */}
-                <div className="w-full aspect-[3/4] mb-6 overflow-hidden bg-gray-100">
+                <div className={`w-full mb-6 overflow-hidden bg-gray-50 ${index < 2 ? 'h-[500px]' : 'h-[400px]'}`}>
                   <img 
                     src={member.img} 
                     alt={member.name} 
@@ -72,10 +72,11 @@ export function Equipo() {
                   />
                 </div>
                 {/* Info */}
-                <div className="border-t border-border pt-4">
+                <div className="pt-4">
                   <h3 className="font-heading text-3xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
                     {member.name}
                   </h3>
+                  <div className="w-8 h-[2px] bg-accent my-3"></div>
                   <p className="font-heading uppercase tracking-widest text-xs text-muted-foreground mb-4">
                     {member.role}
                   </p>

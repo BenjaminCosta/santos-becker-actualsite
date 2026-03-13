@@ -2,7 +2,7 @@ import { Link } from "wouter";
 
 export function Footer() {
   return (
-    <footer className="bg-[#303336] text-white pt-24 pb-12">
+    <footer className="bg-[#303336] text-white pt-24 pb-12" style={{ borderTop: '3px solid #EBD723' }}>
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-20">
           
@@ -11,9 +11,10 @@ export function Footer() {
             <span className="font-heading text-3xl font-bold tracking-wider leading-none mb-2">
               SANTOS & BECKER
             </span>
-            <span className="font-sans text-xs uppercase tracking-[0.3em] text-white/60 mb-6">
+            <span className="font-sans text-xs uppercase tracking-[0.3em] text-white/60">
               Strategic Immigration
             </span>
+            <div className="w-8 h-[2px] bg-accent mt-4 mb-6"></div>
             <p className="text-white/70 font-sans text-lg pr-4">
               Asesoría premium en inmigración corporativa y cumplimiento normativo para empresas globales y talentos de alto perfil.
             </p>

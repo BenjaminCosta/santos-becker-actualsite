@@ -102,4 +102,21 @@
   .text-shadow-premium {
     text-shadow: 0 2px 10px rgba(0,0,0,0.5);
   }
+  .accent-top-border-yellow {
+    border-top: 2px solid #EBD723;
+    padding-top: 2rem;
+  }
+  .accent-left-border-yellow {
+    border-left: 3px solid #EBD723;
+    padding-left: 1rem;
+  }
+  .section-label-yellow::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 2px;
+    background: #EBD723;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
 }

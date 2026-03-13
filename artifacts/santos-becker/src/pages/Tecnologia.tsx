@@ -29,8 +29,9 @@ export function Tecnologia() {
       </section>
 
       {/* Intro */}
-      <section className="py-24 px-6 max-w-4xl mx-auto text-center">
+      <section className="py-24 px-6 max-w-4xl mx-auto text-center flex flex-col items-center">
         <FadeIn>
+          <div className="w-16 h-[3px] bg-accent mb-12 mx-auto"></div>
           <h2 className="font-heading text-4xl md:text-5xl text-foreground font-bold mb-8">
             El poder de la información en tiempo real
           </h2>
@@ -49,7 +50,7 @@ export function Tecnologia() {
               { title: "Gestión Documental", desc: "Repositorio encriptado y seguro para todos los documentos corporativos y personales requeridos." },
               { title: "Trazabilidad Total", desc: "Historial completo de cada paso del proceso con notificaciones automáticas ante cualquier cambio de estatus." }
             ].map((feat, i) => (
-              <div key={i} className="bg-gray-50 p-10 accent-top-border">
+              <div key={i} className="bg-gray-50 p-10 pt-10 border-t-2 border-accent">
                 <h3 className="font-heading text-3xl font-bold mb-4">{feat.title}</h3>
                 <p className="font-sans text-lg text-muted-foreground">{feat.desc}</p>
               </div>

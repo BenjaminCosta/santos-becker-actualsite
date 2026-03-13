@@ -22,6 +22,7 @@ export function Nosotros() {
             </p>
           </FadeIn>
         </div>
+        <div className="absolute bottom-0 left-0 w-full h-[3px]" style={{ background: 'linear-gradient(90deg, #EBD723 0%, transparent 60%)' }}></div>
       </section>
 
       {/* Mission Section */}
@@ -41,9 +42,10 @@ export function Nosotros() {
             </div>
           </FadeIn>
           <FadeIn direction="left">
-             <div className="bg-gray-50 p-12 border-l-4 border-primary">
-                <p className="font-sans text-2xl text-foreground italic leading-relaxed">
-                  "Nuestra misión es proporcionar certeza absoluta en un entorno regulatorio en constante cambio, permitiendo a nuestros clientes operar sin fronteras con total seguridad jurídica."
+             <div className="bg-gray-50 p-12 border-l-4 border-accent relative">
+                <span className="absolute top-8 left-6 text-accent font-heading text-6xl opacity-30 leading-none">"</span>
+                <p className="font-sans text-2xl text-foreground italic leading-relaxed relative z-10 pl-6">
+                  Nuestra misión es proporcionar certeza absoluta en un entorno regulatorio en constante cambio, permitiendo a nuestros clientes operar sin fronteras con total seguridad jurídica.
                 </p>
              </div>
           </FadeIn>
@@ -70,7 +72,7 @@ export function Nosotros() {
                 { title: "Transparencia", desc: "Comunicación clara y proactiva en todo momento." },
                 { title: "Compromiso", desc: "Asumimos los objetivos del cliente como propios." }
               ].map((value, i) => (
-                <div key={i} className="accent-top-border pt-8 border-primary">
+                <div key={i} className="pt-8 border-t-2 border-accent">
                   <h3 className="font-heading text-2xl font-bold mb-4">{value.title}</h3>
                   <p className="font-sans text-white/70">{value.desc}</p>
                 </div>

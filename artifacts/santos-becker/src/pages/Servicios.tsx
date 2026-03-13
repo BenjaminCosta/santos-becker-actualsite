@@ -67,7 +67,7 @@ export function Servicios() {
                   {/* Text Block */}
                   <div className="lg:w-1/2">
                     <FadeIn direction={isEven ? "right" : "left"}>
-                      <span className="font-heading text-5xl text-primary font-bold opacity-20 block mb-2">0{index + 1}</span>
+                      <span className="font-heading text-5xl font-bold block mb-2" style={{ color: '#EBD723', opacity: 0.3 }}>0{index + 1}</span>
                       <h2 className="font-heading text-4xl md:text-5xl text-foreground font-bold mb-6">
                         {service.title}
                       </h2>
@@ -77,7 +77,7 @@ export function Servicios() {
                       <ul className="space-y-4 mb-10">
                         {service.bullets.map((bullet, i) => (
                           <li key={i} className="flex items-center font-sans text-lg text-foreground">
-                            <span className="w-2 h-2 bg-primary mr-4"></span>
+                            <span className="w-2 h-2 bg-accent mr-4"></span>
                             {bullet}
                           </li>
                         ))}
