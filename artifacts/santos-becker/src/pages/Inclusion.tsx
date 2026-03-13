@@ -4,7 +4,8 @@ import { Link } from "wouter";
 export function Inclusion() {
   return (
     <div className="bg-background">
-      {/* Inner Hero — full-width image, centered */}
+
+      {/* ─── 1. HERO ─────────────────────────────────────────────── */}
       <section className="relative h-[65vh] w-full flex items-center justify-center pt-20">
         <div
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
@@ -15,9 +16,7 @@ export function Inclusion() {
         </div>
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <FadeIn>
-            <p className="font-heading text-primary uppercase tracking-[0.35em] text-xs mb-6 font-semibold">
-              Área Especializada
-            </p>
+            <p className="font-heading text-primary uppercase tracking-[0.35em] text-[10px] mb-6 font-semibold">Área Especializada</p>
             <h1 className="font-heading text-6xl md:text-8xl text-white font-bold tracking-tight leading-[0.9] mb-6">
               Inclusión<br/>Laboral
             </h1>
@@ -29,54 +28,41 @@ export function Inclusion() {
         <div className="absolute bottom-0 left-0 w-full h-[3px]" style={{ background: 'linear-gradient(90deg, #EBD723 0%, transparent 55%)' }}></div>
       </section>
 
-      {/* Split Intro */}
-      <section className="py-28 md:py-36 px-6 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-start">
+      {/* ─── 2. POSICIÓN ─────────────────────────────────────────── */}
+      <section className="py-28 md:py-36 px-6 max-w-[1440px] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-28 items-start">
           <FadeIn direction="right">
-            <p className="font-heading text-primary uppercase tracking-[0.2em] text-xs mb-6 font-semibold">
-              Nuestra Perspectiva
-            </p>
+            <p className="font-heading text-primary uppercase tracking-[0.25em] text-[10px] mb-6 font-semibold">Nuestra Posición</p>
             <h2 className="font-heading text-4xl md:text-5xl font-bold mb-8 leading-tight">
               Más allá de la visa
             </h2>
             <div className="font-sans text-xl text-muted-foreground space-y-6 leading-relaxed">
               <p>
-                La obtención de una autorización migratoria es solo el primer paso. La verdadera movilidad global requiere una correcta estructuración laboral y fiscal en el país de destino.
+                La obtención de una autorización migratoria es solo el primer paso. La verdadera inclusión laboral requiere una estructuración jurídica, fiscal y contractual rigurosa en el país de destino.
               </p>
               <p>
-                Santos & Becker asesora a las áreas de Recursos Humanos para asegurar que las contrataciones de personal extranjero cumplan con cuotas, normativas laborales y registros corporativos pertinentes.
+                Santos & Becker defiende que la contratación de talento extranjero es un activo estratégico para las organizaciones modernas, no un riesgo regulatorio que gestionar en el mínimo indispensable.
               </p>
               <p>
-                Nuestra visión integral convierte el proceso de contratación internacional en una ventaja competitiva sostenible para su organización.
+                Por eso asesoramos a las áreas de Recursos Humanos para convertir cada contratación internacional en un proceso controlado, eficiente y sostenible.
               </p>
             </div>
           </FadeIn>
+
           <FadeIn direction="left" delay={0.1}>
             <div className="bg-foreground text-white p-10 md:p-14" style={{ borderTop: '3px solid #EBD723' }}>
-              <h3 className="font-heading text-sm uppercase tracking-[0.2em] text-primary mb-10">Servicios Clave</h3>
+              <h3 className="font-heading text-[10px] uppercase tracking-[0.25em] text-primary mb-10">Servicios de Inclusión</h3>
               <ul className="space-y-8">
                 {[
-                  {
-                    title: "Constancias de Empleador",
-                    desc: "Obtención y actualización de registros empresariales ante autoridades migratorias."
-                  },
-                  {
-                    title: "Auditoría de Cuotas",
-                    desc: "Revisión de proporciones de empleados nacionales vs. extranjeros según la ley laboral vigente."
-                  },
-                  {
-                    title: "Contratos Especializados",
-                    desc: "Elaboración de contratos laborales adaptados a expatriados y normativas locales e internacionales."
-                  },
-                  {
-                    title: "Gestión de Beneficios",
-                    desc: "Estructuración de paquetes de compensación y beneficios para personal internacional."
-                  },
+                  { title: "Constancias de Empleador",   desc: "Obtención y actualización de registros ante autoridades migratorias." },
+                  { title: "Auditoría de Cuotas",        desc: "Revisión de proporciones nacionales/extranjeros conforme a la ley laboral." },
+                  { title: "Contratos Especializados",   desc: "Contratos laborales adaptados a expatriados y normativas locales." },
+                  { title: "Gestión de Beneficios",      desc: "Estructuración de paquetes de compensación y beneficios internacionales." },
                 ].map((item, i) => (
                   <li key={i} className="flex flex-col border-b border-white/10 pb-8 last:border-0 last:pb-0">
                     <div className="flex items-center gap-3 mb-2">
                       <span className="w-[5px] h-[5px] bg-accent shrink-0"></span>
-                      <span className="font-heading text-lg tracking-wide font-bold">{item.title}</span>
+                      <span className="font-heading text-lg font-bold">{item.title}</span>
                     </div>
                     <p className="font-sans text-white/55 text-base leading-relaxed pl-4">{item.desc}</p>
                   </li>
@@ -87,126 +73,123 @@ export function Inclusion() {
         </div>
       </section>
 
-      {/* Stats strip */}
-      <section className="py-20 px-6 bg-gray-50 border-y border-border">
-        <div className="max-w-7xl mx-auto">
+      {/* ─── 3. ALIANZAS ─────────────────────────────────────────── */}
+      <section className="py-24 px-6 border-y border-border bg-gray-50">
+        <div className="max-w-[1440px] mx-auto">
           <FadeIn>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
-              {[
-                { number: "100%", label: "Cumplimiento normativo garantizado" },
-                { number: "+15", label: "Países con cobertura operativa" },
-                { number: "360°", label: "Visibilidad del proceso de contratación" },
-              ].map((stat, i) => (
-                <div key={i} className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6 md:border-l md:border-border md:pl-8 first:border-0 first:pl-0">
-                  <span className="font-heading text-5xl md:text-6xl font-bold" style={{ color: '#EBD723' }}>{stat.number}</span>
-                  <span className="font-heading text-sm uppercase tracking-widest text-muted-foreground max-w-[160px]">{stat.label}</span>
-                </div>
-              ))}
+            <div className="flex flex-col lg:flex-row lg:items-center gap-10 lg:gap-28">
+              <div className="lg:w-2/5">
+                <p className="font-heading text-primary uppercase tracking-[0.25em] text-[10px] mb-4 font-semibold">Alianzas</p>
+                <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground leading-tight mb-6">
+                  Red de organizaciones colaboradoras
+                </h2>
+                <p className="font-sans text-xl text-muted-foreground leading-relaxed">
+                  Colaboramos con organismos nacionales e internacionales comprometidos con la integración digna y efectiva del talento migrante en el mercado laboral.
+                </p>
+              </div>
+              <div className="lg:w-3/5 grid grid-cols-2 md:grid-cols-3 gap-8">
+                {[
+                  { name: "OIM",          full: "Organización Internacional para las Migraciones" },
+                  { name: "IMSS",         full: "Instituto Mexicano del Seguro Social" },
+                  { name: "STPS",         full: "Secretaría del Trabajo y Previsión Social" },
+                  { name: "INAMI",        full: "Instituto Nacional de Migración" },
+                  { name: "COPARMEX",     full: "Confederación Patronal de la República Mexicana" },
+                  { name: "AMCHAM",       full: "Cámara de Comercio AmericanaMéxico" },
+                ].map((org, i) => (
+                  <div key={i} className="pt-5 border-t border-border">
+                    <p className="font-heading text-xl font-bold text-foreground mb-1">{org.name}</p>
+                    <p className="font-sans text-sm text-muted-foreground leading-snug">{org.full}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </FadeIn>
         </div>
       </section>
 
-      {/* How we work — process */}
-      <section className="py-32 px-6 max-w-7xl mx-auto">
-        <FadeIn>
-          <div className="mb-20">
-            <p className="font-heading text-primary uppercase tracking-[0.2em] text-xs mb-4 font-semibold">
-              Proceso
-            </p>
-            <h2 className="font-heading text-4xl md:text-5xl font-bold leading-tight">
-              Cómo estructuramos<br/>la contratación internacional
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              { step: "01", title: "Diagnóstico", desc: "Análisis de la estructura corporativa y requerimientos específicos de contratación." },
-              { step: "02", title: "Estrategia", desc: "Diseño del modelo de contratación más eficiente desde el punto de vista legal y fiscal." },
-              { step: "03", title: "Implementación", desc: "Gestión de todos los trámites, registros y contratos necesarios ante las autoridades." },
-              { step: "04", title: "Monitoreo", desc: "Seguimiento continuo para garantizar el cumplimiento normativo en el largo plazo." },
-            ].map((item, i) => (
-              <div key={i} className="pt-8 border-t-2 border-accent relative">
-                <span className="absolute -top-[2rem] left-0 font-heading text-5xl font-bold" style={{ color: '#EBD723', opacity: 0.15 }}>
-                  {item.step}
-                </span>
-                <h3 className="font-heading text-2xl font-bold mb-4 mt-4">{item.title}</h3>
-                <p className="font-sans text-lg text-muted-foreground leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </FadeIn>
-      </section>
-
-      {/* Full-width image */}
-      <section className="w-full h-[60vh] overflow-hidden">
-        <div
-          className="w-full h-full bg-cover bg-center"
-          style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1920&q=80")' }}
-        />
-      </section>
-
-      {/* Framework section — split layout */}
-      <section className="w-full bg-foreground text-white">
-        <div className="flex flex-col lg:flex-row min-h-[70vh]">
-          <div className="lg:w-1/2 relative min-h-[40vh] lg:min-h-full">
-            <img
-              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=960&q=80"
-              alt="Oficina Santos & Becker"
-              className="absolute inset-0 w-full h-full object-cover opacity-60"
-            />
-          </div>
-          <div className="lg:w-1/2 px-8 md:px-16 py-24 flex flex-col justify-center">
-            <FadeIn direction="left">
-              <p className="font-heading text-primary uppercase tracking-[0.2em] text-xs mb-6 font-semibold">
-                Marco Normativo
-              </p>
-              <h2 className="font-heading text-4xl md:text-5xl font-bold mb-8 leading-tight">
-                Cumplimiento en cada jurisdicción
+      {/* ─── 4. ACCIÓN CONCRETA ──────────────────────────────────── */}
+      <section className="py-32 px-6 bg-white">
+        <div className="max-w-[1440px] mx-auto">
+          <FadeIn>
+            <div className="mb-20">
+              <p className="font-heading text-primary uppercase tracking-[0.25em] text-[10px] mb-4 font-semibold">Metodología</p>
+              <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground leading-tight">
+                Acción concreta
               </h2>
-              <p className="font-sans text-xl text-white/70 leading-relaxed mb-10">
-                Nuestro equipo mantiene actualización constante en las normativas laborales y migratorias de cada país donde operamos, garantizando que su empresa siempre esté un paso adelante de los cambios regulatorios.
-              </p>
-              <ul className="space-y-4 mb-10">
+            </div>
+          </FadeIn>
+
+          {/* Two-col editorial layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <FadeIn direction="right">
+              <div className="space-y-0 border-t border-border">
                 {[
-                  "Ley Federal del Trabajo y normativa IMSS",
-                  "Ley de Migración y Reglamento vigente",
-                  "Tratados internacionales de libre comercio",
-                  "Normativas de seguridad social para expatriados",
+                  { n: "01", title: "Diagnóstico Corporativo",   desc: "Análisis de la estructura organizacional, proporciones de contratación y riesgos regulatorios actuales." },
+                  { n: "02", title: "Estrategia de Cumplimiento", desc: "Diseño de un plan de acción personalizado para garantizar el cumplimiento normativo en cada contratación." },
+                  { n: "03", title: "Implementación Documental", desc: "Gestión de todos los contratos, registros y trámites ante las autoridades competentes." },
+                  { n: "04", title: "Monitoreo Continuo",        desc: "Seguimiento periódico para actualizar los expedientes y anticipar cambios regulatorios." },
                 ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 font-sans text-lg text-white/75">
-                    <span className="w-[6px] h-[6px] shrink-0 bg-accent"></span>
-                    {item}
-                  </li>
+                  <div key={i} className="py-10 border-b border-border last:border-0 group">
+                    <div className="flex items-start gap-6">
+                      <span className="font-heading text-2xl font-bold shrink-0" style={{ color: '#EBD723', opacity: 0.5 }}>{item.n}</span>
+                      <div>
+                        <h3 className="font-heading text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">{item.title}</h3>
+                        <p className="font-sans text-lg text-muted-foreground leading-relaxed">{item.desc}</p>
+                      </div>
+                    </div>
+                  </div>
                 ))}
-              </ul>
-              <Link href="/contacto" className="inline-flex items-center gap-2 font-heading uppercase tracking-[0.15em] text-[11px] text-white border-b border-white/30 pb-1 hover:text-primary hover:border-primary transition-colors group">
-                Solicitar asesoría
-                <span className="transform group-hover:translate-x-1 transition-transform">→</span>
-              </Link>
+              </div>
+            </FadeIn>
+
+            <FadeIn direction="left" delay={0.1}>
+              <div className="space-y-8 lg:sticky lg:top-32">
+                {/* Full-width image */}
+                <div className="w-full h-[420px] overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=960&q=80"
+                    alt="Inclusión Laboral"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* Stats */}
+                <div className="bg-foreground text-white p-10 grid grid-cols-3 gap-6 text-center">
+                  {[
+                    { n: "100%", l: "Cumplimiento garantizado" },
+                    { n: "+15",  l: "Países con cobertura" },
+                    { n: "360°", l: "Visibilidad del proceso" },
+                  ].map((s, i) => (
+                    <div key={i}>
+                      <p className="font-heading text-3xl md:text-4xl font-bold mb-1" style={{ color: '#EBD723' }}>{s.n}</p>
+                      <p className="font-heading text-[9px] uppercase tracking-[0.15em] text-white/50">{s.l}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </FadeIn>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
+      {/* ─── 5. CTA DE CIERRE ────────────────────────────────────── */}
       <section className="py-28 px-6 text-center bg-white" style={{ borderTop: '2px solid #EBD723' }}>
         <div className="max-w-3xl mx-auto">
           <FadeIn>
-            <p className="font-heading text-primary uppercase tracking-[0.2em] text-xs mb-4 font-semibold">
-              Próximos Pasos
-            </p>
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6">
+            <p className="font-heading text-primary uppercase tracking-[0.25em] text-[10px] mb-4 font-semibold">Próximos Pasos</p>
+            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 leading-tight">
               Estructure su proceso de contratación internacional
             </h2>
-            <p className="font-sans text-xl text-muted-foreground mb-12 leading-relaxed">
-              Hable con nuestros especialistas en inclusión laboral y descubra cómo podemos ayudar a su organización.
+            <p className="font-sans text-xl text-muted-foreground mb-12 leading-relaxed max-w-2xl mx-auto">
+              Hable con nuestros especialistas en inclusión laboral y descubra cómo convertir cada contratación extranjera en una ventaja para su organización.
             </p>
-            <Link href="/contacto" className="inline-block px-10 py-4 bg-primary text-white font-heading uppercase tracking-[0.15em] text-[11px] hover:bg-primary/90 transition-colors">
+            <Link href="/contacto" className="inline-block px-12 py-4 bg-primary text-white font-heading uppercase tracking-[0.15em] text-[11px] hover:bg-primary/90 transition-colors">
               Agendar Consulta
             </Link>
           </FadeIn>
         </div>
       </section>
+
     </div>
   );
 }
