@@ -37,7 +37,7 @@ export function InternalPageHero({
 
         {/* Title */}
         <FadeIn delay={0.12} distance={14}>
-          <h1 className="font-heading font-bold tracking-tight mb-10 max-w-3xl mx-auto"
+          <h1 className="font-heading font-bold tracking-[-0.01em] mb-10 mx-auto"
               style={{ fontSize: 'clamp(2.6rem, 6.5vw, 6.5rem)', lineHeight: 0.9 }}>
             <span className="block text-white">{titleLine1}</span>
             <span className="block" style={{ color: '#EBD723' }}>{titleLine2}</span>
