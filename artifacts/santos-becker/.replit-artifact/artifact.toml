@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Santos & Becker"
+version = "1.0.0"
+id = "artifacts/santos-becker"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+localPort = 23013
+name = "web"
+paths = ["/"]
+
+[services.development]
+run = "pnpm --filter @workspace/santos-becker run dev"
+
+[services.env]
+PORT = "23013"
+BASE_PATH = "/"
+
+[services.production]
+build = ["pnpm", "--filter", "@workspace/santos-becker", "run", "build"]
+publicDir = "artifacts/santos-becker/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
