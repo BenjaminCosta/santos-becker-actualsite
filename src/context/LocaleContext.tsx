@@ -12,9 +12,6 @@ const LocaleContext = createContext<LocaleContextValue | null>(null);
 function detectLocale(): Locale {
   const saved = localStorage.getItem("sb-locale") as Locale | null;
   if (saved === "es" || saved === "en" || saved === "zh") return saved;
-  const lang = navigator.language ?? "";
-  if (lang.startsWith("zh")) return "zh";
-  if (lang.startsWith("en")) return "en";
   return "es";
 }
 
