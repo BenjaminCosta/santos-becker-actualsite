@@ -9,7 +9,7 @@ export function WhatsAppButton() {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-4 shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300 flex items-center justify-center"
+      className="fixed bottom-8 right-8 z-50 bg-dark-accent text-white p-4 shadow-lg hover:bg-primary transition-colors duration-300 flex items-center justify-center"
       aria-label={ariaLabel}
     >
       <svg

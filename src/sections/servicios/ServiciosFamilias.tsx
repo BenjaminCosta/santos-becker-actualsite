@@ -6,7 +6,7 @@ export function ServiciosFamilias() {
   const c = useContent().servicios.personal;
 
   return (
-    <section className="py-32 px-6 bg-dark-accent text-white" style={{ borderTop: '2px solid #EBD723' }}>
+    <section className="py-32 px-6 bg-dark-accent text-white border-t-2 border-accent">
       <div className="max-w-[1440px] mx-auto">
         <FadeIn>
           <SectionHeading

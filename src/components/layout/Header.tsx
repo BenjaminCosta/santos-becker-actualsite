@@ -61,7 +61,7 @@ export function Header() {
             />
           </Link>
 
-          <nav className="hidden xl:flex flex-1 items-center justify-center gap-8">
+          <nav className="hidden lg:flex flex-1 items-center justify-center gap-8">
             {navLinks.map((link) => {
               const active = location === link.path;
 
@@ -84,7 +84,7 @@ export function Header() {
             })}
           </nav>
 
-          <div className="hidden xl:flex shrink-0 items-center gap-3">
+          <div className="hidden lg:flex shrink-0 items-center gap-3">
             <AnimatedDropdown
               items={LOCALES}
               value={locale}
@@ -102,7 +102,7 @@ export function Header() {
 
           <button
             type="button"
-            className={`inline-flex items-center justify-center p-2 transition-colors duration-200 xl:hidden ${textColorClass}`}
+            className={`inline-flex items-center justify-center p-2 transition-colors duration-200 lg:hidden ${textColorClass}`}
             onClick={() => setMenuOpen((open) => !open)}
             aria-label={c.menuLabel}
           >
@@ -112,7 +112,7 @@ export function Header() {
       </header>
 
       <div
-        className={`fixed inset-0 z-40 bg-white transition-all duration-300 ease-in-out xl:hidden ${
+        className={`fixed inset-0 z-40 bg-white transition-all duration-300 ease-in-out lg:hidden ${
           menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
         style={{ paddingTop: "84px" }}

@@ -15,6 +15,7 @@ export function HomeBespoke() {
         <img
           src={bespokeOffice}
           alt="Servicio Bespoke"
+          loading="lazy"
           className="w-full h-full object-cover opacity-30"
           style={{ filter: 'saturate(0.25) hue-rotate(160deg)' }}
           onError={(e) => {
@@ -29,7 +30,7 @@ export function HomeBespoke() {
       </div>
 
       {/* Yellow accent top line */}
-      <div className="absolute top-0 left-0 w-1/3 h-0.5 bg-[#EBD723]" />
+      <div className="absolute top-0 left-0 w-1/3 h-0.5 bg-accent" />
 
       <div className="relative z-10 w-full px-8 lg:px-16 xl:px-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -55,7 +56,7 @@ export function HomeBespoke() {
               <div className="space-y-3 mb-10">
                 {c.features.map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
-                    <Check size={16} className="text-[#EBD723] shrink-0" strokeWidth={2} />
+                    <Check size={16} className="text-accent shrink-0" strokeWidth={2} />
                     <span className="font-sans text-sm text-white/70">{item}</span>
                   </div>
                 ))}
@@ -73,9 +74,9 @@ export function HomeBespoke() {
           {/* Right: Testimonial (desktop only) */}
           <FadeIn delay={0.15}>
             <div className="hidden lg:block relative">
-              <div className="absolute -top-10 -right-10 w-40 h-40 border border-[#EBD723]/10" />
-              <div className="bg-white/5 backdrop-blur-sm p-8 border-l-2 border-[#EBD723]">
-                <span className="font-heading text-[#EBD723]/20 text-[8rem] leading-none select-none block -mb-8">"</span>
+              <div className="absolute -top-10 -right-10 w-40 h-40 border border-accent/10" />
+              <div className="bg-white/5 backdrop-blur-md p-8 border-l-2 border-accent">
+                <span className="font-heading text-accent/20 text-[8rem] leading-none select-none block -mb-8">"</span>
                 <p className="font-sans text-lg text-white/80 italic mb-6">
                   {c.testimonial.text}
                 </p>

@@ -49,9 +49,9 @@ export const TextHoverEffect = ({
         <linearGradient id="sbTextGradient" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="0%">
           {hovered && (
             <>
-              <stop offset="0%" stopColor="#EBD723" />
+              <stop offset="0%" stopColor="hsl(var(--accent))" />
               <stop offset="40%" stopColor="#00B07C" />
-              <stop offset="70%" stopColor="#EBD723" />
+              <stop offset="70%" stopColor="hsl(var(--accent))" />
               <stop offset="100%" stopColor="#00B07C" />
             </>
           )}

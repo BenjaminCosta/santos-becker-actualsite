@@ -9,7 +9,7 @@ export function TecnologiaPlatforma() {
   return (
     <section className="bg-white">
       {/* Intro */}
-      <div className="py-28 px-6 max-w-4xl mx-auto text-center flex flex-col items-center">
+      <div className="section-pad-y section-pad-x max-w-4xl mx-auto text-center flex flex-col items-center">
         <FadeIn>
           <div className="w-12 h-[3px] bg-accent mb-10 mx-auto"></div>
           <SectionHeading
@@ -23,12 +23,12 @@ export function TecnologiaPlatforma() {
       </div>
 
       {/* Features Grid */}
-      <div className="pb-24 px-6 max-w-[1440px] mx-auto">
+      <div className="pb-24 section-pad-x max-w-[1440px] mx-auto">
         <FadeIn>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {c.features.map((f, i) => (
               <div key={i} className="bg-gray-50 p-10 border-t-2 border-accent">
-                <span className="font-heading text-[3.5rem] font-bold mb-4 block leading-none" style={{ color: '#EBD723', opacity: 0.22 }}>{f.n}</span>
+                <span className="font-heading text-[3.5rem] font-bold mb-4 block leading-none" style={{ color: 'hsl(var(--accent))', opacity: 0.22 }}>{f.n}</span>
                 <h3 className="font-heading text-2xl font-bold mb-4">{f.title}</h3>
                 <p className="font-sans text-lg text-muted-foreground leading-relaxed">{f.desc}</p>
               </div>
@@ -57,7 +57,7 @@ export function TecnologiaPlatforma() {
                   </li>
                 ))}
               </ul>
-              <Link href="/contacto" className="section-cta-inline section-cta-inline-dark">
+              <Link href="/contacto" className="group section-cta-inline section-cta-inline-dark">
                 {c.cta}
                 <span className="transform group-hover:translate-x-1 transition-transform">→</span>
               </Link>
@@ -74,7 +74,7 @@ export function TecnologiaPlatforma() {
       </div>
 
       {/* How it works */}
-      <div className="py-32 px-6 bg-dark-accent text-white" style={{ borderTop: '2px solid #EBD723' }}>
+      <div className="section-pad-y section-pad-x bg-dark-accent text-white border-t-2 border-accent">
         <div className="max-w-[1440px] mx-auto">
           <FadeIn>
             <SectionHeading
@@ -88,7 +88,7 @@ export function TecnologiaPlatforma() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
               {c.workflow.map((p, i) => (
                 <div key={i} className="relative pt-10">
-                  <div className="absolute top-0 left-0 font-heading text-6xl font-bold leading-none" style={{ color: '#EBD723', opacity: 0.12 }}>{p.step}</div>
+                  <div className="absolute top-0 left-0 font-heading text-6xl font-bold leading-none" style={{ color: 'hsl(var(--accent))', opacity: 0.12 }}>{p.step}</div>
                   <div className="w-8 h-[2px] bg-accent mb-6"></div>
                   <h4 className="font-heading text-2xl font-bold mb-4 text-white">{p.title}</h4>
                   <p className="font-sans text-lg text-white/60 leading-relaxed">{p.desc}</p>

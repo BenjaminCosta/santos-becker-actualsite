@@ -22,7 +22,7 @@ export function HomeServices() {
               title={c.title}
               titleClassName="text-5xl md:text-6xl"
             />
-            <Link href="/servicios" className="section-cta-inline section-cta-inline-primary hidden md:inline-flex shrink-0">
+            <Link href="/servicios" className="group section-cta-inline section-cta-inline-primary hidden md:inline-flex shrink-0">
               {c.cta}
               <span className="transform group-hover:translate-x-1 transition-transform">→</span>
             </Link>
@@ -46,7 +46,7 @@ export function HomeServices() {
           </div>
 
           <div className="mt-10 md:hidden">
-            <Link href="/servicios" className="section-cta-inline section-cta-inline-primary">
+            <Link href="/servicios" className="group section-cta-inline section-cta-inline-primary">
               {c.cta}
               <span className="transform group-hover:translate-x-1 transition-transform">→</span>
             </Link>

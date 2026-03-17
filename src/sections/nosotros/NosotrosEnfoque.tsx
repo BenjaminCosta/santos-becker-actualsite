@@ -41,7 +41,7 @@ export function NosotrosEnfoque() {
                   <div className="flex items-start gap-6">
                     <span
                       className="font-heading text-4xl font-bold shrink-0 w-14 leading-none"
-                      style={{ color: "#EBD723", opacity: 0.35 }}
+                      style={{ color: 'hsl(var(--accent))', opacity: 0.35 }}
                     >
                       {item.step}
                     </span>

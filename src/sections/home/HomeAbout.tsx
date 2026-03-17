@@ -59,10 +59,10 @@ function AnimatedStat({
   return (
     <div
       ref={ref}
-      className="group relative rounded-2xl border border-border/50 bg-white px-5 py-6 flex flex-col gap-4 hover:border-primary/30 hover:shadow-sm transition-all duration-300"
+      className="group relative border border-border/50 bg-white px-5 py-6 flex flex-col gap-4 hover:border-primary/30 hover:shadow-sm transition-all duration-300"
     >
       <div className="flex items-center justify-between">
-        <div className="w-9 h-9 rounded-lg bg-primary/8 flex items-center justify-center shrink-0">
+        <div className="w-9 h-9 bg-primary/8 flex items-center justify-center shrink-0">
           <Icon className="w-4 h-4 text-primary" strokeWidth={1.75} />
         </div>
         <div className="h-px flex-1 mx-3 bg-border/40" />
@@ -90,8 +90,9 @@ export function HomeAbout() {
       <div className="flex flex-col lg:flex-row min-h-[80vh]">
         <div className="lg:w-1/2 relative min-h-[50vh] lg:min-h-full">
           <img
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=960&q=80"
+          src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=960&q=80"
             alt="Santos & Becker"
+            loading="lazy"
             className="absolute inset-0 w-full h-full object-cover"
           />
         </div>
@@ -121,7 +122,7 @@ export function HomeAbout() {
               ))}
             </div>
 
-            <Link href="/nosotros" className="section-cta-inline section-cta-inline-dark">
+            <Link href="/nosotros" className="group section-cta-inline section-cta-inline-dark">
               {c.cta}
               <span className="transform group-hover:translate-x-1 transition-transform">→</span>
             </Link>

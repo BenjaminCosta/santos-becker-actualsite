@@ -30,7 +30,7 @@ export function InternalPageHero({
 
         {/* Eyebrow */}
         <FadeIn delay={0} distance={10}>
-          <p className="typo-eyebrow mb-7" style={{ color: '#EBD723' }}>
+          <p className="typo-eyebrow mb-7 text-accent">
             {eyebrow}
           </p>
         </FadeIn>
@@ -40,7 +40,7 @@ export function InternalPageHero({
           <h1 className="font-heading font-bold tracking-[-0.01em] mb-10 mx-auto"
               style={{ fontSize: 'clamp(2.6rem, 6.5vw, 6.5rem)', lineHeight: 0.9 }}>
             <span className="block text-white">{titleLine1}</span>
-            <span className="block" style={{ color: '#EBD723' }}>{titleLine2}</span>
+            <span className="block text-accent">{titleLine2}</span>
           </h1>
         </FadeIn>
 
@@ -55,7 +55,7 @@ export function InternalPageHero({
 
         {/* Subtitle */}
         <FadeIn delay={0.3} distance={10}>
-          <p className="font-sans text-lg md:text-xl text-white/65 max-w-3xl mx-auto leading-relaxed">
+          <p className="font-sans text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
             {subtitle}
           </p>
         </FadeIn>
@@ -65,7 +65,7 @@ export function InternalPageHero({
       {/* Gold bottom bar */}
       <div
         className="absolute bottom-0 left-0 w-full h-[3px]"
-        style={{ background: 'linear-gradient(90deg, #EBD723 0%, transparent 55%)' }}
+        style={{ background: 'linear-gradient(90deg, hsl(var(--accent)) 0%, transparent 55%)' }}
       />
     </section>
   );

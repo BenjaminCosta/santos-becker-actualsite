@@ -15,6 +15,7 @@ export function HomePurpose() {
         <img
           src={purposeHandshake}
           alt="Propósito"
+          loading="lazy"
           className="w-full h-full object-cover opacity-30"
           style={{ filter: 'saturate(0.25) hue-rotate(160deg)' }}
           onError={(e) => {
@@ -29,8 +30,8 @@ export function HomePurpose() {
       </div>
 
       {/* Yellow accent shapes */}
-      <div className="absolute top-20 left-20 w-32 h-32 border border-[#EBD723]/10" />
-      <div className="absolute bottom-20 right-20 w-24 h-24 bg-[#EBD723]/5" />
+      <div className="absolute top-20 left-20 w-32 h-32 border border-accent/10" />
+      <div className="absolute bottom-20 right-20 w-24 h-24 bg-accent/5" />
 
       <div className="relative z-10 w-full px-8 lg:px-16 xl:px-24">
         <FadeIn>
@@ -50,7 +51,7 @@ export function HomePurpose() {
             />
 
             <div className="relative mb-10">
-              <span className="absolute -top-8 -left-4 font-heading text-[12rem] leading-none select-none pointer-events-none text-[#EBD723]/10">
+              <span className="absolute -top-8 -left-4 font-heading text-[12rem] leading-none select-none pointer-events-none text-accent/10">
                 "
               </span>
               <div className="font-sans text-xl text-white/75 max-w-3xl mx-auto space-y-5 leading-relaxed relative z-10 text-left">
@@ -60,7 +61,7 @@ export function HomePurpose() {
 
             <Link
               href="/nosotros"
-              className="section-cta-inline section-cta-inline-accent"
+              className="group section-cta-inline section-cta-inline-accent"
             >
               {c.cta}
               <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />

@@ -1,3 +1,4 @@
+import { toast } from "sonner";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { useContent } from "@/context/LocaleContext";
 
@@ -6,7 +7,7 @@ export function HomeCta() {
 
   function handleSubmit(e: { preventDefault: () => void }) {
     e.preventDefault();
-    alert(c.successMessage);
+    toast.success(c.successMessage);
   }
 
   return (
@@ -14,7 +15,7 @@ export function HomeCta() {
       {/* Gradient top border: teal → yellow → teal */}
       <div
         className="absolute top-0 left-0 w-full h-0.5"
-        style={{ background: 'linear-gradient(to right, hsl(162 100% 35%), #EBD723, hsl(162 100% 35%))' }}
+        style={{ background: 'linear-gradient(to right, hsl(var(--primary)), hsl(var(--accent)), hsl(var(--primary)))' }}
       />
 
       <div className="w-full px-8 lg:px-16 xl:px-24">
@@ -34,19 +35,19 @@ export function HomeCta() {
 
               {/* Contact details */}
               <div className="space-y-6 mb-10">
-                <div className="border-l-2 border-[#EBD723] pl-6">
+                <div className="border-l-2 border-accent pl-6">
                   <span className="typo-eyebrow text-muted-foreground block mb-1">{c.emailLabel}</span>
                   <a href={`mailto:${c.email}`} className="font-sans text-lg text-foreground hover:text-primary transition-colors">
                     {c.email}
                   </a>
                 </div>
-                <div className="border-l-2 border-[#EBD723] pl-6">
+                <div className="border-l-2 border-accent pl-6">
                   <span className="typo-eyebrow text-muted-foreground block mb-1">{c.phoneLabel}</span>
                   <a href={`tel:${c.phone.replace(/\s/g, "")}`} className="font-sans text-lg text-foreground hover:text-primary transition-colors">
                     {c.phone}
                   </a>
                 </div>
-                <div className="border-l-2 border-[#EBD723] pl-6">
+                <div className="border-l-2 border-accent pl-6">
                   <span className="typo-eyebrow text-muted-foreground block mb-1">{c.hoursLabel}</span>
                   <span className="font-sans text-lg text-foreground">{c.hours}</span>
                 </div>
@@ -70,50 +71,54 @@ export function HomeCta() {
 
           {/* Right: Form */}
           <FadeIn delay={0.15}>
-            <div className="bg-muted p-8 lg:p-10 border-t-2 border-[#EBD723]">
+            <div className="bg-muted p-8 lg:p-10 border-t-2 border-accent">
               <h3 className="font-heading text-xl uppercase tracking-[0.05em] text-foreground mb-8">
                 {c.formTitle}
               </h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="flex flex-col gap-2">
-                    <label className="font-heading uppercase tracking-[0.15em] text-[9px] text-muted-foreground">
+                    <label htmlFor="cta-nombre" className="font-heading uppercase tracking-[0.15em] text-[9px] text-muted-foreground">
                       {c.fields.nombre.label}
                     </label>
                     <input
+                      id="cta-nombre"
                       type="text"
-                      className="border-b border-border bg-transparent py-3 focus:outline-none focus:border-primary transition-colors font-sans text-base"
+                      className="border-b border-border bg-transparent py-3 focus:outline-none focus:border-primary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1 transition-colors font-sans text-base"
                       placeholder={c.fields.nombre.placeholder}
                     />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <label className="font-heading uppercase tracking-[0.15em] text-[9px] text-muted-foreground">
+                    <label htmlFor="cta-empresa" className="font-heading uppercase tracking-[0.15em] text-[9px] text-muted-foreground">
                       {c.fields.empresa.label}
                     </label>
                     <input
+                      id="cta-empresa"
                       type="text"
-                      className="border-b border-border bg-transparent py-3 focus:outline-none focus:border-primary transition-colors font-sans text-base"
+                      className="border-b border-border bg-transparent py-3 focus:outline-none focus:border-primary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1 transition-colors font-sans text-base"
                       placeholder={c.fields.empresa.placeholder}
                     />
                   </div>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label className="font-heading uppercase tracking-[0.15em] text-[9px] text-muted-foreground">
+                  <label htmlFor="cta-correo" className="font-heading uppercase tracking-[0.15em] text-[9px] text-muted-foreground">
                     {c.fields.correo.label}
                   </label>
                   <input
+                    id="cta-correo"
                     type="email"
-                    className="border-b border-border bg-transparent py-3 focus:outline-none focus:border-primary transition-colors font-sans text-base"
+                    className="border-b border-border bg-transparent py-3 focus:outline-none focus:border-primary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1 transition-colors font-sans text-base"
                     placeholder={c.fields.correo.placeholder}
                   />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label className="font-heading uppercase tracking-[0.15em] text-[9px] text-muted-foreground">
+                  <label htmlFor="cta-mensaje" className="font-heading uppercase tracking-[0.15em] text-[9px] text-muted-foreground">
                     {c.fields.mensaje.label}
                   </label>
                   <textarea
+                    id="cta-mensaje"
                     rows={4}
-                    className="border-b border-border bg-transparent py-3 focus:outline-none focus:border-primary transition-colors font-sans text-base resize-none"
+                    className="border-b border-border bg-transparent py-3 focus:outline-none focus:border-primary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1 transition-colors font-sans text-base resize-none"
                     placeholder={c.fields.mensaje.placeholder}
                   />
                 </div>

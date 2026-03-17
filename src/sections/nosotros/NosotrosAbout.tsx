@@ -32,6 +32,7 @@ export function NosotrosAbout() {
             <img
               src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80"
               alt="Santos & Becker"
+              loading="lazy"
               className="absolute inset-0 w-full h-full object-cover"
             />
             {/* Gradient from bottom */}

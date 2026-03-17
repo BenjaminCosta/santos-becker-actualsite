@@ -69,7 +69,7 @@ export function ServiciosCorporativos() {
                   {/* Number */}
                   <span
                     className="font-heading text-5xl font-bold leading-none mb-4 block"
-                    style={{ color: "#EBD723", opacity: 0.4 }}
+                    style={{ color: 'hsl(var(--accent))', opacity: 0.4 }}
                   >
                     {svc.num}
                   </span>

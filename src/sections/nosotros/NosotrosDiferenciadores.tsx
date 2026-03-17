@@ -66,7 +66,7 @@ export function NosotrosDiferenciadores() {
               <div className="md:px-12 first:pl-0 last:pr-0">
                 <p
                   className="font-heading font-bold leading-none mb-3"
-                  style={{ fontSize: "clamp(3.5rem, 7vw, 5rem)", color: "#EBD723" }}
+                  style={{ fontSize: "clamp(3.5rem, 7vw, 5rem)", color: 'hsl(var(--accent))' }}
                 >
                   {s.n}
                 </p>

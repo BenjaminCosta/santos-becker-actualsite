@@ -46,7 +46,7 @@ export function HomeHero() {
         </FadeIn>
 
         <FadeIn delay={0.34} distance={14}>
-          <p className="font-sans text-lg md:text-xl text-white/68 max-w-[560px] mb-14 leading-relaxed">
+          <p className="font-sans text-lg md:text-xl text-white/80 max-w-[560px] mb-14 leading-relaxed">
             {c.subtitle}
           </p>
         </FadeIn>
@@ -67,7 +67,7 @@ export function HomeHero() {
       {/* Scroll indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
         <div className="w-px h-14 bg-white/20 relative overflow-hidden">
-          <div className="absolute inset-x-0 top-0 h-1/2 bg-white/55 animate-[slideDown_2s_ease-in-out_infinite]" />
+          <div className="absolute inset-x-0 top-0 h-1/2 bg-white/55 animate-slide-down" />
         </div>
       </div>
 
