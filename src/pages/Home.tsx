@@ -7,8 +7,11 @@ import { HomeTechnology } from "@/sections/home/HomeTechnology";
 import { HomeBespoke } from "@/sections/home/HomeBespoke";
 import { HomeCta } from "@/sections/home/HomeCta";
 import { PartnerLogos } from "@/components/shared/PartnerLogos";
+import { useContent } from "@/context/LocaleContext";
 
 export function Home() {
+  const a = useContent().home.alliances;
+
   return (
     <div className="bg-background">
       <HomeHero />
@@ -18,9 +21,11 @@ export function Home() {
       <HomeServices />
       <HomeTechnology />
       <PartnerLogos
-        eyebrow="Alianzas Estratégicas"
-        title="Partners Globales"
-        subtitle="Trabajamos junto a las firmas líderes en derecho, consultoría y auditoría a nivel mundial."
+        eyebrow={a.eyebrow}
+        title={a.title}
+        subtitle={a.subtitle}
+        alianzas={[...a.alianzas]}
+        afiliaciones={[...a.afiliaciones]}
       />
       <HomeBespoke />
       <HomeCta />

@@ -1,29 +1,93 @@
 import { Link } from "wouter";
+import { Check } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { useContent } from "@/context/LocaleContext";
+import { SectionHeading } from "@/components/shared/SectionHeading";
+import bespokeOffice from "@/assets/bespoke-office.jpg";
 
 export function HomeBespoke() {
+  const c = useContent().home.bespoke;
+
   return (
-    <section className="relative py-40 px-6 overflow-hidden">
-      <div
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat bg-fixed"
-        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1920&q=80")' }}
-      >
-        <div className="absolute inset-0 bg-black/68"></div>
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(235,215,35,0.06) 0%, transparent 60%)' }}></div>
+    <section className="relative w-full py-24 lg:py-32 bg-dark-accent overflow-hidden">
+      {/* Background image with overlay */}
+      <div className="absolute inset-0">
+        <img
+          src={bespokeOffice}
+          alt="Servicio Bespoke"
+          className="w-full h-full object-cover opacity-30"
+          style={{ filter: 'saturate(0.25) hue-rotate(160deg)' }}
+          onError={(e) => {
+            (e.currentTarget as HTMLImageElement).src =
+              "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1920&q=80";
+          }}
+        />
+        <div
+          className="absolute inset-0"
+          style={{ background: 'linear-gradient(to right, rgba(26,26,26,0.98), rgba(26,26,26,0.92), rgba(26,26,26,0.84))' }}
+        />
       </div>
-      <div className="relative z-10 max-w-4xl mx-auto text-center">
-        <FadeIn>
-          <p className="typo-eyebrow mb-6" style={{ color: '#EBD723' }}>Servicio Bespoke</p>
-          <h2 className="font-heading text-5xl md:text-7xl text-white font-bold mb-8 leading-[0.9]">
-            Atención exclusiva para perfiles de alto impacto
-          </h2>
-          <p className="font-sans text-xl md:text-2xl text-white/75 mb-14 italic leading-relaxed max-w-2xl mx-auto">
-            Para ejecutivos, inversores y talentos excepcionales que requieren un servicio absolutamente personalizado. Sin plantillas. Sin compromisos.
-          </p>
-          <Link href="/contacto" className="inline-block px-12 py-5 bg-primary text-white font-heading uppercase tracking-[0.15em] text-[11px] hover:bg-primary/90 transition-colors">
-            Solicitar Consulta Bespoke
-          </Link>
-        </FadeIn>
+
+      {/* Yellow accent top line */}
+      <div className="absolute top-0 left-0 w-1/3 h-0.5 bg-[#EBD723]" />
+
+      <div className="relative z-10 w-full px-8 lg:px-16 xl:px-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+          {/* Left content */}
+          <FadeIn>
+            <div>
+              <SectionHeading
+                eyebrow={c.eyebrow}
+                title={
+                  <>
+                    {c.titleLines[0]}
+                    <span className="block">{c.titleLines[1]}</span>
+                  </>
+                }
+                description={c.desc}
+                variant="dark"
+                className="mb-10 max-w-lg"
+                descriptionClassName="text-base text-white/60"
+              />
+
+              {/* Features list */}
+              <div className="space-y-3 mb-10">
+                {c.features.map((item, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <Check size={16} className="text-[#EBD723] shrink-0" strokeWidth={2} />
+                    <span className="font-sans text-sm text-white/70">{item}</span>
+                  </div>
+                ))}
+              </div>
+
+              <Link
+                href="/contacto"
+                className="section-cta-rect section-cta-rect-primary"
+              >
+                {c.cta}
+              </Link>
+            </div>
+          </FadeIn>
+
+          {/* Right: Testimonial (desktop only) */}
+          <FadeIn delay={0.15}>
+            <div className="hidden lg:block relative">
+              <div className="absolute -top-10 -right-10 w-40 h-40 border border-[#EBD723]/10" />
+              <div className="bg-white/5 backdrop-blur-sm p-8 border-l-2 border-[#EBD723]">
+                <span className="font-heading text-[#EBD723]/20 text-[8rem] leading-none select-none block -mb-8">"</span>
+                <p className="font-sans text-lg text-white/80 italic mb-6">
+                  {c.testimonial.text}
+                </p>
+                <div>
+                  <span className="font-heading text-sm text-white block uppercase tracking-widest">{c.testimonial.role}</span>
+                  <span className="typo-eyebrow text-white/50">{c.testimonial.org}</span>
+                </div>
+              </div>
+            </div>
+          </FadeIn>
+
+        </div>
       </div>
     </section>
   );

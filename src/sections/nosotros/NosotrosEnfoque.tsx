@@ -1,39 +1,65 @@
 import { FadeIn } from "@/components/ui/FadeIn";
-
-const STEPS = [
-  { step: "01", title: "Diagnóstico Estratégico", desc: "Cada caso comienza con un análisis profundo de la situación corporativa o personal del cliente, identificando riesgos, oportunidades y la ruta migratoria óptima." },
-  { step: "02", title: "Diseño a Medida",         desc: "Desarrollamos una estrategia migratoria totalmente personalizada, sin plantillas estándar. Cada solución es tan única como las necesidades del cliente." },
-  { step: "03", title: "Ejecución de Precisión",  desc: "Nuestro equipo ejecuta cada trámite con rigor técnico, aprovechando nuestra plataforma tecnológica para garantizar trazabilidad y control total del proceso." },
-];
+import { useContent } from "@/context/LocaleContext";
 
 export function NosotrosEnfoque() {
+  const c = useContent().nosotros.enfoque;
+
   return (
-    <section className="bg-foreground text-white py-32 px-6" style={{ borderTop: '2px solid #EBD723' }}>
-      <div className="max-w-[1440px] mx-auto">
-        <FadeIn>
-          <div className="mb-20">
-            <p className="typo-eyebrow text-primary mb-4">Metodología</p>
-            <h2 className="typo-title text-5xl md:text-6xl text-white leading-tight">Nuestro Enfoque</h2>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            <div className="space-y-12">
-              {STEPS.map((item, i) => (
-                <div key={i} className="relative pl-16">
-                  <div className="absolute left-0 top-0 font-heading text-4xl font-bold" style={{ color: '#EBD723', opacity: 0.3 }}>{item.step}</div>
-                  <h3 className="font-heading text-2xl font-bold mb-3 text-white">{item.title}</h3>
-                  <p className="font-sans text-lg text-white/60 leading-relaxed">{item.desc}</p>
+    <section className="w-full bg-dark-accent text-white overflow-hidden">
+      <div className="flex flex-col lg:flex-row min-h-screen">
+
+        {/* Image half */}
+        <div className="lg:w-1/2 relative min-h-[55vh] lg:min-h-full">
+          <FadeIn direction="right" className="absolute inset-0">
+            <img
+              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80"
+              alt="Enfoque Santos & Becker"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-dark-accent/45" />
+            {/* Accent top line */}
+            <div className="absolute top-0 left-0 right-0 h-0.75 bg-accent" />
+            {/* Year badge */}
+            <div className="absolute bottom-10 left-10 border border-white/20 px-6 py-4 backdrop-blur-sm">
+              <p className="font-heading text-3xl font-bold text-white leading-none">2026</p>
+              <p className="font-heading text-[9px] uppercase tracking-[0.22em] text-white/40 mt-1">
+                Founded in México
+              </p>
+            </div>
+          </FadeIn>
+        </div>
+
+        {/* Content half */}
+        <div className="lg:w-1/2 px-8 md:px-16 xl:px-20 py-28 flex flex-col justify-center">
+          <FadeIn direction="left">
+            <p className="typo-eyebrow text-accent mb-6">{c.eyebrow}</p>
+            <h2 className="typo-title text-5xl md:text-6xl text-white mb-16">{c.title}</h2>
+
+            <div className="space-y-0 border-t border-white/10">
+              {c.steps.map((item, i) => (
+                <div key={i} className="py-9 border-b border-white/10 group">
+                  <div className="flex items-start gap-6">
+                    <span
+                      className="font-heading text-4xl font-bold shrink-0 w-14 leading-none"
+                      style={{ color: "#EBD723", opacity: 0.35 }}
+                    >
+                      {item.step}
+                    </span>
+                    <div>
+                      <h3 className="font-heading text-xl font-bold text-white mb-2 group-hover:text-accent transition-colors">
+                        {item.title}
+                      </h3>
+                      <p className="font-sans text-base text-white/55 leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
-            <div className="relative h-[500px] lg:h-full min-h-[400px]">
-              <img
-                src="https://images.unsplash.com/photo-1560472355-536de3962603?auto=format&fit=crop&w=960&q=80"
-                alt="Enfoque Santos & Becker"
-                className="absolute inset-0 w-full h-full object-cover opacity-70"
-              />
-            </div>
-          </div>
-        </FadeIn>
+          </FadeIn>
+        </div>
+
       </div>
     </section>
   );

@@ -3,16 +3,19 @@ import { ServiciosCorporativos } from "@/sections/servicios/ServiciosCorporativo
 import { ServiciosFamilias } from "@/sections/servicios/ServiciosFamilias";
 import { ServiciosComplementarios } from "@/sections/servicios/ServiciosCta";
 import { ServiciosClosingCta } from "@/sections/servicios/ServiciosClosingCta";
+import { useContent } from "@/context/LocaleContext";
 
 export function Servicios() {
+  const c = useContent().servicios.hero;
+
   return (
     <div className="bg-background">
       <InternalPageHero
         image="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80"
-        eyebrow="SERVICIOS"
-        titleLine1="SOLUCIONES"
-        titleLine2="MIGRATORIAS"
-        subtitle="Consultoría migratoria integral para empresas que mueven talento y profesionales que buscan certeza en México."
+        eyebrow={c.eyebrow}
+        titleLine1={c.titleLine1}
+        titleLine2={c.titleLine2}
+        subtitle={c.subtitle}
       />
       <ServiciosCorporativos />
       <ServiciosFamilias />

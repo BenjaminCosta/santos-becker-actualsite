@@ -1,85 +1,116 @@
 import { Link } from "wouter";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { useContent } from "@/context/LocaleContext";
 
-const CORPORATE_SERVICES = [
-  {
-    title: "Visas Corporativas",
-    desc: "Gestión integral de visas de trabajo para ejecutivos y personal especializado, asegurando la movilidad fluida del talento en su organización global.",
-    bullets: ["Visas de transferencia intracompany (L-1, ICT)", "Permisos de trabajo temporal", "Visas para inversionistas y directivos", "Renovaciones y extensiones estratégicas"],
-    img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1000&q=80",
-    num: "01"
-  },
-  {
-    title: "Compliance Migratorio",
-    desc: "Auditorías preventivas y diseño de políticas internas para garantizar que su empresa cumpla rigurosamente con las normativas vigentes, mitigando riesgos regulatorios.",
-    bullets: ["Auditorías de cumplimiento normativo", "Diseño de políticas de movilidad corporativa", "Capacitación especializada a equipos RRHH", "Representación en inspecciones gubernamentales"],
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1000&q=80",
-    num: "02"
-  },
-  {
-    title: "Movilidad de Talento",
-    desc: "Estrategias de relocalización que abarcan desde el aspecto migratorio hasta la integración cultural y fiscal en el país de destino.",
-    bullets: ["Estrategias end-to-end de relocalización", "Gestión migratoria de dependientes y familia", "Asesoría fiscal internacional para expatriados", "Programas de onboarding cultural"],
-    img: "https://images.unsplash.com/photo-1560472355-536de3962603?auto=format&fit=crop&w=1000&q=80",
-    num: "03"
-  },
+const IMAGES = [
+  "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1400&q=80",
+  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1400&q=80",
+  "https://images.unsplash.com/photo-1560472355-536de3962603?auto=format&fit=crop&w=1400&q=80",
+  "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=80",
+  "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80",
+  "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80",
 ];
 
 export function ServiciosCorporativos() {
-  return (
-    <section className="py-32 px-6 max-w-[1440px] mx-auto">
-      <FadeIn>
-        <div className="mb-20">
-          <p className="typo-eyebrow text-primary mb-4">Empresas y Corporaciones</p>
-          <h2 className="font-heading text-5xl md:text-6xl font-bold text-foreground leading-tight mb-6">
-            Estrategia Migratoria Corporativa
-          </h2>
-          <p className="font-sans text-xl text-muted-foreground max-w-3xl leading-relaxed">
-            Gestionamos de forma integral las necesidades migratorias de empresas multinacionales, desde la estructuración de políticas internas hasta la resolución de casos individuales de alta complejidad.
-          </p>
-        </div>
-      </FadeIn>
+  const c = useContent().servicios.corporate;
 
-      <div className="space-y-0">
-        {CORPORATE_SERVICES.map((svc, index) => {
-          const isEven = index % 2 !== 0;
-          return (
-            <div key={index} className={`w-full ${isEven ? 'bg-gray-50/60' : 'bg-white'}`}>
-              <div className="max-w-[1440px] mx-auto px-6 md:px-16 py-24 md:py-32">
-                <div className={`flex flex-col lg:flex-row gap-12 lg:gap-20 items-center ${isEven ? 'lg:flex-row-reverse' : ''}`}>
-                  <div className="lg:w-1/2 w-full h-[460px] overflow-hidden">
-                    <FadeIn direction={isEven ? "left" : "right"} className="w-full h-full">
-                      <div
-                        className="w-full h-full bg-cover bg-center transition-transform duration-700 hover:scale-[1.02]"
-                        style={{ backgroundImage: `url("${svc.img}")` }}
-                      />
-                    </FadeIn>
-                  </div>
-                  <div className="lg:w-1/2">
-                    <FadeIn direction={isEven ? "right" : "left"}>
-                      <span className="font-heading text-[5rem] font-bold block mb-1 leading-none" style={{ color: '#EBD723', opacity: 0.2 }}>{svc.num}</span>
-                      <h3 className="font-heading text-4xl md:text-5xl text-foreground font-bold mb-6 leading-tight">{svc.title}</h3>
-                      <p className="font-sans text-xl text-muted-foreground mb-8 leading-relaxed">{svc.desc}</p>
-                      <ul className="space-y-3 mb-10">
-                        {svc.bullets.map((b, i) => (
-                          <li key={i} className="flex items-center gap-3 font-sans text-lg text-foreground">
-                            <span className="w-[6px] h-[6px] shrink-0 bg-accent"></span>
+  return (
+    <>
+      {/* Section intro */}
+      <section className="py-24 px-6 lg:px-16 xl:px-24">
+        <FadeIn>
+          <p className="typo-eyebrow text-primary mb-8">{c.eyebrow}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-end">
+            <h2 className="typo-title text-5xl md:text-6xl text-foreground">{c.title}</h2>
+            <p className="font-sans text-xl text-muted-foreground leading-relaxed">{c.intro}</p>
+          </div>
+        </FadeIn>
+      </section>
+
+      {/* Service rows */}
+      {c.items.map((svc, index) => {
+        const isEven = index % 2 === 0;
+        const isDark = !isEven;
+
+        return (
+          <section
+            key={index}
+            className={[
+              "relative min-h-screen flex flex-col items-center overflow-hidden",
+              isEven ? "md:flex-row" : "md:flex-row-reverse",
+              isDark ? "bg-white" : "bg-white",
+            ].join(" ")}
+          >
+            {/* Full-height image */}
+            <div className="w-full md:w-2/3 h-[55vh] md:h-screen relative overflow-hidden shrink-0">
+              <img
+                src={IMAGES[index]}
+                alt={svc.title}
+                className="w-full h-full object-cover"
+              />
+              <div className={`absolute inset-0 ${isDark ? "bg-black/20" : "bg-foreground/10"}`} />
+            </div>
+
+            {/* Floating card */}
+            <div
+              className={[
+                "w-full md:w-[44%] md:absolute z-20",
+                isEven
+                  ? "md:right-10 md:-translate-y-12"
+                  : "md:left-10 md:translate-y-12",
+              ].join(" ")}
+            >
+              <FadeIn direction={isEven ? "left" : "right"} className="w-full">
+                <div className={[
+                  "p-10 md:p-14 backdrop-blur-md shadow-[0_24px_48px_-12px_rgba(25,28,31,0.10)] border-t-2 border-accent",
+                  isDark ? "bg-dark-accent/95" : "bg-white/95",
+                ].join(" ")}>
+
+                  {/* Number */}
+                  <span
+                    className="font-heading text-5xl font-bold leading-none mb-4 block"
+                    style={{ color: "#EBD723", opacity: 0.4 }}
+                  >
+                    {svc.num}
+                  </span>
+
+                  {/* Title */}
+                  <h3 className={`typo-title text-3xl md:text-4xl mb-5 ${isDark ? "text-white" : "text-foreground"}`}>
+                    {svc.title}
+                  </h3>
+
+                  <div className="max-w-100">
+                    {/* Description */}
+                    <p className={`font-sans leading-relaxed mb-8 ${isDark ? "text-white/60" : "text-muted-foreground"}`}>
+                      {svc.desc}
+                    </p>
+
+                    {/* Bullets */}
+                    <ul className="space-y-3 mb-10">
+                      {svc.bullets.map((b, i) => (
+                        <li key={i} className="flex items-center gap-3">
+                          <span className="w-1.25 h-1.25 shrink-0 bg-accent" />
+                          <span className={`font-heading text-[11px] uppercase tracking-[0.18em] ${isDark ? "text-white/80" : "text-foreground"}`}>
                             {b}
-                          </li>
-                        ))}
-                      </ul>
-                      <Link href="/contacto" className="inline-flex items-center gap-2 border-b border-foreground/25 pb-1 font-heading uppercase tracking-[0.15em] text-[11px] text-foreground hover:text-primary hover:border-primary transition-colors group">
-                        Solicitar información
-                        <span className="transform group-hover:translate-x-1 transition-transform">→</span>
-                      </Link>
-                    </FadeIn>
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    {/* CTA */}
+                    <Link
+                      href="/contacto"
+                      className="section-cta-rect section-cta-rect-primary"
+                    >
+                      {c.requestInfo}
+                    </Link>
                   </div>
                 </div>
-              </div>
+              </FadeIn>
             </div>
-          );
-        })}
-      </div>
-    </section>
+          </section>
+        );
+      })}
+    </>
   );
 }

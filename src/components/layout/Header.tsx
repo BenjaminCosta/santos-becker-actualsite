@@ -1,140 +1,170 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logos/S_S&B Logo2_Color.png";
+import { useLocale, useContent } from "@/context/LocaleContext";
+import type { Locale } from "@/content/index";
+import {
+  AnimatedDropdown,
+  type AnimatedDropdownItem,
+} from "@/components/ui/animated-dropdown";
+
+const LOCALES: AnimatedDropdownItem<Locale>[] = [
+  { value: "es", label: "ESP", description: "Espanol" },
+  { value: "en", label: "ENG", description: "English" },
+  { value: "zh", label: "CHN", description: "Chinese" },
+];
 
 export function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [location] = useLocation();
+  const { locale, setLocale } = useLocale();
+  const c = useContent().global.nav;
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
+    const handleScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
-    setMobileMenuOpen(false);
+    setMenuOpen(false);
   }, [location]);
 
   const navLinks = [
-    { name: "Nosotros", path: "/nosotros" },
-    { name: "Servicios", path: "/servicios" },
-    { name: "Tecnología", path: "/tecnologia" },
-    { name: "Inclusión Laboral", path: "/inclusion-laboral" },
-    { name: "Equipo", path: "/equipo" },
-    { name: "Contacto", path: "/contacto" },
+    { name: c.nosotros, path: "/nosotros" },
+    { name: c.servicios, path: "/servicios" },
+    { name: c.tecnologia, path: "/tecnologia" },
+    { name: c.inclusion, path: "/inclusion-laboral" },
+    { name: c.equipo, path: "/equipo" },
+    { name: c.contacto, path: "/contacto" },
   ];
 
-  const isHome = location === "/";
-  const isTransparent = !isScrolled && isHome;
-
-  const headerBg = isTransparent
-    ? "bg-transparent"
-    : "bg-white border-b border-border/60";
-  const textColor = isTransparent ? "text-white" : "text-foreground";
-  const mutedColor = isTransparent ? "text-white/60" : "text-muted-foreground";
+  const headerSurfaceClass = scrolled
+    ? "header-surface-solid border-b border-[#E2E2DF]"
+    : "header-surface-transparent border-b border-transparent";
+  const textColorClass = scrolled ? "text-[#303336]" : "text-white";
+  const mutedTextColorClass = scrolled ? "text-[#303336]/72" : "text-white/78";
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${headerBg}`}>
-      <div className="max-w-[1440px] mx-auto px-8 md:px-12 h-[80px] flex items-center justify-between gap-8">
-
-        {/* Logo */}
-<Link href="/" className="group relative flex items-center z-50 shrink-0">
-  <img
-    src={logo}
-    alt="Santos &amp; Becker"
-    className="h-16 md:h-[4.4rem] w-auto object-contain transition-transform duration-500 ease-out group-hover:scale-[1.05]"
-  />
-
-  {/* subtle primary hover glow */}
-  <span className="pointer-events-none absolute inset-0 -z-10 rounded-none bg-primary/0 blur-md transition-all duration-500" />
-</Link>
-
-        {/* Desktop Nav */}
-        <nav className="hidden xl:flex items-center gap-7 flex-1 justify-center">
-          {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              href={link.path}
-              className={`font-heading uppercase tracking-[0.12em] text-[11px] font-medium transition-colors duration-200 hover:text-primary relative group ${textColor}`}
-            >
-              {link.name}
-              <span className="absolute -bottom-[2px] left-0 w-0 h-[1px] bg-primary transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-          ))}
-        </nav>
-
-        {/* Right side: CTA + Language selector */}
-        <div className="hidden xl:flex items-center gap-6 shrink-0">
-          {/* Language selector — decorative */}
-          <div className={`flex items-center gap-0 font-heading text-[10px] tracking-[0.15em] ${mutedColor}`}>
-            <span className="cursor-default hover:text-primary transition-colors px-2 py-1">ESP</span>
-            <span className={`${isTransparent ? 'text-white/20' : 'text-border'}`}>|</span>
-            <span className="cursor-default hover:text-primary transition-colors px-2 py-1 opacity-50">ENG</span>
-            <span className={`${isTransparent ? 'text-white/20' : 'text-border'}`}>|</span>
-            <span className="cursor-default hover:text-primary transition-colors px-2 py-1 opacity-50">CHN</span>
-          </div>
-
-          {/* Divider */}
-          <div className={`h-5 w-[1px] ${isTransparent ? 'bg-white/20' : 'bg-border'}`}></div>
-
-          {/* CTA */}
-          <Link
-            href="/contacto"
-            className="px-6 py-[10px] bg-primary text-white font-heading uppercase tracking-[0.15em] text-[11px] hover:bg-primary/90 transition-colors"
-          >
-            Consulta Inicial
-          </Link>
-        </div>
-
-        {/* Mobile Toggle */}
-        <button
-          className={`xl:hidden z-50 p-2 transition-colors ${mobileMenuOpen ? "text-foreground" : textColor}`}
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          {mobileMenuOpen ? <X size={24} strokeWidth={1.5} /> : <Menu size={24} strokeWidth={1.5} />}
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      <div
-        className={`fixed inset-0 bg-white z-40 transition-transform duration-500 ease-in-out xl:hidden flex flex-col ${
-          mobileMenuOpen ? "translate-y-0" : "-translate-y-full"
-        }`}
+    <>
+      <header
+        className={`fixed inset-x-0 top-0 z-50 h-[84px] transition-[background-color,border-color,box-shadow,backdrop-filter] duration-300 ${headerSurfaceClass}`}
       >
-        <div className="flex flex-col h-full justify-center items-center gap-8 px-8">
-          <Link href="/" className="font-heading text-2xl uppercase tracking-[0.15em] text-foreground hover:text-primary transition-colors">
-            Inicio
+        <div className="mx-auto flex h-full w-full max-w-[1440px] items-center justify-between gap-6 px-5 md:px-8 xl:px-10">
+          <Link href="/" className="group relative flex shrink-0 items-center">
+            <img
+              src={logo}
+              alt="Santos & Becker"
+              className="h-[4.7rem] w-auto object-contain transition-transform duration-500 ease-out group-hover:scale-[1.03] md:h-[5.15rem]"
+            />
           </Link>
-          {navLinks.map((link) => (
+
+          <nav className="hidden xl:flex flex-1 items-center justify-center gap-8">
+            {navLinks.map((link) => {
+              const active = location === link.path;
+
+              return (
+                <Link
+                  key={link.path}
+                  href={link.path}
+                  className={`group relative font-heading text-[0.78rem] uppercase tracking-[0.1em] transition-colors duration-200 ${
+                    active ? "text-primary" : textColorClass
+                  }`}
+                >
+                  {link.name}
+                  <span
+                    className={`absolute -bottom-1.5 -left-1 h-[2px] bg-primary transition-all duration-200 ${
+                      active ? "-right-1" : "right-[calc(100%+0.25rem)] group-hover:-right-1"
+                    }`}
+                  />
+                </Link>
+              );
+            })}
+          </nav>
+
+          <div className="hidden xl:flex shrink-0 items-center gap-3">
+            <AnimatedDropdown
+              items={LOCALES}
+              value={locale}
+              onSelect={setLocale}
+              label={c.languageLabel}
+              variant={scrolled ? "solid" : "transparent"}
+            />
+            <Link
+              href="/contacto"
+              className="inline-flex items-center justify-center bg-primary px-6 py-[0.62rem] font-heading text-[11px] uppercase tracking-[0.18em] text-white transition-colors hover:bg-primary/90"
+            >
+              {c.cta}
+            </Link>
+          </div>
+
+          <button
+            type="button"
+            className={`inline-flex items-center justify-center p-2 transition-colors duration-200 xl:hidden ${textColorClass}`}
+            onClick={() => setMenuOpen((open) => !open)}
+            aria-label={c.menuLabel}
+          >
+            {menuOpen ? <X size={22} strokeWidth={1.75} /> : <Menu size={22} strokeWidth={1.75} />}
+          </button>
+        </div>
+      </header>
+
+      <div
+        className={`fixed inset-0 z-40 bg-white transition-all duration-300 ease-in-out xl:hidden ${
+          menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+        style={{ paddingTop: "84px" }}
+      >
+        <div className="mx-auto flex w-full max-w-[1440px] flex-col gap-1 px-4 py-10 md:px-6">
+          <Link
+            href="/"
+            className={`font-heading text-3xl font-bold uppercase tracking-wider py-4 border-b border-[#E2E2DF] transition-colors duration-200 ${
+              location === "/" ? "text-primary" : "text-[#303336]"
+            }`}
+          >
+            {c.inicio}
+          </Link>
+          {navLinks.map((link, index) => (
             <Link
               key={link.path}
               href={link.path}
-              className="font-heading text-2xl uppercase tracking-[0.15em] text-foreground hover:text-primary transition-colors"
+              className={`font-heading text-3xl font-bold uppercase tracking-wider py-4 border-b border-[#E2E2DF] transition-colors duration-200 ${
+                location === link.path ? "text-primary" : "text-[#303336]"
+              }`}
+              style={{
+                transitionDelay: menuOpen ? `${index * 40}ms` : "0ms",
+              }}
             >
               {link.name}
             </Link>
           ))}
-          <div className="mt-4 flex items-center gap-3 font-heading text-sm tracking-[0.15em] text-muted-foreground">
-            <span>ESP</span>
-            <span className="text-border">|</span>
-            <span className="opacity-50">ENG</span>
-            <span className="text-border">|</span>
-            <span className="opacity-50">CHN</span>
+
+          <div className="mt-8 flex flex-col gap-5">
+            <div className="flex items-center justify-between gap-4 border-b border-[#E2E2DF] pb-5">
+              <span className="typo-eyebrow text-muted-foreground">{c.languageLabel}</span>
+              <AnimatedDropdown
+                items={LOCALES}
+                value={locale}
+                onSelect={setLocale}
+                variant="solid"
+                align="end"
+              />
+            </div>
+
+            <Link
+              href="/contacto"
+              className="inline-flex w-full items-center justify-center bg-primary px-6 py-4 font-heading text-[11px] uppercase tracking-[0.18em] text-white transition-colors hover:bg-primary/90"
+            >
+              {c.cta}
+            </Link>
+            <p className={`font-sans text-sm ${mutedTextColorClass}`}>
+              Santos &amp; Becker
+            </p>
           </div>
-          <Link
-            href="/contacto"
-            className="mt-4 px-10 py-4 bg-primary text-white font-heading uppercase tracking-[0.15em] text-sm hover:bg-primary/90 transition-colors"
-          >
-            Consulta Inicial
-          </Link>
         </div>
       </div>
-    </header>
+    </>
   );
 }

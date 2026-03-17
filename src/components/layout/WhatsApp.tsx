@@ -1,11 +1,16 @@
+import { useContent } from "@/context/LocaleContext";
+
 export function WhatsAppButton() {
+  const { number, message, ariaLabel } = useContent().global.whatsapp;
+  const href = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+
   return (
     <a
-      href="https://wa.me/1234567890"
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-4 shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300 flex items-center justify-center"
-      aria-label="Contactar por WhatsApp"
+      aria-label={ariaLabel}
     >
       <svg
         viewBox="0 0 24 24"

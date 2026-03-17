@@ -1,18 +1,13 @@
-import { ReactNode, useEffect } from "react";
-import { useLocation } from "wouter";
+import { ReactNode } from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { WhatsAppButton } from "./WhatsApp";
+import { ScrollToTop } from "./ScrollToTop";
 
 export function PageLayout({ children }: { children: ReactNode }) {
-  const [location] = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location]);
-
   return (
     <div className="min-h-screen flex flex-col">
+      <ScrollToTop />
       <Header />
       <main className="flex-grow">
         {children}

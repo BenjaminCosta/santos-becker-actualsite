@@ -1,68 +1,80 @@
+import { Search, Target, FileText, Activity } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { useContent } from "@/context/LocaleContext";
 
-const STEPS = [
-  { n: "01", title: "Diagnóstico Corporativo",    desc: "Análisis de la estructura organizacional, proporciones de contratación y riesgos regulatorios actuales." },
-  { n: "02", title: "Estrategia de Cumplimiento", desc: "Diseño de un plan de acción personalizado para garantizar el cumplimiento normativo en cada contratación." },
-  { n: "03", title: "Implementación Documental",  desc: "Gestión de todos los contratos, registros y trámites ante las autoridades competentes." },
-  { n: "04", title: "Monitoreo Continuo",          desc: "Seguimiento periódico para actualizar los expedientes y anticipar cambios regulatorios." },
-];
-
-const STATS = [
-  { n: "100%", l: "Cumplimiento garantizado" },
-  { n: "+15",  l: "Países con cobertura" },
-  { n: "360°", l: "Visibilidad del proceso" },
-];
+const STEP_ICONS = [Search, Target, FileText, Activity];
 
 export function InclusionMethodology() {
-  return (
-    <section className="py-32 px-6 bg-white">
-      <div className="max-w-[1440px] mx-auto">
-        <FadeIn>
-          <div className="mb-20">
-            <p className="typo-eyebrow text-primary mb-4">Metodología</p>
-            <h2 className="typo-title text-4xl md:text-5xl text-foreground leading-tight">
-              Acción concreta
-            </h2>
-          </div>
-        </FadeIn>
+  const c = useContent().inclusion.methodology;
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+  return (
+    <section className="bg-white overflow-hidden">
+      <div className="grid grid-cols-1 lg:grid-cols-12">
+
+        {/* Left: sticky title column */}
+        <div className="lg:col-span-4 px-6 lg:px-12 xl:px-16 py-20 lg:py-28 flex flex-col justify-start">
           <FadeIn direction="right">
-            <div className="space-y-0 border-t border-border">
-              {STEPS.map((item, i) => (
-                <div key={i} className="py-10 border-b border-border last:border-0 group">
-                  <div className="flex items-start gap-6">
-                    <span className="font-heading text-2xl font-bold shrink-0" style={{ color: '#EBD723', opacity: 0.5 }}>{item.n}</span>
+            <p className="typo-eyebrow text-primary mb-6">{c.eyebrow}</p>
+            <h2 className="typo-title text-4xl md:text-5xl lg:text-5xl text-foreground mb-6">
+              {c.title}
+            </h2>
+            <div className="w-12 h-0.5 bg-accent" />
+          </FadeIn>
+        </div>
+
+        {/* Right: cards grid */}
+        <div className="lg:col-span-8 bg-gray-50">
+          <FadeIn direction="left" delay={0.08}>
+            <div className="grid grid-cols-1 sm:grid-cols-2">
+              {c.steps.map((step, i) => {
+                const Icon = STEP_ICONS[i];
+                const isPrimary = i === 1 || i === 3;
+
+                return (
+                  <div
+                    key={i}
+                    className={[
+                      "p-10 md:p-12 flex flex-col gap-6",
+                      i % 2 === 0 ? "border-r border-gray-200/60" : "",
+                      i < 2 ? "border-b border-gray-200/60" : "",
+                    ].join(" ")}
+                  >
                     <div>
-                      <h3 className="font-heading text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">{item.title}</h3>
-                      <p className="font-sans text-lg text-muted-foreground leading-relaxed">{item.desc}</p>
+                      <Icon
+                        size={28}
+                        strokeWidth={1.5}
+                        className={"text-primary"}
+                      />
+                    </div>
+                    <div>
+                      <p
+                        className={`font-heading text-[9px] uppercase tracking-[0.2em] mb-3 ${
+"text-muted-foreground"
+                        }`}
+                      >
+                        {step.n}
+                      </p>
+                      <h3
+                        className={`font-heading text-lg font-bold uppercase tracking-[0.05em] mb-4 ${"text-foreground"
+                        }`}
+                      >
+                        {step.title}
+                      </h3>
+                      <p
+                        className={`font-sans text-base leading-relaxed ${
+                     "text-muted-foreground"
+                        }`}
+                      >
+                        {step.desc}
+                      </p>
                     </div>
                   </div>
-                </div>
-              ))}
-            </div>
-          </FadeIn>
-
-          <FadeIn direction="left" delay={0.1}>
-            <div className="space-y-8 lg:sticky lg:top-32">
-              <div className="w-full h-[420px] overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=960&q=80"
-                  alt="Inclusión Laboral"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="bg-foreground text-white p-10 grid grid-cols-3 gap-6 text-center">
-                {STATS.map((s, i) => (
-                  <div key={i}>
-                    <p className="font-heading text-3xl md:text-4xl font-bold mb-1" style={{ color: '#EBD723' }}>{s.n}</p>
-                    <p className="font-heading text-[9px] uppercase tracking-[0.15em] text-white/50">{s.l}</p>
-                  </div>
-                ))}
-              </div>
+                );
+              })}
             </div>
           </FadeIn>
         </div>
+
       </div>
     </section>
   );

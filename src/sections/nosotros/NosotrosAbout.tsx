@@ -1,41 +1,57 @@
 import { Link } from "wouter";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { useContent } from "@/context/LocaleContext";
 
 export function NosotrosAbout() {
+  const c = useContent().nosotros.about;
+
   return (
-    <section className="py-28 md:py-36 px-6 max-w-[1440px] mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-28 items-center">
-        <FadeIn direction="right">
-          <p className="typo-eyebrow text-primary mb-6">Quiénes Somos</p>
-          <h2 className="font-heading text-4xl md:text-5xl text-foreground font-bold mb-8 leading-tight">
-            Una visión diferente de la práctica migratoria
-          </h2>
-          <div className="font-sans text-xl text-muted-foreground space-y-6 leading-relaxed">
-            <p>
-              Santos & Becker fue fundada con un objetivo claro: elevar la práctica del derecho migratorio al nivel de la consultoría corporativa estratégica.
-            </p>
-            <p>
-              Operamos en la intersección entre el derecho, la tecnología y la estrategia empresarial, ofreciendo a nuestros clientes soluciones migratorias que generan ventajas competitivas reales.
-            </p>
-            <p>
-              Nuestro equipo combina décadas de experiencia jurídica con una plataforma tecnológica propietaria y una red de alianzas globales inigualable.
-            </p>
-          </div>
-          <div className="mt-10">
-            <Link href="/equipo" className="inline-flex items-center gap-2 font-heading uppercase tracking-[0.15em] text-[11px] text-foreground border-b border-foreground/25 pb-1 hover:text-primary hover:border-primary transition-colors group">
-              Conocer al equipo
+    <section className="w-full bg-white overflow-hidden">
+      <div className="flex flex-col lg:flex-row min-h-[85vh]">
+
+        {/* Left: editorial text */}
+        <div className="lg:w-[45%] px-8 md:px-16 xl:px-24 py-28 flex flex-col justify-center">
+          <FadeIn direction="right">
+            <p className="typo-eyebrow text-primary mb-6">{c.eyebrow}</p>
+            <h2 className="typo-title text-5xl md:text-6xl text-foreground mb-10">
+              {c.title}
+            </h2>
+            <div className="font-sans text-lg text-muted-foreground space-y-5 leading-relaxed border-l-2 border-accent/30 pl-6 mb-12">
+              {c.body.map((p, i) => <p key={i}>{p}</p>)}
+            </div>
+            <Link href="/equipo" className="section-cta-inline section-cta-inline-dark group">
+              {c.cta}
               <span className="transform group-hover:translate-x-1 transition-transform">→</span>
             </Link>
-          </div>
-        </FadeIn>
-        <FadeIn direction="left">
-          <div className="bg-gray-50 p-10 md:p-14 border-l-4 border-accent relative">
-            <span className="absolute top-6 left-8 font-heading text-7xl leading-none" style={{ color: '#EBD723', opacity: 0.2 }}>"</span>
-            <p className="font-sans text-2xl text-foreground italic leading-relaxed relative z-10 pt-6">
-              Nuestra misión es proporcionar certeza absoluta en un entorno regulatorio en constante cambio, permitiendo a nuestros clientes operar sin fronteras con total seguridad jurídica.
-            </p>
-          </div>
-        </FadeIn>
+          </FadeIn>
+        </div>
+
+        {/* Right: full-height image + quote overlay */}
+        <div className="lg:w-[55%] relative min-h-[60vh] lg:min-h-full">
+          <FadeIn direction="left" className="absolute inset-0">
+            <img
+              src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80"
+              alt="Santos & Becker"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            {/* Gradient from bottom */}
+            <div className="absolute inset-0 bg-gradient-to-t from-dark-accent/92 via-dark-accent/25 to-transparent" />
+
+            {/* Quote overlay */}
+            <div className="absolute bottom-0 left-0 right-0 p-10 md:p-14 z-10">
+              <span
+                className="font-heading leading-none text-accent/50 block select-none"
+                style={{ fontSize: "5rem", lineHeight: 1, marginBottom: "-1rem" }}
+              >
+                "
+              </span>
+              <p className="font-sans text-xl md:text-2xl text-white italic leading-relaxed max-w-md">
+                {c.quote}
+              </p>
+            </div>
+          </FadeIn>
+        </div>
+
       </div>
     </section>
   );

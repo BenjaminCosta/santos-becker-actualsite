@@ -16,7 +16,7 @@ export function InternalPageHero({
   subtitle,
 }: InternalPageHeroProps) {
   return (
-    <section className="relative h-[75vh] min-h-[600px] w-full flex items-center justify-center pt-20 overflow-hidden">
+    <section className="relative h-[75vh] min-h-[600px] w-full flex items-center justify-center pt-28 md:pt-32 overflow-hidden">
       {/* Background */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
@@ -70,5 +70,4 @@ export function InternalPageHero({
     </section>
   );
 }
-
 
