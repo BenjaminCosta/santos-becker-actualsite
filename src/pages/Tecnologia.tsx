@@ -1,5 +1,4 @@
 import { InternalPageHero } from "@/components/shared/InternalPageHero";
-import { TecnologiaPlatforma } from "@/sections/tecnologia/TecnologiaPlatforma";
 import { TecnologiaSam } from "@/sections/tecnologia/TecnologiaSam";
 import { useContent } from "@/context/LocaleContext";
 
@@ -15,7 +14,6 @@ export function Tecnologia() {
         titleLine2={c.titleLine2}
         subtitle={c.subtitle}
       />
-      <TecnologiaPlatforma />
       <TecnologiaSam />
     </div>
   );

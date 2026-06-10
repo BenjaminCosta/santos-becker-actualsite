@@ -69,19 +69,20 @@ export function ContactForm() {
 
               {/* Social box */}
               <div className="bg-gray-50 p-10 -mx-6 md:mx-0 mt-12">
-                <p className="typo-eyebrow text-primary mb-6">Redes sociales</p>
+                <p className="typo-eyebrow text-primary mb-6">{contactInfo.socialEyebrow}</p>
                 <ul className="space-y-4 divide-y divide-border">
-                  {[
-                    { name: "LinkedIn", href: "#" },
-                    { name: "Instagram", href: "#" },
-                    { name: "WhatsApp", href: `https://wa.me/${contactInfo.whatsappNumber}` },
-                  ].map((s) => (
+                  {contactInfo.socials.map((s) => (
                     <li key={s.name} className="pt-4 first:pt-0">
                       <a
                         href={s.href}
+                        target={s.href.startsWith("http") ? "_blank" : undefined}
+                        rel={s.href.startsWith("http") ? "noopener noreferrer" : undefined}
                         className="font-sans text-base text-foreground hover:text-primary transition-colors flex items-center justify-between group"
                       >
-                        {s.name}
+                        <span>
+                          {s.name}
+                          <span className="block text-sm text-muted-foreground">{s.label}</span>
+                        </span>
                         <span className="transform group-hover:translate-x-1 transition-transform text-sm">→</span>
                       </a>
                     </li>
@@ -157,6 +158,9 @@ export function ContactForm() {
                     >
                       {form.submitBtn}
                     </button>
+                    <p className="font-sans text-sm text-muted-foreground mt-4">
+                      {form.privacyNote}
+                    </p>
                   </div>
 
                 </form>

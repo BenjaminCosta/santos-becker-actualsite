@@ -15,7 +15,7 @@ export const es = {
     footer: {
       tagline: "Strategic Immigration Consulting & Compliance",
       description:
-        "Asesoría de élite en inmigración corporativa y cumplimiento normativo para empresas globales y perfiles de alto impacto.",
+        "Consultoría estratégica migratoria y compliance para empresas globales, familias y talento internacional.",
       email: "info@santosbecker.com",
       phone: "+52 55 6617 7712",
       firma: {
@@ -27,8 +27,8 @@ export const es = {
         links: [
           "Estrategia Corporativa",
           "Residencias y Visas",
-          "Naturalización",
-          "Apostillas y Relocation",
+          "Compliance Migratorio",
+          "Servicios Complementarios",
           "Servicio Bespoke",
         ],
       },
@@ -50,7 +50,7 @@ export const es = {
       },
       editorial: {
         heading: "El Estándar\nProfesional.",
-        body: "Santos & Becker es más que una firma; es una institución construida sobre precisión técnica y excelencia jurídica, con presencia estratégica en los principales corredores económicos de México.",
+        body: "Santos & Becker acompaña la movilidad global con precisión técnica, cumplimiento normativo y presencia estratégica en los principales corredores económicos de México.",
       },
     },
     whatsapp: {
@@ -63,8 +63,8 @@ export const es = {
 
   home: {
     hero: {
-      eyebrow: "STRATEGIC IMMIGRATION CONSULTING",
-      lines: ["Donde el talento", "global encuentra", "su camino"],
+      eyebrow: "GLOBAL STRATEGIC IMMIGRATION CONSULTING & COMPLIANCE",
+      lines: ["Movilidad global", "estratégica sin", "complicaciones"],
       subtitle:
         "Transformamos cada proceso migratorio con soluciones estratégicas y acompañamiento personalizado. Tres décadas como el socio de confianza de empresas globales y talentos internacionales en México.",
       ctaPrimary: "Contáctanos",
@@ -73,18 +73,18 @@ export const es = {
 
     about: {
       eyebrow: "Quiénes Somos",
-      title: "Consultoría migratoria estratégica con visión boutique",
+      title: "Consultoría y estrategia global migratoria",
       body: [
-        "Santos & Becker es una firma boutique mexicana de consultoría migratoria estratégica, fundada por dos socios con trayectorias complementarias de más de tres décadas en el sector.",
-        "Asesoramos a empresas mexicanas, multinacionales y personas físicas nacionales y extranjeras en el diseño e implementación de soluciones migratorias con los más altos estándares de cumplimiento normativo. Nuestro modelo combina rigor legal, visión estratégica y una atención personalizada que nos ha posicionado como referentes en la industria.",
+        "Somos una firma mexicana de consultoría y estrategia global migratoria, fundada por dos socios con trayectorias complementarias de más de 25 años en el sector.",
+        "Asesoramos a empresas mexicanas, multinacionales y a personas físicas nacionales y extranjeras, en el diseño e implementación de soluciones migratorias con los más altos estándares de cumplimiento normativo. Nuestro modelo combina compliance, visión estratégica y atención personalizada que nos ha posicionado como referentes en la industria a nivel mundial.",
       ],
       stats: [
-        { value: 30, prefix: "+", suffix: " años", label: "de práctica especializada" },
+        { value: 25, prefix: "+", suffix: " años", label: "de práctica especializada" },
         { value: 500, prefix: "+", suffix: "", label: "empresas en cartera activa" },
-        { value: 5000, prefix: "+", suffix: "", label: "extranjeros asistidos con sus familias" },
+        { value: 10000, prefix: "+", suffix: "", label: "extranjeros asistidos con sus familias" },
         { value: 95, prefix: "", suffix: "% NPS", label: "índice de satisfacción del cliente" },
         { value: 4, prefix: "", suffix: " oficinas", label: "nacionales: CDMX · Monterrey · Guadalajara · Cancún" },
-        { value: 25, prefix: "", suffix: " firmas", label: "en nuestra red internacional" },
+        { value: 25, prefix: "+", suffix: " firmas", label: "especializadas alrededor del mundo" },
       ],
       cta: "Conoce nuestra historia",
     },
@@ -93,29 +93,29 @@ export const es = {
       eyebrow: "Nuestro Propósito",
       titleLines: [
         "Nuestro propósito es claro:",
-        "certeza, agilidad y acompañamiento",
+        "impactar de manera positiva",
       ],
       body: [
-        "Nuestro propósito es claro: garantizar la menor fricción, la mayor certeza legal y el respaldo de un equipo profesional que acompaña y asesora a cada cliente durante todo el proceso.",
-        "Diseñamos estrategias migratorias a la medida de cada empresa y cada persona, con un nivel de atención que solo es posible desde un modelo boutique.",
+        "Nuestro propósito es claro: impactar de manera positiva a todas las personas que atendemos.",
+        "Diseñamos estrategias migratorias a la medida de cada empresa y cada persona, combinando modelos operativos claros, cumplimiento normativo y acompañamiento cercano en cada etapa.",
       ],
       cta: "Descubre cómo trabajamos",
     },
 
     differentiators: {
       eyebrow: "Por qué elegirnos",
-      title: "Una firma diferente",
+      title: "Lo que nos distingue",
       items: [
-        {
-          title: "Interlocución directa con las autoridades",
-          desc: "Mantenemos una relación activa y de reconocimiento profesional con las principales autoridades migratorias y consulares del país. Esto se traduce en procesos más ágiles, criterios claros y soluciones que cumplen con cada regulación vigente.",
-        },
         {
           title: "Un estándar de servicio medible",
           desc: "No hablamos de calidad en abstracto: la medimos. Nuestro modelo de atención ha alcanzado un índice de satisfacción del 95% (NPS), sustentado en tiempos de respuesta definidos, seguimiento puntual y un compromiso con KPIs que nos exigimos en cada caso.",
         },
         {
-          title: "Anticipación permanente",
+          title: "Presencia nacional, alcance global",
+          desc: "Operamos desde cuatro oficinas en México (Ciudad de México, Monterrey, Guadalajara y Cancún) con equipos locales que cubren todo el territorio nacional. Para requerimientos internacionales, somos fundadores de una red de más de 25 firmas especializadas en derecho migratorio alrededor del mundo.",
+        },
+        {
+          title: "Anticipación estratégica",
           desc: "Nos adelantamos. Cada cambio regulatorio, cada vencimiento y cada variable que pueda afectar un proceso es monitoreada de forma continua para que nuestros clientes reciban alertas y recomendaciones oportunas sin tener que solicitarlas.",
         },
         {
@@ -123,46 +123,49 @@ export const es = {
           desc: "Colaboramos con la OIM, ACNUR y TENT Partnership for Refugees en iniciativas de inclusión laboral de migrantes y refugiados. Ofrecemos consultoría pro bono a empresas interesadas en contratar talento migrante, y en nuestra propia firma, empleamos a personas que encontraron refugio en México.",
         },
         {
-          title: "Presencia nacional, alcance global",
-          desc: "Operamos desde cuatro oficinas en México (Ciudad de México, Monterrey, Guadalajara y Cancún) con equipos locales que cubren todo el territorio nacional. Para requerimientos internacionales, somos fundadores de una red de 25 firmas especializadas en derecho migratorio alrededor del mundo.",
+          title: "Interlocución directa con las autoridades",
+          desc: "Mantenemos una relación activa y de reconocimiento profesional con las principales autoridades migratorias y consulares del país. Esto se traduce en procesos más ágiles, criterios claros y soluciones que cumplen con cada regulación vigente.",
         },
         {
-          title: "Tecnología que trabaja para el cliente",
-          desc: "Nuestra plataforma, impulsada por inteligencia artificial, permite a cada cliente dar seguimiento a sus casos en tiempo real, acceder a documentación y comprender cada etapa de su proceso. Todo desde un solo lugar.",
+          title: "Tecnología aplicada a movilidad global",
+          desc: "Contamos con tecnología para que cada cliente tenga claridad total sobre sus trámites. Conoce cómo estamos transformando la operación migratoria con inteligencia artificial.",
         },
       ],
     },
 
     services: {
-      eyebrow: "Servicios",
-      title: "Soluciones migratorias integrales",
+      eyebrow: "Qué hacemos",
+      title: "Servicios migratorios estratégicos",
       items: [
         {
-          title: "Estrategia Migratoria Corporativa",
-          sub: "Movilidad global · Trámites · Coordinación multi-país",
+          title: "Movilidad Global",
+          sub: "Políticas · Consultoría · Coordinación regional y global",
         },
         {
-          title: "Servicios para Profesionales y Familias",
-          sub: "Residencias · Naturalización · Visas internacionales",
+          title: "Trámites Migratorios",
+          sub: "Residencias · Visas de trabajo · Renovaciones",
+        },
+        {
+          title: "Compliance Migratorio",
+          sub: "Auditorías · Riesgos · Monitoreo preventivo",
         },
         {
           title: "Servicios Complementarios",
-          sub: "Apostillas · Relocation · Consultoría internacional",
+          sub: "RFC · Seguridad social · Apostillas · Visas",
         },
       ],
-      cta: "Ver todos los servicios",
+      cta: "Conoce el detalle de cada servicio",
     },
 
     technology: {
-      eyebrow: "Innovación Migratoria",
-      title: "Plataforma digital de gestión migratoria",
+      eyebrow: "Nuestra Tecnología",
+      title: "Movilidad global impulsada por inteligencia tecnológica",
       intro:
-        "Desarrollamos nuestra propia tecnología para que cada cliente tenga claridad total sobre sus trámites. Conoce cómo la inteligencia artificial está transformando la gestión migratoria.",
+        "Contamos con tecnología para que cada cliente tenga claridad total sobre sus trámites. Conoce cómo estamos transformando la operación migratoria con inteligencia artificial.",
       features: [
-        "Seguimiento en tiempo real — Estado actualizado de cada trámite en curso",
-        "Documentación centralizada — Acceso a todos los documentos del proceso en un solo lugar",
-        "Solicitud de servicios — Apertura de nuevos casos directamente desde la plataforma",
-        "SAM — Asistente virtual de gestión migratoria",
+        "SAM mantiene informado a cada cliente con datos oportunos",
+        "AI Associates apoyan una comunicación más precisa y ágil",
+        "Canal digital preparado para claridad, trazabilidad y acompañamiento",
       ],
       cta: "Conoce a SAM, nuestra asistente virtual",
     },
@@ -173,21 +176,21 @@ export const es = {
       subtitle:
         "Trabajamos junto a las organizaciones más relevantes del ecosistema migratorio internacional y del entorno empresarial en México.",
       alianzas: ["ACNUR", "OIM", "TENT Partnership for Refugees"],
-      afiliaciones: ["COMCE", "Invest Monterrey", "CCI France México"],
+      afiliaciones: ["COMCE", "Invest Monterrey", "CCI France México", "AILA", "OIT", "ASEM"],
     },
 
     bespoke: {
       eyebrow: "Bespoke",
       titleLines: ["Más allá", "de lo migratorio"],
-      desc: "Nuestro alcance va más allá de lo migratorio. A través de Bespoke, nuestra firma de consultoría estratégica, ofrecemos soluciones personalizadas para los retos empresariales de nuestros clientes.",
+      desc: "Nuestro alcance trasciende lo migratorio. A través de nuestro modelo de vinculación estratégica, encontramos y desarrollamos soluciones a la medida, articulando comunidades, espacios de relación estratégica y una red de tomadores de decisión que acelera alianzas, oportunidades y resultados.",
       features: [
-        "Ejecutivo de cuenta dedicado",
-        "Respuesta inmediata 24/7",
-        "Gestión discreta y confidencial",
-        "Acceso directo a socios",
+        "Soluciones a la medida",
+        "Vinculación con comunidades estratégicas",
+        "Red de tomadores de decisión",
+        "Acompañamiento directo de socios",
       ],
       testimonial: {
-        text: "El servicio Bespoke de Santos & Becker ha sido fundamental para gestionar la movilidad de nuestros ejecutivos senior con la discreción y eficiencia que requerimos.",
+        text: "El servicio Bespoke de Santos & Becker ha sido fundamental para coordinar la movilidad de nuestros ejecutivos senior con la discreción y eficiencia que requerimos.",
         role: "Directora de RH",
         org: "Fortune 500 Company",
       },
@@ -233,21 +236,21 @@ export const es = {
   nosotros: {
     hero: {
       eyebrow: "NOSOTROS",
-      titleLine1: "TRES DÉCADAS",
-      titleLine2: "DE CONFIANZA",
+      titleLine1: "NOSOTROS",
+      titleLine2: "CONFIANZA GLOBAL",
       subtitle:
-        "Una firma construida sobre tres décadas de práctica, relaciones de confianza y un compromiso que se demuestra con cada cliente.",
+        "Una firma cimentada en la confianza y respaldada por un compromiso constante con cada cliente.",
     },
     about: {
       eyebrow: "Quiénes Somos",
-      title: "Una visión diferente de la práctica migratoria",
+      title: "Transformando la materia migratoria de un servicio transaccional a una estrategia global de movilidad.",
       body: [
-        "Somos una firma boutique mexicana de consultoría migratoria estratégica, fundada por dos socios con trayectorias de más de tres décadas en el sector.",
+        "Somos una firma mexicana de estrategia, consultoría y cumplimiento migratorio a nivel global, fundada por dos socios con trayectorias complementarias de más de 25 años en el sector.",
         "Asesoramos a empresas mexicanas, multinacionales y personas físicas, nacionales y extranjeras, en el diseño e implementación de soluciones migratorias con los más altos estándares de cumplimiento normativo.",
-        "Nuestro modelo combina rigor legal, visión estratégica y una atención personalizada que nos ha posicionado como referentes en la industria. Hoy, nuestra cartera incluye más de 500 empresas activas y un historial de más de 5,000 extranjeros acompañados junto a sus familias.",
+        "Nuestro modelo combina cumplimiento legal, visión estratégica y atención personalizada que nos han posicionado como referentes en la industria. Hoy, nuestra cartera incluye más de 500 empresas activas y un historial de más de 10,000 extranjeros acompañados junto a sus familias.",
       ],
       quote:
-        "El proceso migratorio involucra una dimensión que pocas firmas entienden: el vínculo de confianza que se construye con cada cliente. Esa cercanía es lo que define nuestro modelo de negocio.",
+        "El proceso migratorio involucra una dimensión que pocas firmas entienden: el vínculo de confianza que se construye con cada cliente.",
       cta: "Conocer al equipo",
     },
     enfoque: {
@@ -266,9 +269,32 @@ export const es = {
         },
         {
           step: "03",
-          title: "Ejecución de Precisión",
-          desc: "Nuestro equipo ejecuta cada trámite con rigor técnico, aprovechando nuestra plataforma tecnológica para garantizar trazabilidad y control total del proceso.",
+          title: "Ejecución y Acompañamiento",
+          desc: "Cada proceso se ejecuta con precisión normativa, trazabilidad completa y la cercanía de un equipo que acompaña de principio a fin.",
         },
+      ],
+    },
+    institucional: {
+      eyebrow: "Principios",
+      title: "Misión, visión y valores",
+      mission: {
+        title: "Misión",
+        desc: "Brindar soluciones estratégicas en movilidad global y cumplimiento migratorio con los más altos estándares legales, acompañando a empresas y personas con un enfoque humano, proactivo y personalizado.",
+      },
+      vision: {
+        title: "Visión",
+        desc: "Posicionarnos como la firma mexicana de estrategia, consultoría y cumplimiento en materia de movilidad global más confiable de México, fortaleciendo nuestra presencia a nivel internacional.",
+      },
+      values: [
+        { title: "Compliance", desc: "Operar con estricto apego legal, transparencia y prevención de riesgos para empresas y talento internacional." },
+        { title: "Ética profesional", desc: "Actuar con integridad, honestidad y responsabilidad en cada decisión y proceso." },
+        { title: "Anticorrupción", desc: "Mantener una política de cero tolerancia a prácticas indebidas, priorizando procesos legales y transparentes." },
+        { title: "Transparencia", desc: "Comunicar de forma clara, realista y objetiva tiempos, riesgos, costos y expectativas." },
+        { title: "Confidencialidad", desc: "Proteger la información y documentación de clientes y extranjeros con altos estándares de seguridad y discreción." },
+        { title: "Empatía", desc: "Reconocer que detrás de cada trámite existen personas, familias, proyectos profesionales y cambios de vida." },
+        { title: "Confianza", desc: "Construir relaciones de largo plazo basadas en credibilidad, consistencia y resultados." },
+        { title: "Excelencia operativa", desc: "Cuidar cada detalle, tiempos de respuesta y calidad en la ejecución." },
+        { title: "Responsabilidad corporativa", desc: "Impulsar prácticas migratorias responsables, sostenibles y alineadas con estándares internacionales." },
       ],
     },
     diferenciadores: {
@@ -302,7 +328,7 @@ export const es = {
       ],
       stats: [
         { n: "+500", l: "Empresas en cartera activa" },
-        { n: "+5,000", l: "Extranjeros acompañados" },
+        { n: "+10,000", l: "Extranjeros acompañados" },
         { n: "95% NPS", l: "Índice de satisfacción" },
       ],
     },
@@ -312,92 +338,87 @@ export const es = {
       subtitle:
         "Trabajamos junto a las organizaciones más relevantes del ecosistema migratorio internacional y del entorno empresarial en México.",
       alianzas: ["ACNUR", "OIM", "TENT Partnership for Refugees"],
-      afiliaciones: ["COMCE", "Invest Monterrey", "CCI France México"],
+      afiliaciones: ["COMCE", "Invest Monterrey", "CCI France México", "AILA", "OIT", "ASEM"],
+    },
+    publicaciones: {
+      eyebrow: "Publicaciones",
+      title: "Artículos y entrevistas",
+      items: [
+        {
+          title: "De un servicio transaccional a una estrategia global de movilidad disruptiva",
+          source: "Forbes México",
+          href: "https://forbes.com.mx/patrocinado-santos-becker-de-un-servicio-transaccional-a-una-estrategia-global-de-movilidad-disruptiva/#google_vignette",
+        },
+      ],
     },
   },
 
   servicios: {
     hero: {
       eyebrow: "SERVICIOS",
-      titleLine1: "SOLUCIONES",
-      titleLine2: "MIGRATORIAS",
+      titleLine1: "MOVILIDAD GLOBAL",
+      titleLine2: "ESTRATÉGICA",
       subtitle:
-        "Consultoría migratoria integral para empresas que mueven talento y profesionales que buscan certeza en México.",
+        "Soluciones migratorias y compliance con visión estratégica. Atención personalizada en cada etapa.",
     },
     corporate: {
-      eyebrow: "Empresas y Corporaciones",
-      title: "Estrategia Migratoria Corporativa",
+      eyebrow: "Empresas mexicanas, multinacionales y emprendedores",
+      title: "Estrategia, consultoría y cumplimiento en materia migratoria corporativa",
       intro:
-        "Diseñamos y ejecutamos estrategias migratorias alineadas con los objetivos de negocio de cada organización. Con el rigor que las empresas multinacionales exigen.",
+        "Diseñamos y ejecutamos estrategias migratorias alineadas con los objetivos y necesidades de negocio de cada organización.",
       items: [
         {
           num: "01",
-          title: "Programas de movilidad global",
-          desc: "Creación e implementación de estrategias integrales para la movilidad de talento a nivel regional o global.",
+          title: "Movilidad Global",
+          desc: "Definición de estrategia, ejecución y coordinación de programas de movilidad a escala regional o global. Nuestro modelo incluye atención personalizada, guías de llegada y acompañamiento en cada etapa del proceso.",
           bullets: [
             "Diseño de políticas de movilidad corporativa",
-            "Estrategias end-to-end de relocalización",
-            "Gestión migratoria de dependientes y familia",
-            "Programas de onboarding cultural",
-          ],
-        },
-        {
-          num: "02",
-          title: "Procesamiento de trámites migratorios",
-          desc: "Gestión completa de todo tipo de trámites ante las autoridades migratorias, a nivel nacional e internacional.",
-          bullets: [
-            "Residencias temporales y permanentes",
-            "Visas de trabajo para ejecutivos y especialistas",
-            "Renovaciones y extensiones estratégicas",
-            "Representación en inspecciones gubernamentales",
-          ],
-        },
-        {
-          num: "03",
-          title: "Coordinación multi-país",
-          desc: "Articulación de servicios migratorios en múltiples jurisdicciones a través de nuestra red internacional de 25 firmas especializadas.",
-          bullets: [
-            "Cobertura en más de 25 jurisdicciones",
-            "Un punto de contacto para todos los países",
-            "Coordinación de plazos y requisitos locales",
+            "Estrategias de relocalización end-to-end",
+            "Acompañamiento migratorio para familias y dependientes",
+            "Coordinación multi-país con red de más de 25 firmas",
             "Reportes consolidados por región",
           ],
         },
         {
-          num: "04",
-          title: "Registros patronales",
-          desc: "Obtención de registros y permisos para que las empresas puedan contratar legalmente a personal extranjero en México.",
+          num: "02",
+          title: "Trámites Migratorios",
+          desc: "Ejecutamos cada trámite ante autoridades migratorias a nivel nacional e internacional. Nuestro equipo conoce los criterios, precedentes y rutas eficientes para cada tipo de solicitud, con comunicación constante sobre el estatus de cada caso.",
           bullets: [
-            "Registro ante el INM como empleador",
-            "Obtención de RENAPO y CURP empresarial",
-            "Actualización de registros ante cambios societarios",
-            "Asesoría en cuotas de contratación",
+            "Visas de trabajo",
+            "Residencias temporales y permanentes",
+            "Residencias para familias",
+            "Renovaciones, extensiones y regularizaciones",
+            "Constancias de Inscripción de Empleador y actualizaciones",
+            "Nacionalidad mexicana por naturalización",
           ],
         },
         {
-          num: "05",
-          title: "Cumplimiento de obligaciones migratorias",
-          desc: "Notificación y seguimiento de todas las obligaciones regulatorias aplicables a residentes extranjeros y sus empleadores.",
+          num: "03",
+          title: "Compliance Migratorio",
+          desc: "Cumplimiento de obligaciones migratorias para empresas, residentes extranjeros y sus dependientes. Anticipamos riesgos, monitoreamos vencimientos, auditamos cumplimiento normativo y preparamos equipos de movilidad y recursos humanos.",
           bullets: [
             "Auditorías preventivas de cumplimiento normativo",
-            "Alertas automáticas de vencimientos",
+            "Alertas de vencimientos",
             "Capacitación especializada a equipos de RRHH",
-            "Gestión de sanciones y regularizaciones",
+            "Atención de sanciones y regularizaciones",
+            "Monitoreo de condiciones de estancia",
           ],
         },
         {
-          num: "06",
-          title: "Orientación fiscal",
-          desc: "Asesoría de entendimiento sobre la situación fiscal en México y consideraciones de tributación global para colaboradores internacionales.",
+          num: "04",
+          title: "Servicios Complementarios",
+          desc: "Servicios especializados que complementan la operación migratoria: documentación fiscal para colaboradores extranjeros, visados de negocios o turismo para otros países y apoyo en la integración al país.",
           bullets: [
-            "Diagnóstico de residencia fiscal",
-            "Coordinación con asesores fiscales internacionales",
-            "Estructuración de paquetes de expatriación",
-            "Análisis de convenios para evitar doble tributación",
+            "Obtención de RFC, FIEL y Seguridad Social",
+            "Apostillas, legalizaciones y traducciones",
+            "Visas internacionales de turismo y negocios",
+            "Constancias de No Antecedentes Penales",
+            "Obtención de otras nacionalidades en México y otras partes del mundo",
+            "Vinculación estratégica",
           ],
         },
       ],
-      requestInfo: "Solicitar información",
+      requestInfo: "Hablar con SAM",
     },
     personal: {
       eyebrow: "Personas y Familias",
@@ -411,7 +432,7 @@ export const es = {
         },
         {
           title: "Residencias permanentes",
-          desc: "Gestión del proceso para la obtención de residencia permanente en territorio mexicano.",
+          desc: "Acompañamiento del proceso para la obtención de residencia permanente en territorio mexicano.",
         },
         {
           title: "Nacionalidad mexicana",
@@ -419,7 +440,7 @@ export const es = {
         },
         {
           title: "Otras nacionalidades",
-          desc: "Gestión de trámites para la obtención de nacionalidades de otros países a través de sus representaciones consulares en México.",
+          desc: "Acompañamiento de trámites para la obtención de nacionalidades de otros países a través de sus representaciones consulares en México.",
         },
         {
           title: "Visas internacionales",
@@ -439,7 +460,7 @@ export const es = {
       items: [
         {
           title: "Apostillas, legalizaciones y traducciones",
-          desc: "Gestión documental completa para validar documentos en territorio mexicano o en el extranjero.",
+          desc: "Procesamiento documental completo para validar documentos en territorio mexicano o en el extranjero.",
         },
         {
           title: "Relocation",
@@ -453,20 +474,20 @@ export const es = {
       cta: "Agendar consulta",
     },
     closingCta: {
-      eyebrow: "Servicio Premium",
-      title: "¿Necesita un servicio que no aparece en esta lista?",
+      eyebrow: "Servicio a la medida",
+      title: "¿Necesitas un servicio a la medida?",
       subtitle:
         "Contáctanos. Cada caso es único y nuestro equipo puede diseñar una solución a la medida.",
-      cta: "Contactar a un Socio",
+      cta: "Hablar con un especialista",
     },
   },
 
   equipo: {
     hero: {
-      eyebrow: "EQUIPO",
-      titleLine1: "EL TALENTO DETRÁS",
-      titleLine2: "DE CADA SOLUCIÓN",
-      subtitle: "El talento detrás de cada solución migratoria.",
+      eyebrow: "NUESTRO TALENTO",
+      titleLine1: "NUESTRO",
+      titleLine2: "TALENTO",
+      subtitle: "Equipo especializado para acompañarte en cada paso.",
     },
     oscar: {
       eyebrow: "Socio Fundador",
@@ -491,6 +512,7 @@ export const es = {
     team: {
       eyebrow: "Equipo",
       title: "Equipo Operativo",
+      intro: "Nuestro equipo está conformado por profesionales especializados en derecho migratorio, cumplimiento normativo y atención al cliente, cada uno con un rol clave en la experiencia que ofrecemos.",
       members: [
         {
           name: "Carlos Mendoza",
@@ -521,7 +543,7 @@ export const es = {
     carreras: {
       eyebrow: "Carreras",
       title: "Únete a la firma",
-      desc: "Buscamos talento excepcional con vocación por la excelencia jurídica y visión global.",
+      desc: "Forma parte de nuestro equipo.",
       cta: "Enviar CV",
       email: "careers@santosbecker.com",
     },
@@ -530,19 +552,19 @@ export const es = {
   tecnologia: {
     hero: {
       eyebrow: "TECNOLOGÍA",
-      titleLine1: "CONTROL Y CLARIDAD",
-      titleLine2: "EN CADA PROCESO",
+      titleLine1: "TECNOLOGÍA",
+      titleLine2: "CON CLARIDAD",
       subtitle:
         "Innovación diseñada para darte control y claridad sobre tu proceso migratorio.",
     },
     plataforma: {
-      eyebrow: "Plataforma de Gestión y Seguimiento",
-      title: "El poder de la información en tiempo real",
+      eyebrow: "Plataforma de seguimiento",
+      title: "Tecnología para decisiones con certeza",
       intro:
-        "Desarrollamos una tecnología propia para la gestión de casos migratorios. Cada cliente accede a un espacio donde puede consultar el estado de sus trámites, revisar documentación y visualizar su proceso.",
+        "Contamos con tecnología que brinda seguridad a nuestros clientes sobre el seguimiento de cada proceso migratorio, incluyendo vencimientos y repositorio de documentos.",
       features: [
         { n: "01", title: "Dashboard Ejecutivo", desc: "Vista unificada de todos los procesos activos, vencimientos críticos y alertas en tiempo real, con acceso multi-usuario y roles diferenciados." },
-        { n: "02", title: "Gestión Documental", desc: "Repositorio encriptado con organización automática por caso y empleado. Acceso controlado, historial de versiones y firma digital." },
+        { n: "02", title: "Repositorio Documental", desc: "Repositorio encriptado con organización automática por caso y empleado. Acceso controlado, historial de versiones y firma digital." },
         { n: "03", title: "Trazabilidad Total", desc: "Registro completo de cada acción del proceso, notificaciones automáticas ante cambios de estatus y reportes ejecutivos exportables." },
       ],
       capabilitiesEyebrow: "Capacidades",
@@ -559,7 +581,7 @@ export const es = {
       workflowTitle: "Cómo funciona",
       workflow: [
         { step: "01", title: "Onboarding Digital", desc: "Carga segura de información inicial a través del portal encriptado. Expediente activado en menos de 24 horas hábiles." },
-        { step: "02", title: "Procesamiento", desc: "El equipo jurídico gestiona el caso con visibilidad en tiempo real para el cliente en cada etapa del proceso." },
+        { step: "02", title: "Procesamiento", desc: "El equipo jurídico acompaña el caso con visibilidad en tiempo real para el cliente en cada etapa del proceso." },
         { step: "03", title: "Resolución", desc: "Recepción digital de aprobaciones y resguardo automático en el repositorio corporativo. Notificación inmediata." },
       ],
       cta: "Solicitar una demo",
@@ -567,17 +589,12 @@ export const es = {
     sam: {
       eyebrow: "Inteligencia Artificial",
       title: "SAM — Asistente Virtual",
-      fullName: "Asistente Virtual de Migración",
+      fullName: "Asistente virtual y equipo de AI Associates",
       body: [
-        "SAM es nuestra asistente virtual, responsable de mantener a cada cliente informado de manera oportuna con la información que necesita para tomar decisiones con certeza.",
+        "SAM es nuestra asistente virtual y su equipo de AI Associates son responsables de mantener a cada cliente informado de manera oportuna con la información que necesita para tomar decisiones con certeza.",
         "Esta solución, basada en inteligencia artificial, nos permite ofrecer una comunicación más precisa, más ágil y a una escala que complementa la atención directa de nuestro equipo.",
       ],
-      features: [
-        { title: "Consultas inmediatas", desc: "Respuestas precisas sobre requisitos, plazos y procedimientos en tiempo real." },
-        { title: "Orientación de casos", desc: "SAM analiza el perfil del caso y sugiere la ruta migratoria más eficiente." },
-        { title: "Disponible 24/7", desc: "Acceso continuo desde la plataforma, app móvil o WhatsApp corporativo." },
-        { title: "Escalamiento inteligente", desc: "Cuando el caso lo requiere, SAM conecta directamente con el abogado responsable." },
-      ],
+      features: [],
       mockQ: "¿Cuál es el plazo estándar para una visa de transferencia intracompany en México?",
       mockA: "El plazo habitual es de 15 a 30 días hábiles, sujeto al tipo de empresa y documentación. ¿Desea iniciar el proceso?",
       cta: "Conoce a SAM, nuestra asistente virtual",
@@ -590,15 +607,15 @@ export const es = {
       titleLine1: "INCLUSIÓN LABORAL",
       titleLine2: "CON IMPACTO REAL",
       subtitle:
-        "Lideramos iniciativas de inclusión laboral de migrantes en México, respaldados por alianzas con los organismos internacionales más relevantes del sector.",
+        "Somos el único despacho mexicano especializado en materia migratoria con alianzas estratégicas con organismos internacionales públicos y privados, comprometidos con la inclusión laboral para personas migrantes y refugiadas en México.",
     },
     position: {
-      eyebrow: "Nuestra Posición",
-      title: "Más allá de la visa",
+      eyebrow: "Inclusión que transforma",
+      title: "Compromiso real con la inclusión",
       body: [
         "En Santos & Becker, la inclusión laboral de migrantes y refugiados en México es una línea de acción permanente. Desde nuestro conocimiento técnico en materia migratoria y nuestro relacionamiento con el sector público y privado, trabajamos activamente para que más empresas integren talento internacional en sus equipos.",
-        "Santos & Becker defiende que la contratación de talento extranjero es un activo estratégico para las organizaciones modernas, no un riesgo regulatorio que gestionar en el mínimo indispensable.",
-        "Por eso asesoramos a las áreas de Recursos Humanos para convertir cada contratación internacional en un proceso controlado, eficiente y sostenible.",
+        "Santos & Becker defiende que la contratación de talento extranjero es un activo estratégico para las organizaciones modernas, no un riesgo regulatorio que atender en el mínimo indispensable.",
+        "Asesoramos pro bono a cualquier organización que esté interesada en la inclusión laboral de migrantes y refugiados.",
       ],
       servicesEyebrow: "Acción concreta",
       services: [
@@ -611,25 +628,25 @@ export const es = {
           desc: "En nuestra propia firma, contamos con colaboradores que llegaron al país como refugiados y hoy forman parte integral de nuestro equipo.",
         },
         {
-          title: "Capacitación a empleadores",
-          desc: "Talleres y sesiones de orientación para equipos de RRHH sobre contratación de talento migrante.",
-        },
-        {
-          title: "Gestión de registros y cuotas",
-          desc: "Obtención de constancias de empleador y revisión de proporciones conforme a la ley laboral.",
+          title: "Aliados estratégicos",
+          desc: "Acompañamos a las empresas en la integración de talento migrante con conocimiento técnico y visión estratégica.",
         },
       ],
     },
     alliances: {
-      eyebrow: "Alianzas",
-      title: "Respaldados por los organismos más relevantes",
+      eyebrow: "Aliados estratégicos",
+      title: "Acompañamos a empresas con visión estratégica",
       subtitle:
-        "Nuestra agenda de inclusión está respaldada por alianzas con las organizaciones más relevantes del ecosistema.",
+        "Acompañamos a las empresas en la integración de talento migrante con conocimiento técnico y visión estratégica.",
       items: [
+        { name: "Invest Monterrey", full: "Agencia oficial de promoción de inversión del estado de Nuevo León" },
+        { name: "CCI France México", full: "Cámara de comercio franco-mexicana orientada al impulso de negocios, inversión y vinculación empresarial" },
+        { name: "AILA", full: "Asociación profesional de referencia en derecho migratorio en Estados Unidos" },
         { name: "TENT Partnership for Refugees", full: "Organización global dedicada a la inclusión laboral de refugiados" },
         { name: "OIM", full: "Agencia de la ONU especializada en migración" },
         { name: "ACNUR", full: "Alto Comisionado de las Naciones Unidas para los Refugiados" },
-        { name: "AMCHAM", full: "Consejo de inclusión laboral de migrantes — AMCHAM" },
+        { name: "OIT", full: "Agencia especializada de Naciones Unidas enfocada en justicia social, derechos laborales y trabajo decente" },
+        { name: "ASEM", full: "Asociación civil que representa a personas emprendedoras y promueve mejores condiciones para emprender en México" },
       ],
     },
     methodology: {
@@ -638,18 +655,18 @@ export const es = {
       steps: [
         { n: "01", title: "Diagnóstico Corporativo", desc: "Análisis de la estructura organizacional, proporciones de contratación y riesgos regulatorios actuales." },
         { n: "02", title: "Estrategia de Cumplimiento", desc: "Diseño de un plan de acción personalizado para garantizar el cumplimiento normativo en cada contratación." },
-        { n: "03", title: "Implementación Documental", desc: "Gestión de todos los contratos, registros y trámites ante las autoridades competentes." },
+        { n: "03", title: "Implementación Documental", desc: "Procesamiento de todos los contratos, registros y trámites ante las autoridades competentes." },
         { n: "04", title: "Monitoreo Continuo", desc: "Seguimiento periódico para actualizar los expedientes y anticipar cambios regulatorios." },
       ],
       stats: [
         { n: "100%", l: "Cumplimiento garantizado" },
-        { n: "+15", l: "Países con cobertura" },
+        { n: "PRO BONO", l: "Consultoría para empresas interesadas" },
         { n: "360°", l: "Visibilidad del proceso" },
       ],
     },
     cta: {
       eyebrow: "Próximos Pasos",
-      title: "Estructure su proceso de contratación internacional",
+      title: "Conozca más sobre inclusión laboral",
       subtitle:
         "Si su empresa está interesada en conocer más sobre inclusión laboral de migrantes y refugiados, nuestro equipo puede orientarle sin compromiso.",
       cta: "Contáctenos",
@@ -702,6 +719,14 @@ export const es = {
       phoneLabel: "Teléfono",
       emailLabel: "Email",
       waLabel: "WhatsApp",
+      socialEyebrow: "Redes sociales",
+      socials: [
+        { name: "LinkedIn", label: "Santos & Becker", href: "#" },
+        { name: "Instagram", label: "@santosbecker_sc", href: "#" },
+        { name: "Facebook", label: "Santos & Becker", href: "#" },
+        { name: "YouTube", label: "S&B YouTube Channel", href: "#" },
+        { name: "WhatsApp", label: "+52 55 6617 7712", href: "https://wa.me/525566177712" },
+      ],
       hoursLabel: "Horario de Atención",
       hours: "Lunes a Jueves: 9:00 – 18:00\nViernes: 9:00 – 15:00",
       officesEyebrow: "Oficinas",

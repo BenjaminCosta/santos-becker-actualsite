@@ -15,7 +15,7 @@ export const en = {
     footer: {
       tagline: "Strategic Immigration Consulting & Compliance",
       description:
-        "Elite corporate immigration consulting and regulatory compliance advisory for global companies and high-impact professionals.",
+        "Strategic immigration consulting and compliance for global companies, families, and international talent.",
       email: "info@santosbecker.com",
       phone: "+52 55 6617 7712",
       firma: {
@@ -27,8 +27,8 @@ export const en = {
         links: [
           "Corporate Strategy",
           "Residencies & Visas",
-          "Naturalization",
-          "Apostilles & Relocation",
+          "Immigration Compliance",
+          "Complementary Services",
           "Bespoke Service",
         ],
       },
@@ -50,7 +50,7 @@ export const en = {
       },
       editorial: {
         heading: "The Professional\nStandard.",
-        body: "Santos & Becker is more than a firm; it is an institution built on technical precision and legal excellence, with strategic presence in Mexico's leading economic corridors.",
+        body: "Santos & Becker supports global mobility with technical precision, regulatory compliance, and strategic presence in Mexico's leading economic corridors.",
       },
     },
     whatsapp: {
@@ -63,8 +63,8 @@ export const en = {
 
   home: {
     hero: {
-      eyebrow: "STRATEGIC IMMIGRATION CONSULTING",
-      lines: ["Where global talent", "finds its", "path"],
+      eyebrow: "GLOBAL STRATEGIC IMMIGRATION CONSULTING & COMPLIANCE",
+      lines: ["Strategic global", "mobility without", "complications"],
       subtitle:
         "We transform every immigration process with strategic solutions and personalized support. Three decades as the trusted partner of global companies and international talent in Mexico.",
       ctaPrimary: "Contact Us",
@@ -73,18 +73,18 @@ export const en = {
 
     about: {
       eyebrow: "Who We Are",
-      title: "Strategic immigration consulting with a boutique vision",
+      title: "Global immigration consulting and strategy",
       body: [
-        "Santos & Becker is a Mexican boutique firm specializing in strategic immigration consulting, founded by two partners with complementary careers spanning more than three decades in the sector.",
-        "We advise Mexican companies, multinationals, and individuals — both national and foreign — in the design and implementation of immigration solutions to the highest regulatory compliance standards. Our model combines legal rigor, strategic vision, and personalized service that has positioned us as industry leaders.",
+        "We are a Mexican global immigration consulting and strategy firm, founded by two partners with complementary careers spanning more than 25 years in the sector.",
+        "We advise Mexican companies, multinationals, and national and foreign individuals in the design and implementation of immigration solutions with the highest regulatory compliance standards. Our model combines compliance, strategic vision, and personalized attention that has positioned us as a global industry reference.",
       ],
       stats: [
-        { value: 30, prefix: "+", suffix: " years", label: "of specialized practice" },
+        { value: 25, prefix: "+", suffix: " years", label: "of specialized practice" },
         { value: 500, prefix: "+", suffix: "", label: "companies in active portfolio" },
-        { value: 5000, prefix: "+", suffix: "", label: "foreigners assisted with their families" },
+        { value: 10000, prefix: "+", suffix: "", label: "foreigners assisted with their families" },
         { value: 95, prefix: "", suffix: "% NPS", label: "client satisfaction index" },
         { value: 4, prefix: "", suffix: " offices", label: "nationwide: CDMX · Monterrey · Guadalajara · Cancún" },
-        { value: 25, prefix: "", suffix: " firms", label: "in our international network" },
+        { value: 25, prefix: "+", suffix: " firms", label: "specialized around the world" },
       ],
       cta: "Learn our story",
     },
@@ -93,29 +93,29 @@ export const en = {
       eyebrow: "Our Purpose",
       titleLines: [
         "Our purpose is clear:",
-        "certainty, agility, and guidance",
+        "positive impact",
       ],
       body: [
-        "Our purpose is clear: to guarantee minimum friction, maximum legal certainty, and the support of a professional team that accompanies and advises each client throughout the entire process.",
-        "We design immigration strategies tailored to each company and individual, with a level of service only possible through a boutique model.",
+        "Our purpose is clear: to create a positive impact for every person we serve.",
+        "We design immigration strategies tailored to each company and each person, combining clear operating models, regulatory compliance, and close support at every stage.",
       ],
       cta: "Discover how we work",
     },
 
     differentiators: {
       eyebrow: "Why Choose Us",
-      title: "A different firm",
+      title: "What sets us apart",
       items: [
-        {
-          title: "Direct engagement with authorities",
-          desc: "We maintain an active relationship of professional recognition with the leading immigration and consular authorities in the country. This translates into faster processes, clear criteria, and solutions that comply with every regulation in force.",
-        },
         {
           title: "A measurable service standard",
           desc: "We don't talk about quality in abstract terms — we measure it. Our service model has achieved a 95% satisfaction index (NPS), supported by defined response times, punctual follow-up, and a commitment to KPIs we demand on every case.",
         },
         {
-          title: "Permanent anticipation",
+          title: "National presence, global reach",
+          desc: "We operate from four offices in Mexico (Mexico City, Monterrey, Guadalajara, and Cancún) with local teams covering the entire country. For international requirements, we are founding members of a network of more than 25 firms specialized in immigration law around the world.",
+        },
+        {
+          title: "Strategic anticipation",
           desc: "We stay ahead. Every regulatory change, every expiration, and every variable that could affect a process is continuously monitored so our clients receive timely alerts and recommendations without having to ask for them.",
         },
         {
@@ -123,46 +123,49 @@ export const en = {
           desc: "We collaborate with IOM, UNHCR, and TENT Partnership for Refugees on labor inclusion initiatives for migrants and refugees. We offer pro bono consulting to companies interested in hiring migrant talent, and within our own firm, we employ people who found refuge in Mexico.",
         },
         {
-          title: "National presence, global reach",
-          desc: "We operate from four offices in Mexico (Mexico City, Monterrey, Guadalajara, and Cancún) with local teams covering the entire country. For international requirements, we are founding members of a network of 25 firms specialized in immigration law around the world.",
+          title: "Direct engagement with authorities",
+          desc: "We maintain an active relationship of professional recognition with the leading immigration and consular authorities in the country. This translates into faster processes, clear criteria, and solutions that comply with every regulation in force.",
         },
         {
-          title: "Technology that works for the client",
-          desc: "Our AI-powered platform allows each client to track their cases in real time, access documentation, and understand every stage of their process — all from one place.",
+          title: "Technology applied to global mobility",
+          desc: "We use technology so every client has full clarity over their procedures. Discover how we are transforming immigration operations with artificial intelligence.",
         },
       ],
     },
 
     services: {
-      eyebrow: "Services",
-      title: "Comprehensive immigration solutions",
+      eyebrow: "What we do",
+      title: "Strategic immigration services",
       items: [
         {
-          title: "Corporate Immigration Strategy",
-          sub: "Global mobility · Procedures · Multi-country coordination",
+          title: "Global Mobility",
+          sub: "Policies · Consulting · Regional and global coordination",
         },
         {
-          title: "Services for Professionals & Families",
-          sub: "Residencies · Naturalization · International visas",
+          title: "Immigration Procedures",
+          sub: "Residencies · Work visas · Renewals",
+        },
+        {
+          title: "Immigration Compliance",
+          sub: "Audits · Risk · Preventive monitoring",
         },
         {
           title: "Complementary Services",
-          sub: "Apostilles · Relocation · International consulting",
+          sub: "Tax ID · Social security · Apostilles · Visas",
         },
       ],
-      cta: "View all services",
+      cta: "Explore each service in detail",
     },
 
     technology: {
-      eyebrow: "Immigration Innovation",
-      title: "Digital immigration management platform",
+      eyebrow: "Our Technology",
+      title: "Global mobility powered by intelligent technology",
       intro:
-        "We developed our own technology so every client has complete clarity on their procedures. Discover how artificial intelligence is transforming immigration management.",
+        "We use technology so every client has full clarity over their procedures. Discover how we are transforming immigration operations with artificial intelligence.",
       features: [
-        "Real-time tracking — Updated status of every ongoing procedure",
-        "Centralized documentation — Access to all process documents in one place",
-        "Service requests — Open new cases directly from the platform",
-        "SAM — Virtual immigration management assistant",
+        "SAM keeps every client informed with timely data",
+        "AI Associates support more precise and agile communication",
+        "A digital channel built for clarity, traceability, and support",
       ],
       cta: "Meet SAM, our virtual assistant",
     },
@@ -173,18 +176,18 @@ export const en = {
       subtitle:
         "We work alongside the most relevant organizations in the international immigration ecosystem and Mexico's business environment.",
       alianzas: ["UNHCR", "IOM", "TENT Partnership for Refugees"],
-      afiliaciones: ["COMCE", "Invest Monterrey", "CCI France México"],
+      afiliaciones: ["COMCE", "Invest Monterrey", "CCI France México", "AILA", "ILO", "ASEM"],
     },
 
     bespoke: {
       eyebrow: "Bespoke",
       titleLines: ["Beyond", "immigration"],
-      desc: "Our reach goes beyond immigration. Through Bespoke, our strategic consulting division, we offer tailored solutions for our clients' business challenges.",
+      desc: "Our reach goes beyond immigration. Through our strategic connection model, we find and develop tailored solutions, connecting communities, strategic relationship spaces, and a network of decision-makers that accelerates alliances, opportunities, and results.",
       features: [
-        "Dedicated account executive",
-        "Immediate 24/7 response",
-        "Discreet and confidential management",
-        "Direct partner access",
+        "Tailored solutions",
+        "Connection with strategic communities",
+        "Decision-maker network",
+        "Direct partner support",
       ],
       testimonial: {
         text: "Santos & Becker's Bespoke service has been fundamental in managing our senior executives' mobility with the discretion and efficiency we require.",
@@ -233,21 +236,21 @@ export const en = {
   nosotros: {
     hero: {
       eyebrow: "ABOUT US",
-      titleLine1: "THREE DECADES",
-      titleLine2: "OF TRUST",
+      titleLine1: "ABOUT",
+      titleLine2: "GLOBAL TRUST",
       subtitle:
-        "A firm built on three decades of practice, trusted relationships, and a commitment demonstrated with every client.",
+        "A firm grounded in trust and backed by a constant commitment to every client.",
     },
     about: {
       eyebrow: "Who We Are",
-      title: "A different vision of immigration practice",
+      title: "Transforming immigration from a transactional service into a global mobility strategy.",
       body: [
-        "We are a Mexican boutique firm specializing in strategic immigration consulting, founded by two partners with careers spanning more than three decades in the sector.",
+        "We are a Mexican global immigration strategy, consulting, and compliance firm, founded by two partners with complementary careers spanning more than 25 years in the sector.",
         "We advise Mexican companies, multinationals, and individuals — both national and foreign — in the design and implementation of immigration solutions to the highest regulatory compliance standards.",
-        "Our model combines legal rigor, strategic vision, and personalized service that has positioned us as industry leaders. Today, our portfolio includes more than 500 active companies and a track record of over 5,000 foreigners accompanied along with their families.",
+        "Our model combines legal compliance, strategic vision, and personalized attention that has positioned us as an industry reference. Today, our portfolio includes more than 500 active companies and a track record of more than 10,000 foreigners accompanied along with their families.",
       ],
       quote:
-        "The immigration process involves a dimension that few firms understand: the trust relationship built with each client. That closeness is what defines our business model.",
+        "The immigration process involves a dimension that few firms understand: the trust relationship built with each client.",
       cta: "Meet the team",
     },
     enfoque: {
@@ -266,9 +269,32 @@ export const en = {
         },
         {
           step: "03",
-          title: "Precision Execution",
-          desc: "Our team executes every procedure with technical rigor, leveraging our technology platform to ensure full traceability and process control.",
+          title: "Execution and Support",
+          desc: "Each process is executed with regulatory precision, full traceability, and the closeness of a team that supports clients from beginning to end.",
         },
+      ],
+    },
+    institucional: {
+      eyebrow: "Principles",
+      title: "Mission, vision, and values",
+      mission: {
+        title: "Mission",
+        desc: "To provide strategic solutions in global mobility and immigration compliance with the highest legal standards, supporting companies and individuals with a human, proactive, and personalized approach.",
+      },
+      vision: {
+        title: "Vision",
+        desc: "To position ourselves as Mexico's most trusted firm for global mobility strategy, consulting, and compliance, strengthening our international presence.",
+      },
+      values: [
+        { title: "Compliance", desc: "Operate with strict legal adherence, transparency, and risk prevention for companies and international talent." },
+        { title: "Professional ethics", desc: "Act with integrity, honesty, and responsibility in every decision and process." },
+        { title: "Anti-corruption", desc: "Maintain a zero-tolerance policy toward improper practices, prioritizing legal and transparent processes." },
+        { title: "Transparency", desc: "Communicate timelines, risks, costs, and expectations clearly, realistically, and objectively." },
+        { title: "Confidentiality", desc: "Protect client and foreign national information with high security and discretion standards." },
+        { title: "Empathy", desc: "Recognize that behind every procedure there are people, families, professional projects, and life changes." },
+        { title: "Trust", desc: "Build long-term relationships based on credibility, consistency, and results." },
+        { title: "Operational excellence", desc: "Care for every detail, response time, and execution quality." },
+        { title: "Corporate responsibility", desc: "Promote responsible and sustainable immigration practices aligned with international standards." },
       ],
     },
     diferenciadores: {
@@ -302,7 +328,7 @@ export const en = {
       ],
       stats: [
         { n: "+500", l: "Companies in active portfolio" },
-        { n: "+5,000", l: "Foreigners accompanied" },
+        { n: "+10,000", l: "Foreigners accompanied" },
         { n: "95% NPS", l: "Satisfaction index" },
       ],
     },
@@ -312,92 +338,87 @@ export const en = {
       subtitle:
         "We work alongside the most relevant organizations in the international immigration ecosystem and Mexico's business environment.",
       alianzas: ["UNHCR", "IOM", "TENT Partnership for Refugees"],
-      afiliaciones: ["COMCE", "Invest Monterrey", "CCI France México"],
+      afiliaciones: ["COMCE", "Invest Monterrey", "CCI France México", "AILA", "ILO", "ASEM"],
+    },
+    publicaciones: {
+      eyebrow: "Publications",
+      title: "Articles and interviews",
+      items: [
+        {
+          title: "From a transactional service to a disruptive global mobility strategy",
+          source: "Forbes México",
+          href: "https://forbes.com.mx/patrocinado-santos-becker-de-un-servicio-transaccional-a-una-estrategia-global-de-movilidad-disruptiva/#google_vignette",
+        },
+      ],
     },
   },
 
   servicios: {
     hero: {
       eyebrow: "SERVICES",
-      titleLine1: "IMMIGRATION",
-      titleLine2: "SOLUTIONS",
+      titleLine1: "STRATEGIC GLOBAL",
+      titleLine2: "MOBILITY",
       subtitle:
-        "Comprehensive immigration consulting for companies that move talent and professionals seeking certainty in Mexico.",
+        "Immigration solutions and compliance with a strategic vision. Personalized attention at every stage.",
     },
     corporate: {
-      eyebrow: "Companies & Corporations",
-      title: "Corporate Immigration Strategy",
+      eyebrow: "Mexican companies, multinationals, and entrepreneurs",
+      title: "Strategy, consulting, and compliance in corporate immigration matters",
       intro:
-        "We design and execute immigration strategies aligned with each organization's business objectives. With the rigor that multinational companies demand.",
+        "We design and execute immigration strategies aligned with each organization's business objectives and needs.",
       items: [
         {
           num: "01",
-          title: "Global mobility programs",
-          desc: "Creation and implementation of comprehensive strategies for talent mobility at regional or global level.",
+          title: "Global Mobility",
+          desc: "Strategy definition, execution, and coordination of mobility programs at regional or global scale. Our model includes personalized attention, arrival guides, and support at every stage of the process.",
           bullets: [
             "Corporate mobility policy design",
             "End-to-end relocation strategies",
-            "Immigration management for dependents and families",
-            "Cultural onboarding programs",
-          ],
-        },
-        {
-          num: "02",
-          title: "Immigration procedure processing",
-          desc: "Complete management of all types of procedures before immigration authorities, at national and international level.",
-          bullets: [
-            "Temporary and permanent residencies",
-            "Work visas for executives and specialists",
-            "Strategic renewals and extensions",
-            "Representation in government inspections",
-          ],
-        },
-        {
-          num: "03",
-          title: "Multi-country coordination",
-          desc: "Articulation of immigration services across multiple jurisdictions through our international network of 25 specialized firms.",
-          bullets: [
-            "Coverage in more than 25 jurisdictions",
-            "One point of contact for all countries",
-            "Coordination of local deadlines and requirements",
+            "Immigration support for families and dependents",
+            "Multi-country coordination with a network of more than 25 firms",
             "Consolidated regional reports",
           ],
         },
         {
-          num: "04",
-          title: "Employer registrations",
-          desc: "Obtaining registrations and permits so companies can legally hire foreign personnel in Mexico.",
+          num: "02",
+          title: "Immigration Procedures",
+          desc: "We execute each procedure before immigration authorities at national and international levels. Our team knows the criteria, precedents, and efficient routes for each request, with constant communication on case status.",
           bullets: [
-            "Registration before INM as employer",
-            "Obtaining RENAPO and corporate CURP",
-            "Updating registrations upon corporate changes",
-            "Advisory on hiring quotas",
+            "Work visas",
+            "Temporary and permanent residencies",
+            "Residencies for families",
+            "Renewals, extensions, and regularizations",
+            "Employer Registration Certificates and updates",
+            "Mexican nationality by naturalization",
           ],
         },
         {
-          num: "05",
-          title: "Immigration compliance obligations",
-          desc: "Notification and monitoring of all regulatory obligations applicable to foreign residents and their employers.",
+          num: "03",
+          title: "Immigration Compliance",
+          desc: "Compliance with immigration obligations for companies, foreign residents, and their dependents. We anticipate risks, monitor expirations, audit regulatory compliance, and prepare mobility and HR teams.",
           bullets: [
             "Preventive regulatory compliance audits",
-            "Automatic expiration alerts",
+            "Expiration alerts",
             "Specialized training for HR teams",
-            "Sanctions and regularization management",
+            "Sanctions and regularization support",
+            "Monitoring of stay conditions",
           ],
         },
         {
-          num: "06",
-          title: "Tax orientation",
-          desc: "Advisory on understanding the tax situation in Mexico and global taxation considerations for international collaborators.",
+          num: "04",
+          title: "Complementary Services",
+          desc: "Specialized services that complement immigration operations: tax documentation for foreign collaborators, business or tourism visas for other countries, and support for integration into Mexico.",
           bullets: [
-            "Tax residency diagnosis",
-            "Coordination with international tax advisors",
-            "Expatriate package structuring",
-            "Double taxation treaty analysis",
+            "Obtaining RFC, FIEL, and Social Security",
+            "Apostilles, legalizations, and translations",
+            "International tourism and business visas",
+            "No criminal record certificates",
+            "Obtaining other nationalities in Mexico and abroad",
+            "Strategic connection",
           ],
         },
       ],
-      requestInfo: "Request information",
+      requestInfo: "Talk to SAM",
     },
     personal: {
       eyebrow: "Individuals & Families",
@@ -453,20 +474,20 @@ export const en = {
       cta: "Schedule consultation",
     },
     closingCta: {
-      eyebrow: "Premium Service",
-      title: "Need a service not on this list?",
+      eyebrow: "Tailored service",
+      title: "Need a tailored service?",
       subtitle:
         "Contact us. Every case is unique and our team can design a tailored solution.",
-      cta: "Contact a Partner",
+      cta: "Talk to a specialist",
     },
   },
 
   equipo: {
     hero: {
-      eyebrow: "TEAM",
-      titleLine1: "THE TALENT BEHIND",
-      titleLine2: "EVERY SOLUTION",
-      subtitle: "The talent behind every immigration solution.",
+      eyebrow: "OUR TALENT",
+      titleLine1: "OUR",
+      titleLine2: "TALENT",
+      subtitle: "A specialized team to support you at every step.",
     },
     oscar: {
       eyebrow: "Founding Partner",
@@ -491,6 +512,7 @@ export const en = {
     team: {
       eyebrow: "Team",
       title: "Operational Team",
+      intro: "Our team is made up of professionals specialized in immigration law, regulatory compliance, and client service, each with a key role in the experience we provide.",
       members: [
         {
           name: "Carlos Mendoza",
@@ -521,7 +543,7 @@ export const en = {
     carreras: {
       eyebrow: "Careers",
       title: "Join the firm",
-      desc: "We seek exceptional talent with a vocation for legal excellence and a global vision.",
+      desc: "Become part of our team.",
       cta: "Send CV",
       email: "careers@santosbecker.com",
     },
@@ -530,16 +552,16 @@ export const en = {
   tecnologia: {
     hero: {
       eyebrow: "TECHNOLOGY",
-      titleLine1: "CONTROL AND CLARITY",
-      titleLine2: "IN EVERY PROCESS",
+      titleLine1: "TECHNOLOGY",
+      titleLine2: "WITH CLARITY",
       subtitle:
         "Innovation designed to give you control and clarity over your immigration process.",
     },
     plataforma: {
-      eyebrow: "Case Management & Tracking Platform",
-      title: "The power of real-time information",
+      eyebrow: "Tracking platform",
+      title: "Technology for decisions with certainty",
       intro:
-        "We developed proprietary technology for immigration case management. Each client accesses a space where they can check the status of their procedures, review documentation, and visualize their process.",
+        "We use technology that gives our clients security over the follow-up of each immigration process, including expirations and document repositories.",
       features: [
         { n: "01", title: "Executive Dashboard", desc: "Unified view of all active processes, critical expirations, and real-time alerts, with multi-user access and differentiated roles." },
         { n: "02", title: "Document Management", desc: "Encrypted repository with automatic organization by case and employee. Controlled access, version history, and digital signature." },
@@ -567,17 +589,12 @@ export const en = {
     sam: {
       eyebrow: "Artificial Intelligence",
       title: "SAM — Virtual Assistant",
-      fullName: "Immigration Management Virtual Assistant",
+      fullName: "Virtual assistant and AI Associates team",
       body: [
-        "SAM is our virtual assistant, responsible for keeping each client informed in a timely manner with the information they need to make decisions with certainty.",
+        "SAM is our virtual assistant and her team of AI Associates are responsible for keeping each client informed in a timely manner with the information they need to make decisions with certainty.",
         "This AI-based solution allows us to offer more precise, more agile communication at a scale that complements the direct attention of our team.",
       ],
-      features: [
-        { title: "Immediate queries", desc: "Precise answers on requirements, deadlines, and procedures in real time." },
-        { title: "Case guidance", desc: "SAM analyzes the case profile and suggests the most efficient immigration route." },
-        { title: "Available 24/7", desc: "Continuous access from the platform, mobile app, or corporate WhatsApp." },
-        { title: "Smart escalation", desc: "When the case requires it, SAM connects directly with the responsible attorney." },
-      ],
+      features: [],
       mockQ: "What is the standard timeline for an intracompany transfer visa in Mexico?",
       mockA: "The usual timeline is 15 to 30 business days, subject to company type and documentation. Would you like to start the process?",
       cta: "Meet SAM, our virtual assistant",
@@ -590,15 +607,15 @@ export const en = {
       titleLine1: "LABOR INCLUSION",
       titleLine2: "WITH REAL IMPACT",
       subtitle:
-        "We lead migrant labor inclusion initiatives in Mexico, supported by alliances with the most relevant international organizations in the sector.",
+        "We are the only Mexican firm specialized in immigration matters with strategic alliances with public and private international organizations, committed to labor inclusion for migrants and refugees in Mexico.",
     },
     position: {
-      eyebrow: "Our Position",
-      title: "Beyond the visa",
+      eyebrow: "Inclusion that transforms",
+      title: "A genuine commitment to inclusion",
       body: [
         "At Santos & Becker, the labor inclusion of migrants and refugees in Mexico is a permanent line of action. From our technical expertise in immigration matters and our relationships with the public and private sectors, we actively work to help more companies integrate international talent into their teams.",
         "Santos & Becker believes that hiring foreign talent is a strategic asset for modern organizations — not a regulatory risk to be managed at the bare minimum.",
-        "That is why we advise Human Resources departments to turn every international hire into a controlled, efficient, and sustainable process.",
+        "We provide pro bono advice to any organization interested in labor inclusion for migrants and refugees.",
       ],
       servicesEyebrow: "Concrete action",
       services: [
@@ -611,25 +628,25 @@ export const en = {
           desc: "Within our own firm, we have team members who arrived in the country as refugees and are now an integral part of our team.",
         },
         {
-          title: "Employer training",
-          desc: "Workshops and guidance sessions for HR teams on hiring migrant talent.",
-        },
-        {
-          title: "Registration and quota management",
-          desc: "Obtaining employer certificates and reviewing proportions in accordance with labor law.",
+          title: "Strategic allies",
+          desc: "We support companies in integrating migrant talent with technical knowledge and strategic vision.",
         },
       ],
     },
     alliances: {
-      eyebrow: "Alliances",
-      title: "Backed by the most relevant organizations",
+      eyebrow: "Strategic allies",
+      title: "We support companies with strategic vision",
       subtitle:
-        "Our inclusion agenda is backed by alliances with the most relevant organizations in the ecosystem.",
+        "We support companies in integrating migrant talent with technical knowledge and strategic vision.",
       items: [
+        { name: "Invest Monterrey", full: "Official investment promotion agency of the state of Nuevo León" },
+        { name: "CCI France México", full: "Franco-Mexican chamber of commerce focused on business, investment, and corporate connection" },
+        { name: "AILA", full: "Leading professional association for immigration law in the United States" },
         { name: "TENT Partnership for Refugees", full: "Global organization dedicated to refugee labor inclusion" },
         { name: "IOM", full: "UN agency specialized in migration" },
         { name: "UNHCR", full: "United Nations High Commissioner for Refugees" },
-        { name: "AMCHAM", full: "Migrant labor inclusion council — AMCHAM" },
+        { name: "ILO", full: "UN specialized agency focused on social justice, labor rights, and decent work" },
+        { name: "ASEM", full: "Civil association representing entrepreneurs and promoting better conditions for doing business in Mexico" },
       ],
     },
     methodology: {
@@ -643,13 +660,13 @@ export const en = {
       ],
       stats: [
         { n: "100%", l: "Guaranteed compliance" },
-        { n: "+15", l: "Countries with coverage" },
+        { n: "PRO BONO", l: "Consulting for interested companies" },
         { n: "360°", l: "Process visibility" },
       ],
     },
     cta: {
       eyebrow: "Next Steps",
-      title: "Structure your international hiring process",
+      title: "Learn more about labor inclusion",
       subtitle:
         "If your company is interested in learning more about migrant and refugee labor inclusion, our team can guide you with no commitment.",
       cta: "Contact Us",
@@ -702,6 +719,14 @@ export const en = {
       phoneLabel: "Phone",
       emailLabel: "Email",
       waLabel: "WhatsApp",
+      socialEyebrow: "Social media",
+      socials: [
+        { name: "LinkedIn", label: "Santos & Becker", href: "#" },
+        { name: "Instagram", label: "@santosbecker_sc", href: "#" },
+        { name: "Facebook", label: "Santos & Becker", href: "#" },
+        { name: "YouTube", label: "S&B YouTube Channel", href: "#" },
+        { name: "WhatsApp", label: "+52 55 6617 7712", href: "https://wa.me/525566177712" },
+      ],
       hoursLabel: "Office Hours",
       hours: "Monday to Thursday: 9:00 – 18:00\nFriday: 9:00 – 15:00",
       officesEyebrow: "Offices",

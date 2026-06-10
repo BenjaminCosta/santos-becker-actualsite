@@ -1,6 +1,7 @@
 import { InternalPageHero } from "@/components/shared/InternalPageHero";
 import { ContactForm } from "@/sections/contacto/ContactForm";
 import { ContactOffices } from "@/sections/contacto/ContactOffices";
+import { ContactAlternativeCta } from "@/sections/contacto/ContactAlternativeCta";
 import { useContent } from "@/context/LocaleContext";
 
 export function Contacto() {
@@ -17,6 +18,7 @@ export function Contacto() {
       />
       <ContactForm />
       <ContactOffices />
+      <ContactAlternativeCta />
     </div>
   );
 }

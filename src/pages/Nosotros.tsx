@@ -1,6 +1,7 @@
 import { InternalPageHero } from "@/components/shared/InternalPageHero";
 import { NosotrosAbout } from "@/sections/nosotros/NosotrosAbout";
 import { NosotrosEnfoque } from "@/sections/nosotros/NosotrosEnfoque";
+import { NosotrosInstitucional } from "@/sections/nosotros/NosotrosInstitucional";
 import { NosotrosDiferenciadores } from "@/sections/nosotros/NosotrosDiferenciadores";
 import { PartnerLogos } from "@/components/shared/PartnerLogos";
 import { useContent } from "@/context/LocaleContext";
@@ -19,6 +20,7 @@ export function Nosotros() {
       />
       <NosotrosAbout />
       <NosotrosEnfoque />
+      <NosotrosInstitucional />
       <NosotrosDiferenciadores />
       <PartnerLogos
         eyebrow={c.alliances.eyebrow}

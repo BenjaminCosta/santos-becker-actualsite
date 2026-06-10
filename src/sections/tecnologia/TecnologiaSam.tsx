@@ -39,14 +39,6 @@ export function TecnologiaSam() {
             <div className="font-sans text-xl text-muted-foreground space-y-6 leading-relaxed mb-10">
               {c.body.map((p, i) => <p key={i}>{p}</p>)}
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
-              {c.features.map((item, i) => (
-                <div key={i} className="pt-5 border-t border-border">
-                  <h4 className="font-heading text-base font-bold mb-2">{item.title}</h4>
-                  <p className="font-sans text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
-            </div>
             <Link href="/contacto" className="section-cta-rect section-cta-rect-primary">
               {c.cta}
             </Link>

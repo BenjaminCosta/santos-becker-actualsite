@@ -1,7 +1,5 @@
 import { InternalPageHero } from "@/components/shared/InternalPageHero";
 import { ServiciosCorporativos } from "@/sections/servicios/ServiciosCorporativos";
-import { ServiciosFamilias } from "@/sections/servicios/ServiciosFamilias";
-import { ServiciosComplementarios } from "@/sections/servicios/ServiciosCta";
 import { ServiciosClosingCta } from "@/sections/servicios/ServiciosClosingCta";
 import { useContent } from "@/context/LocaleContext";
 
@@ -18,8 +16,6 @@ export function Servicios() {
         subtitle={c.subtitle}
       />
       <ServiciosCorporativos />
-      <ServiciosFamilias />
-      <ServiciosComplementarios />
       <ServiciosClosingCta />
     </div>
   );

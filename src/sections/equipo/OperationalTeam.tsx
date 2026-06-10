@@ -11,6 +11,9 @@ export function OperationalTeam() {
           <div className="mb-16">
             <p className="typo-eyebrow text-primary mb-4">{c.team.eyebrow}</p>
             <h2 className="typo-title text-4xl md:text-5xl text-foreground">{c.team.title}</h2>
+            <p className="font-sans text-xl text-muted-foreground leading-relaxed mt-6 max-w-3xl">
+              {c.team.intro}
+            </p>
           </div>
         </FadeIn>
 
