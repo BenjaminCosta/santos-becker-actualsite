@@ -4,6 +4,7 @@ import { useInView } from "framer-motion";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { useContent } from "@/context/LocaleContext";
 import { SectionHeading } from "@/components/shared/SectionHeading";
+import { peopleInTransit } from "@/assets/photos";
 import {
   Clock,
   Briefcase,
@@ -90,7 +91,7 @@ export function HomeAbout() {
       <div className="flex flex-col lg:flex-row min-h-[80vh]">
         <div className="lg:w-1/2 relative min-h-[50vh] lg:min-h-full">
           <img
-          src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=960&q=80"
+            src={peopleInTransit}
             alt="Santos & Becker"
             loading="lazy"
             className="absolute inset-0 w-full h-full object-cover"

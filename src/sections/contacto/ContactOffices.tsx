@@ -1,9 +1,10 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { useContent } from "@/context/LocaleContext";
+import { cityStrategy, internationalFlags, officeMapPins, runwayMobility } from "@/assets/photos";
 
 const OFFICE_IMAGES = [
   {
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=80",
+    image: officeMapPins,
     badge: null,
     colClass: "md:col-span-7",
     aspect: "aspect-video",
@@ -11,7 +12,7 @@ const OFFICE_IMAGES = [
     offset: "",
   },
   {
-    image: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
+    image: cityStrategy,
     badge: null,
     colClass: "md:col-span-4 md:col-start-9",
     aspect: "aspect-[4/5]",
@@ -19,7 +20,7 @@ const OFFICE_IMAGES = [
     offset: "md:mt-48",
   },
   {
-    image: "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1200&q=80",
+    image: runwayMobility,
     badge: null,
     colClass: "md:col-span-5",
     aspect: "aspect-[3/2]",
@@ -27,7 +28,7 @@ const OFFICE_IMAGES = [
     offset: "md:mt-12",
   },
   {
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80",
+    image: internationalFlags,
     badge: null,
     colClass: "md:col-span-6 md:col-start-7",
     aspect: "aspect-video",

@@ -1,5 +1,6 @@
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { useContent } from "@/context/LocaleContext";
+import { officeMapPins } from "@/assets/photos";
 
 export function ContactMap() {
   const c = useContent().contacto.contactInfo.map;
@@ -8,7 +9,7 @@ export function ContactMap() {
     <section className="h-[380px] w-full relative overflow-hidden border-t border-border">
       <div
         className="w-full h-full bg-cover bg-center grayscale opacity-75"
-        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1430285561322-7808604715df?auto=format&fit=crop&w=1920&q=80")' }}
+        style={{ backgroundImage: `url(${officeMapPins})` }}
       />
       <div className="absolute inset-0 bg-black/25" />
       <div className="absolute left-6 top-6 z-10 max-w-md md:left-10 md:top-10">

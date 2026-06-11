@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { useContent } from "@/context/LocaleContext";
+import { cityStrategy } from "@/assets/photos";
 
 export function NosotrosAbout() {
   const c = useContent().nosotros.about;
@@ -30,7 +31,7 @@ export function NosotrosAbout() {
         <div className="lg:w-[55%] relative min-h-[60vh] lg:min-h-full">
           <FadeIn direction="left" className="absolute inset-0">
             <img
-              src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80"
+              src={cityStrategy}
               alt="Santos & Becker"
               loading="lazy"
               className="absolute inset-0 w-full h-full object-cover"

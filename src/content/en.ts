@@ -52,6 +52,12 @@ export const en = {
         heading: "The Professional\nStandard.",
         body: "Santos & Becker supports global mobility with technical precision, regulatory compliance, and strategic presence in Mexico's leading economic corridors.",
       },
+      socials: [
+        { name: "LinkedIn", href: "#" },
+        { name: "Instagram", href: "#" },
+        { name: "Facebook", href: "#" },
+        { name: "YouTube", href: "#" },
+      ],
     },
     whatsapp: {
       number: "525566177712",
@@ -105,6 +111,8 @@ export const en = {
     differentiators: {
       eyebrow: "Why Choose Us",
       title: "What sets us apart",
+      subtitle:
+        "Behind every immigration process there is a life decision. People and families starting a new chapter, and companies seeking to provide certainty and support for their global talent. That is why it is essential to have a firm that combines high quality standards, legal certainty, empathy, and an exceptional experience at every interaction.\n\nWith more than 20 years of experience in the immigration and global mobility sector, Santos & Becker has established itself as a strategic partner for national and international companies. Our work has been recognized by various organizations and clients for generating a close, human, and efficient experience, setting us apart as a firm that prioritizes empathy without losing the technical and legal focus that today's immigration processes demand.\n\nAt Santos & Becker we understand that global mobility is not just about procedures — it is about people. That is why we accompany every process with operational excellence, strategic vision, and a genuine commitment to those who place their trust in us.",
       items: [
         {
           title: "A measurable service standard",
@@ -160,6 +168,7 @@ export const en = {
     technology: {
       eyebrow: "Our Technology",
       title: "Global mobility powered by intelligent technology",
+      youtubeVideoId: "",
       intro:
         "We use technology so every client has full clarity over their procedures. Discover how we are transforming immigration operations with artificial intelligence.",
       features: [
@@ -176,7 +185,7 @@ export const en = {
       subtitle:
         "We work alongside the most relevant organizations in the international immigration ecosystem and Mexico's business environment.",
       alianzas: ["UNHCR", "IOM", "TENT Partnership for Refugees"],
-      afiliaciones: ["COMCE", "Invest Monterrey", "CCI France México", "AILA", "ILO", "ASEM"],
+      afiliaciones: ["COMCE", "Invest Monterrey", "CCI France México", "AILA", "ILO", "ASEM", "AMCHAM Mexico"],
     },
 
     bespoke: {
@@ -199,7 +208,7 @@ export const en = {
 
     cta: {
       eyebrow: "Contact",
-      titleLines: ["Start", "today"],
+      titleLines: ["Contact Us", ""],
       subtitle:
         "Our team is available to analyze your case and design the immigration strategy your company or situation requires.",
       emailLabel: "Email",
@@ -250,7 +259,7 @@ export const en = {
         "Our model combines legal compliance, strategic vision, and personalized attention that has positioned us as an industry reference. Today, our portfolio includes more than 500 active companies and a track record of more than 10,000 foreigners accompanied along with their families.",
       ],
       quote:
-        "The immigration process involves a dimension that few firms understand: the trust relationship built with each client.",
+        "The immigration process involves a dimension that few firms understand: the trust relationship built with each client. That closeness defines our business model. It allows us to anticipate needs, resolve with agility, maintain constant communication, and build community.",
       cta: "Meet the team",
     },
     enfoque: {
@@ -302,28 +311,28 @@ export const en = {
       title: "Why they choose us",
       items: [
         {
-          title: "Direct engagement with authorities",
-          desc: "We maintain an active relationship of professional recognition with the leading immigration and consular authorities in the country.",
-        },
-        {
           title: "A measurable service standard",
-          desc: "Our service model has achieved a 95% satisfaction index (NPS), supported by defined response times and punctual follow-up.",
-        },
-        {
-          title: "Permanent anticipation",
-          desc: "Every regulatory change and every expiration is continuously monitored so our clients receive timely alerts without having to ask for them.",
-        },
-        {
-          title: "Genuine commitment to inclusion",
-          desc: "We collaborate with IOM, UNHCR, and TENT Partnership for Refugees on labor inclusion initiatives for migrants and refugees.",
+          desc: "We don't talk about quality in abstract terms — we measure it. Our service model has achieved a 95% satisfaction index (NPS), supported by defined response times, punctual follow-up, and a commitment to KPIs we demand on every case.",
         },
         {
           title: "National presence, global reach",
-          desc: "Four offices in Mexico and a network of 25 firms specialized in immigration law around the world.",
+          desc: "We operate from four offices in Mexico (Mexico City, Monterrey, Guadalajara, and Cancún) with local teams covering the entire country. For international requirements, we are founding members of a network of more than 25 firms specialized in immigration law around the world.",
         },
         {
-          title: "Technology that works for the client",
-          desc: "Our platform allows each client to track their cases in real time and access documentation from a single place.",
+          title: "Strategic anticipation",
+          desc: "We stay ahead. Every regulatory change, every expiration, and every variable that could affect a process is continuously monitored so our clients receive timely alerts and recommendations without having to ask for them.",
+        },
+        {
+          title: "Genuine commitment to inclusion",
+          desc: "We collaborate with IOM, UNHCR, and TENT Partnership for Refugees on labor inclusion initiatives for migrants and refugees. We offer pro bono consulting to companies interested in hiring migrant talent, and within our own firm, we employ people who found refuge in Mexico.",
+        },
+        {
+          title: "Direct engagement with authorities",
+          desc: "We maintain an active relationship of professional recognition with the leading immigration and consular authorities in the country. This translates into faster processes, clear criteria, and solutions that comply with every regulation in force.",
+        },
+        {
+          title: "Technology applied to global mobility",
+          desc: "We use technology so every client has full clarity over their procedures. Discover how we are transforming immigration operations with artificial intelligence.",
         },
       ],
       stats: [
@@ -338,7 +347,7 @@ export const en = {
       subtitle:
         "We work alongside the most relevant organizations in the international immigration ecosystem and Mexico's business environment.",
       alianzas: ["UNHCR", "IOM", "TENT Partnership for Refugees"],
-      afiliaciones: ["COMCE", "Invest Monterrey", "CCI France México", "AILA", "ILO", "ASEM"],
+      afiliaciones: ["COMCE", "Invest Monterrey", "CCI France México", "AILA", "ILO", "ASEM", "AMCHAM Mexico"],
     },
     publicaciones: {
       eyebrow: "Publications",
@@ -390,6 +399,7 @@ export const en = {
             "Renewals, extensions, and regularizations",
             "Employer Registration Certificates and updates",
             "Mexican nationality by naturalization",
+            "Replacements due to loss or theft",
           ],
         },
         {
@@ -498,6 +508,7 @@ export const en = {
         "He actively drives labor inclusion initiatives for migrant talent through strategic alliances with IOM and UNHCR.",
       ],
       email: "oscar.santos@santosbecker.com",
+      linkedin: "#",
     },
     cesar: {
       eyebrow: "Founding Partner",
@@ -508,6 +519,7 @@ export const en = {
         "His global vision and commitment to inclusion have established him as a strategic ally for international talent in the country.",
       ],
       email: "cesar.becker@santosbecker.com",
+      linkedin: "#",
     },
     team: {
       eyebrow: "Team",
@@ -518,25 +530,25 @@ export const en = {
           name: "Carlos Mendoza",
           role: "Practice Director",
           bio: "Leads corporate visa operations and strategic liaison with government authorities.",
-          img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80",
+          img: "people-in-transit",
         },
         {
           name: "Elena Ríos",
           role: "Head of Tech & Innovation",
           bio: "Architect of the proprietary platform and legal-immigration automation processes.",
-          img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80",
+          img: "sam-ai-assistant",
         },
         {
           name: "Roberto Garza",
           role: "Senior Counsel",
           bio: "Specialist in Bespoke cases and high-net-worth investors across international jurisdictions.",
-          img: "https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=800&q=80",
+          img: "legal-signature",
         },
         {
           name: "Sofía Laurent",
           role: "Senior Associate",
           bio: "Expert in international labor inclusion and compliance with foreign hiring regulations.",
-          img: "https://images.unsplash.com/photo-1598550874175-4d0ef43ee90d?auto=format&fit=crop&w=800&q=80",
+          img: "global-reach-network",
         },
       ],
     },
@@ -598,6 +610,8 @@ export const en = {
       mockQ: "What is the standard timeline for an intracompany transfer visa in Mexico?",
       mockA: "The usual timeline is 15 to 30 business days, subject to company type and documentation. Would you like to start the process?",
       cta: "Meet SAM, our virtual assistant",
+      youtubeCta: "Watch our YouTube channel",
+      youtubeHref: "#",
     },
   },
 

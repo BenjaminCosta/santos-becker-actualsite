@@ -52,6 +52,12 @@ export const es = {
         heading: "El Estándar\nProfesional.",
         body: "Santos & Becker acompaña la movilidad global con precisión técnica, cumplimiento normativo y presencia estratégica en los principales corredores económicos de México.",
       },
+      socials: [
+        { name: "LinkedIn", href: "#" },
+        { name: "Instagram", href: "#" },
+        { name: "Facebook", href: "#" },
+        { name: "YouTube", href: "#" },
+      ],
     },
     whatsapp: {
       number: "525566177712",
@@ -105,6 +111,8 @@ export const es = {
     differentiators: {
       eyebrow: "Por qué elegirnos",
       title: "Lo que nos distingue",
+      subtitle:
+        "Detrás de cada proceso migratorio existe una decisión de vida. Personas y familias que comienzan una nueva etapa y empresas que buscan brindar certeza y acompañamiento a su talento global. Por ello, es fundamental contar con un despacho que combine altos estándares de calidad, seguridad jurídica, empatía y una experiencia excepcional en cada interacción.\n\nCon más de 20 años de experiencia en el sector migratorio y de movilidad global, Santos & Becker se ha consolidado como un aliado estratégico para empresas nacionales e internacionales. Nuestro trabajo ha sido reconocido por diversas organizaciones y clientes por generar una experiencia cercana, humana y eficiente, distinguiéndonos como un despacho que prioriza la empatía sin perder el enfoque técnico y legal que requieren los procesos migratorios actuales.\n\nEn Santos & Becker entendemos que la movilidad global no se trata solo de trámites, sino de personas. Por ello, acompañamos cada proceso con excelencia operativa, visión estratégica y un compromiso genuino con quienes depositan su confianza en nosotros.",
       items: [
         {
           title: "Un estándar de servicio medible",
@@ -160,6 +168,7 @@ export const es = {
     technology: {
       eyebrow: "Nuestra Tecnología",
       title: "Movilidad global impulsada por inteligencia tecnológica",
+      youtubeVideoId: "",
       intro:
         "Contamos con tecnología para que cada cliente tenga claridad total sobre sus trámites. Conoce cómo estamos transformando la operación migratoria con inteligencia artificial.",
       features: [
@@ -176,7 +185,7 @@ export const es = {
       subtitle:
         "Trabajamos junto a las organizaciones más relevantes del ecosistema migratorio internacional y del entorno empresarial en México.",
       alianzas: ["ACNUR", "OIM", "TENT Partnership for Refugees"],
-      afiliaciones: ["COMCE", "Invest Monterrey", "CCI France México", "AILA", "OIT", "ASEM"],
+      afiliaciones: ["COMCE", "Invest Monterrey", "CCI France México", "AILA", "OIT", "ASEM", "AMCHAM Mexico"],
     },
 
     bespoke: {
@@ -199,7 +208,7 @@ export const es = {
 
     cta: {
       eyebrow: "Contacto",
-      titleLines: ["Empieza", "hoy"],
+      titleLines: ["Contáctanos", ""],
       subtitle:
         "Nuestro equipo está disponible para analizar su caso y diseñar la estrategia migratoria que su empresa o situación requiere.",
       emailLabel: "Email",
@@ -250,7 +259,7 @@ export const es = {
         "Nuestro modelo combina cumplimiento legal, visión estratégica y atención personalizada que nos han posicionado como referentes en la industria. Hoy, nuestra cartera incluye más de 500 empresas activas y un historial de más de 10,000 extranjeros acompañados junto a sus familias.",
       ],
       quote:
-        "El proceso migratorio involucra una dimensión que pocas firmas entienden: el vínculo de confianza que se construye con cada cliente.",
+        "El proceso migratorio involucra una dimensión que pocas firmas entienden: el vínculo de confianza que se construye con cada cliente. Esa cercanía es lo que define nuestro modelo de negocio. Nos permite anticipar necesidades, resolver con agilidad, mantener una comunicación constante y generar comunidad.",
       cta: "Conocer al equipo",
     },
     enfoque: {
@@ -302,28 +311,28 @@ export const es = {
       title: "Por qué nos eligen",
       items: [
         {
-          title: "Interlocución directa con las autoridades",
-          desc: "Mantenemos una relación activa y de reconocimiento profesional con las principales autoridades migratorias y consulares del país.",
-        },
-        {
           title: "Un estándar de servicio medible",
-          desc: "Nuestro modelo de atención ha alcanzado un índice de satisfacción del 95% (NPS), sustentado en tiempos de respuesta definidos y seguimiento puntual.",
-        },
-        {
-          title: "Anticipación permanente",
-          desc: "Cada cambio regulatorio y cada vencimiento es monitoreado de forma continua para que nuestros clientes reciban alertas oportunas sin tener que solicitarlas.",
-        },
-        {
-          title: "Compromiso real con la inclusión",
-          desc: "Colaboramos con la OIM, ACNUR y TENT Partnership for Refugees en iniciativas de inclusión laboral de migrantes y refugiados.",
+          desc: "No hablamos de calidad en abstracto: la medimos. Nuestro modelo de atención ha alcanzado un índice de satisfacción del 95% (NPS), sustentado en tiempos de respuesta definidos, seguimiento puntual y un compromiso con KPIs que nos exigimos en cada caso.",
         },
         {
           title: "Presencia nacional, alcance global",
-          desc: "Cuatro oficinas en México y una red de 25 firmas especializadas en derecho migratorio alrededor del mundo.",
+          desc: "Operamos desde cuatro oficinas en México (Ciudad de México, Monterrey, Guadalajara y Cancún) con equipos locales que cubren todo el territorio nacional. Para requerimientos internacionales, somos fundadores de una red de más de 25 firmas especializadas en derecho migratorio alrededor del mundo.",
         },
         {
-          title: "Tecnología que trabaja para el cliente",
-          desc: "Nuestra plataforma permite a cada cliente dar seguimiento a sus casos en tiempo real y acceder a documentación desde un solo lugar.",
+          title: "Anticipación estratégica",
+          desc: "Nos adelantamos. Cada cambio regulatorio, cada vencimiento y cada variable que pueda afectar un proceso es monitoreada de forma continua para que nuestros clientes reciban alertas y recomendaciones oportunas sin tener que solicitarlas.",
+        },
+        {
+          title: "Compromiso real con la inclusión",
+          desc: "Colaboramos con la OIM, ACNUR y TENT Partnership for Refugees en iniciativas de inclusión laboral de migrantes y refugiados. Ofrecemos consultoría pro bono a empresas interesadas en contratar talento migrante, y en nuestra propia firma, empleamos a personas que encontraron refugio en México.",
+        },
+        {
+          title: "Interlocución directa con las autoridades",
+          desc: "Mantenemos una relación activa y de reconocimiento profesional con las principales autoridades migratorias y consulares del país. Esto se traduce en procesos más ágiles, criterios claros y soluciones que cumplen con cada regulación vigente.",
+        },
+        {
+          title: "Tecnología aplicada a movilidad global",
+          desc: "Contamos con tecnología para que cada cliente tenga claridad total sobre sus trámites. Conoce cómo estamos transformando la operación migratoria con inteligencia artificial.",
         },
       ],
       stats: [
@@ -338,7 +347,7 @@ export const es = {
       subtitle:
         "Trabajamos junto a las organizaciones más relevantes del ecosistema migratorio internacional y del entorno empresarial en México.",
       alianzas: ["ACNUR", "OIM", "TENT Partnership for Refugees"],
-      afiliaciones: ["COMCE", "Invest Monterrey", "CCI France México", "AILA", "OIT", "ASEM"],
+      afiliaciones: ["COMCE", "Invest Monterrey", "CCI France México", "AILA", "OIT", "ASEM", "AMCHAM Mexico"],
     },
     publicaciones: {
       eyebrow: "Publicaciones",
@@ -390,6 +399,7 @@ export const es = {
             "Renovaciones, extensiones y regularizaciones",
             "Constancias de Inscripción de Empleador y actualizaciones",
             "Nacionalidad mexicana por naturalización",
+            "Reposiciones por pérdida o robo",
           ],
         },
         {
@@ -498,6 +508,7 @@ export const es = {
         "Impulsa activamente iniciativas de inclusión laboral de talento migrante a través de alianzas estratégicas con la OIM y ACNUR.",
       ],
       email: "oscar.santos@santosbecker.com",
+      linkedin: "#",
     },
     cesar: {
       eyebrow: "Socio Fundador",
@@ -508,6 +519,7 @@ export const es = {
         "Su visión global y su compromiso con la inclusión lo han consolidado como un aliado estratégico para el talento internacional en el país.",
       ],
       email: "cesar.becker@santosbecker.com",
+      linkedin: "#",
     },
     team: {
       eyebrow: "Equipo",
@@ -518,25 +530,25 @@ export const es = {
           name: "Carlos Mendoza",
           role: "Director de Práctica",
           bio: "Lidera las operaciones de visas corporativas y el enlace estratégico con autoridades gubernamentales.",
-          img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80",
+          img: "people-in-transit",
         },
         {
           name: "Elena Ríos",
           role: "Head of Tech & Innovation",
           bio: "Arquitecta de la plataforma propietaria y de los procesos de automatización jurídico-migratoria.",
-          img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80",
+          img: "sam-ai-assistant",
         },
         {
           name: "Roberto Garza",
           role: "Senior Counsel",
           bio: "Especialista en casos Bespoke e inversionistas de alto patrimonio en jurisdicciones internacionales.",
-          img: "https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=800&q=80",
+          img: "legal-signature",
         },
         {
           name: "Sofía Laurent",
           role: "Asociada Senior",
           bio: "Experta en inclusión laboral internacional y cumplimiento de normativas de contratación extranjera.",
-          img: "https://images.unsplash.com/photo-1598550874175-4d0ef43ee90d?auto=format&fit=crop&w=800&q=80",
+          img: "global-reach-network",
         },
       ],
     },
@@ -598,6 +610,8 @@ export const es = {
       mockQ: "¿Cuál es el plazo estándar para una visa de transferencia intracompany en México?",
       mockA: "El plazo habitual es de 15 a 30 días hábiles, sujeto al tipo de empresa y documentación. ¿Desea iniciar el proceso?",
       cta: "Conoce a SAM, nuestra asistente virtual",
+      youtubeCta: "Ver canal de YouTube",
+      youtubeHref: "#",
     },
   },
 

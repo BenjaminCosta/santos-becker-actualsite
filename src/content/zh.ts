@@ -52,6 +52,12 @@ export const zh = {
         heading: "专业\n标准。",
         body: "Santos & Becker以技术精准、合规标准和墨西哥主要经济走廊的战略布局，支持全球人才流动。",
       },
+      socials: [
+        { name: "LinkedIn", href: "#" },
+        { name: "Instagram", href: "#" },
+        { name: "Facebook", href: "#" },
+        { name: "YouTube", href: "#" },
+      ],
     },
     whatsapp: {
       number: "525566177712",
@@ -105,6 +111,8 @@ export const zh = {
     differentiators: {
       eyebrow: "为何选择我们",
       title: "我们的差异",
+      subtitle:
+        "每一个移民流程背后都有一个人生决策。人们和家庭开始新的篇章，企业寻求为其全球人才提供确定性和陪伴。因此，拥有一家结合高质量标准、法律确定性、同理心和卓越体验的律所至关重要。\n\n凭借20多年的移民和全球流动领域经验，Santos & Becker已成为国内外企业的战略合作伙伴。\n\nSantos & Becker理解，全球流动不仅仅是关于手续，更是关于人。因此，我们以卓越运营、战略眼光和真诚承诺陪伴每一个流程。",
       items: [
         {
           title: "可量化的服务标准",
@@ -160,6 +168,7 @@ export const zh = {
     technology: {
       eyebrow: "我们的技术",
       title: "由智能技术驱动的全球流动",
+      youtubeVideoId: "",
       intro:
         "我们运用技术，让每位客户对其手续拥有全面清晰的信息。了解人工智能如何改变移民运营。",
       features: [
@@ -176,7 +185,7 @@ export const zh = {
       subtitle:
         "我们与国际移民生态系统和墨西哥商业环境中最相关的组织携手合作。",
       alianzas: ["联合国难民署", "国际移民组织", "TENT难民合作伙伴计划"],
-      afiliaciones: ["COMCE", "投资蒙特雷", "CCI法国墨西哥", "AILA", "OIT", "ASEM"],
+      afiliaciones: ["COMCE", "投资蒙特雷", "CCI法国墨西哥", "AILA", "OIT", "ASEM", "AMCHAM Mexico"],
     },
 
     bespoke: {
@@ -199,7 +208,7 @@ export const zh = {
 
     cta: {
       eyebrow: "联系",
-      titleLines: ["立即", "开始"],
+      titleLines: ["联系我们", ""],
       subtitle:
         "我们的团队随时为您分析案情，设计您的企业或个人情况所需的移民策略。",
       emailLabel: "电子邮件",
@@ -250,7 +259,7 @@ export const zh = {
         "我们的模式结合法律合规、战略视野和个性化关注，使我们成为行业参考。如今，我们的客户群包括500多家活跃企业，以及超过10000名获得协助的外国人及其家属。",
       ],
       quote:
-        "移民流程涉及一个很少有律所能够理解的维度：与每位客户建立的信任纽带。",
+        "移民流程涉及一个很少有律所能够理解的维度：与每位客户建立的信任纽带。这种亲近感定义了我们的商业模式。它使我们能够预见需求、敏捷解决、保持持续沟通并建立社群。",
       cta: "认识我们的团队",
     },
     enfoque: {
@@ -302,28 +311,28 @@ export const zh = {
       title: "为何选择我们",
       items: [
         {
-          title: "与当局的直接沟通",
-          desc: "我们与国内主要移民和领事当局保持积极的专业认可关系。",
-        },
-        {
           title: "可量化的服务标准",
-          desc: "我们的服务模式已达到95%满意度指数（NPS），以明确的响应时间和准时跟进为支撑。",
-        },
-        {
-          title: "持续预判",
-          desc: "每一项法规变化和每一个到期日都被持续监控，让客户在无需主动要求的情况下获得及时提醒。",
-        },
-        {
-          title: "对融合的真正承诺",
-          desc: "我们与国际移民组织、联合国难民署和TENT难民合作伙伴计划合作，推动移民和难民劳动力融合倡议。",
+          desc: "我们不抽象谈论质量——我们量化它。我们的服务模式已达到95%满意度指数（NPS），以明确的响应时间、准时跟进和我们在每个案例中对自己要求的KPI为支撑。",
         },
         {
           title: "全国布局，全球覆盖",
-          desc: "墨西哥四个办事处，以及全球25家专业移民法律所组成的网络。",
+          desc: "我们在墨西哥四个城市（墨西哥城、蒙特雷、瓜达拉哈拉和坎昆）运营，拥有覆盖全国的本地团队。对于国际需求，我们是全球25多家专业移民法律所组成网络的创始成员。",
         },
         {
-          title: "为客户服务的技术",
-          desc: "我们的平台让每位客户能够实时跟踪案件进展，并在一处访问所有文件。",
+          title: "战略预判",
+          desc: "我们提前行动。每一项法规变化、每一个到期日和每一个可能影响流程的变量都被持续监控，让客户在无需主动要求的情况下获得及时的提醒和建议。",
+        },
+        {
+          title: "对融合的真正承诺",
+          desc: "我们与国际移民组织、联合国难民署和TENT难民合作伙伴计划合作，推动移民和难民劳动力融合倡议。我们为有意雇用移民人才的企业提供公益咨询，并在我们自己的律所中，雇用了在墨西哥获得庇护的人员。",
+        },
+        {
+          title: "与当局的直接沟通",
+          desc: "我们与国内主要移民和领事当局保持积极的专业认可关系。这意味着流程更加顺畅、标准更加清晰，解决方案符合每项现行法规。",
+        },
+        {
+          title: "应用于全球流动的技术",
+          desc: "我们运用技术，让每位客户对其手续拥有全面清晰的信息。了解人工智能如何改变移民运营。",
         },
       ],
       stats: [
@@ -338,7 +347,7 @@ export const zh = {
       subtitle:
         "我们与国际移民生态系统和墨西哥商业环境中最相关的组织携手合作。",
       alianzas: ["联合国难民署", "国际移民组织", "TENT难民合作伙伴计划"],
-      afiliaciones: ["COMCE", "投资蒙特雷", "CCI法国墨西哥", "AILA", "OIT", "ASEM"],
+      afiliaciones: ["COMCE", "投资蒙特雷", "CCI法国墨西哥", "AILA", "OIT", "ASEM", "AMCHAM Mexico"],
     },
     publicaciones: {
       eyebrow: "出版与报道",
@@ -390,6 +399,7 @@ export const zh = {
             "续签、延期和身份规范化",
             "雇主登记证明及更新",
             "墨西哥入籍",
+            "遗失或被盗后的补办",
           ],
         },
         {
@@ -498,6 +508,7 @@ export const zh = {
         "他通过与国际移民组织和联合国难民署的战略联盟，积极推动移民人才劳动力融合倡议。",
       ],
       email: "oscar.santos@santosbecker.com",
+      linkedin: "#",
     },
     cesar: {
       eyebrow: "创始合伙人",
@@ -508,6 +519,7 @@ export const zh = {
         "他的全球视野和对融合的承诺使他成为国际人才在墨西哥的战略盟友。",
       ],
       email: "cesar.becker@santosbecker.com",
+      linkedin: "#",
     },
     team: {
       eyebrow: "团队",
@@ -518,25 +530,25 @@ export const zh = {
           name: "Carlos Mendoza",
           role: "业务主任",
           bio: "领导企业签证运营及与政府当局的战略联络。",
-          img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80",
+          img: "people-in-transit",
         },
         {
           name: "Elena Ríos",
           role: "技术与创新负责人",
           bio: "专有平台及法律移民自动化流程的架构师。",
-          img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80",
+          img: "sam-ai-assistant",
         },
         {
           name: "Roberto Garza",
           role: "高级顾问",
           bio: "专注于跨国司法管辖区的Bespoke案件和高净值投资者。",
-          img: "https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=800&q=80",
+          img: "legal-signature",
         },
         {
           name: "Sofía Laurent",
           role: "高级律师助理",
           bio: "国际劳动力融合及外籍雇用法规合规专家。",
-          img: "https://images.unsplash.com/photo-1598550874175-4d0ef43ee90d?auto=format&fit=crop&w=800&q=80",
+          img: "global-reach-network",
         },
       ],
     },
@@ -598,6 +610,8 @@ export const zh = {
       mockQ: "在墨西哥办理公司内部调任签证的标准周期是多长？",
       mockA: "通常周期为15至30个工作日，取决于公司类型和文件情况。您想启动流程吗？",
       cta: "认识SAM，我们的虚拟助手",
+      youtubeCta: "访问YouTube频道",
+      youtubeHref: "#",
     },
   },
 

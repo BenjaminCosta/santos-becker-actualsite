@@ -1,5 +1,6 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { useContent } from "@/context/LocaleContext";
+import { internationalFlags, peopleInTransit } from "@/assets/photos";
 
 export function InclusionPosition() {
   const c = useContent().inclusion.position;
@@ -31,7 +32,7 @@ export function InclusionPosition() {
               {/* Portrait 1 — taller */}
               <div className="w-1/2 h-110 overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80"
+                  src={peopleInTransit}
                   alt="Talento internacional"
                   className="w-full h-full object-cover object-top grayscale"
                 />
@@ -39,7 +40,7 @@ export function InclusionPosition() {
               {/* Portrait 2 — shorter, offset down */}
               <div className="w-1/2 h-90 mt-20 overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80"
+                  src={internationalFlags}
                   alt="Talento internacional"
                   className="w-full h-full object-cover object-top grayscale"
                 />

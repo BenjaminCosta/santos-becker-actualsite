@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { useContent } from "@/context/LocaleContext";
+import { homeHeroGlobalMobility } from "@/assets/photos";
 
 export function HomeHero() {
   const c = useContent().home.hero;
@@ -11,7 +12,7 @@ export function HomeHero() {
       {/* Background */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80")' }}
+        style={{ backgroundImage: `url("${homeHeroGlobalMobility}")` }}
       >
         <div className="absolute inset-0 bg-black/62" />
         <div

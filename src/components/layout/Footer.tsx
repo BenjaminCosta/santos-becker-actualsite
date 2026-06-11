@@ -76,12 +76,30 @@ export function Footer() {
         {/* ── Brand + newsletter ── */}
         <div className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-12">
           <AnimatedContainer className="max-w-2xl">
-            <span className="block font-heading text-4xl tracking-wider text-white mb-6">
+            <span className="block font-heading text-4xl tracking-wider text-white mb-2">
               Santos &amp; Becker
             </span>
-            <p className="font-sans text-xl text-white/55 max-w-[560px] leading-relaxed">
+            <p className="font-heading text-[10px] uppercase tracking-[0.22em] text-accent/70 mb-6">
+              {footer.tagline}
+            </p>
+            <p className="font-sans text-xl text-white/55 max-w-[560px] leading-relaxed mb-8">
               {footer.description}
             </p>
+            {footer.socials && (
+              <div className="flex items-center gap-6">
+                {footer.socials.map((s) => (
+                  <a
+                    key={s.name}
+                    href={s.href}
+                    target={s.href !== "#" ? "_blank" : undefined}
+                    rel={s.href !== "#" ? "noopener noreferrer" : undefined}
+                    className="font-heading text-[9px] uppercase tracking-[0.22em] text-white/35 hover:text-accent transition-colors duration-300"
+                  >
+                    {s.name}
+                  </a>
+                ))}
+              </div>
+            )}
           </AnimatedContainer>
 
           <AnimatedContainer delay={0.2} className="w-full md:w-96 shrink-0">

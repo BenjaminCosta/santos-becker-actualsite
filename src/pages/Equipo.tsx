@@ -3,6 +3,7 @@ import { FounderOscar } from "@/sections/equipo/FounderOscar";
 import { FounderCesar } from "@/sections/equipo/FounderCesar";
 import { OperationalTeam } from "@/sections/equipo/OperationalTeam";
 import { useContent } from "@/context/LocaleContext";
+import { peopleInTransit } from "@/assets/photos";
 
 export function Equipo() {
   const c = useContent().equipo.hero;
@@ -10,7 +11,7 @@ export function Equipo() {
   return (
     <div className="bg-background">
       <InternalPageHero
-        image="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80"
+        image={peopleInTransit}
         eyebrow={c.eyebrow}
         titleLine1={c.titleLine1}
         titleLine2={c.titleLine2}

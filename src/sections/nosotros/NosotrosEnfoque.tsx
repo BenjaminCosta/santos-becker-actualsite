@@ -1,5 +1,6 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { useContent } from "@/context/LocaleContext";
+import { peopleInTransit } from "@/assets/photos";
 
 export function NosotrosEnfoque() {
   const c = useContent().nosotros.enfoque;
@@ -12,7 +13,7 @@ export function NosotrosEnfoque() {
         <div className="lg:w-1/2 relative min-h-[55vh] lg:min-h-full">
           <FadeIn direction="right" className="absolute inset-0">
             <img
-              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80"
+              src={peopleInTransit}
               alt="Enfoque Santos & Becker"
               className="absolute inset-0 w-full h-full object-cover"
             />

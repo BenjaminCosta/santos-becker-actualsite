@@ -11,9 +11,17 @@ export function HomeDifferentiators() {
         <SectionHeading
           eyebrow={c.eyebrow}
           title={c.title}
-          className="mb-20"
+          className="mb-10"
           titleClassName="text-5xl md:text-6xl"
         />
+        {c.subtitle && (
+          <div className="max-w-3xl mb-20 space-y-5">
+            {c.subtitle.split("\n\n").map((p, i) => (
+              <p key={i} className="font-sans text-lg text-muted-foreground leading-relaxed">{p}</p>
+            ))}
+          </div>
+        )}
+        {!c.subtitle && <div className="mb-20" />}
       </FadeIn>
       <FadeInGroup className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-14" stagger={0.1}>
         {c.items.map((item, i) => (

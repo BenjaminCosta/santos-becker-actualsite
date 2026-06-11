@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { useContent } from "@/context/LocaleContext";
 import { SectionHeading } from "@/components/shared/SectionHeading";
+import { samAiAssistant } from "@/assets/photos";
 
 export function HomeTechnology() {
   const c = useContent().home.technology;
@@ -31,12 +32,22 @@ export function HomeTechnology() {
           </FadeIn>
         </div>
         <div className="lg:w-1/2 relative min-h-[50vh] lg:min-h-full">
-          <img
-            src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=960&q=80"
-            alt="Tecnología Santos & Becker"
-            loading="lazy"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
+          {c.youtubeVideoId ? (
+            <iframe
+              src={`https://www.youtube.com/embed/${c.youtubeVideoId}?autoplay=0&rel=0&modestbranding=1`}
+              title="Santos & Becker — SAM"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full border-0"
+            />
+          ) : (
+            <img
+              src={samAiAssistant}
+              alt="Tecnología Santos & Becker"
+              loading="lazy"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          )}
         </div>
       </div>
     </section>

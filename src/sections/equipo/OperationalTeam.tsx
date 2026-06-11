@@ -1,5 +1,8 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { useContent } from "@/context/LocaleContext";
+import { globalReachNetwork, legalSignature, peopleInTransit, samAiAssistant } from "@/assets/photos";
+
+const TEAM_IMAGES = [peopleInTransit, samAiAssistant, legalSignature, globalReachNetwork];
 
 export function OperationalTeam() {
   const c = useContent().equipo;
@@ -23,7 +26,7 @@ export function OperationalTeam() {
               <div className="group cursor-pointer">
                 <div className="w-full h-95 overflow-hidden mb-5">
                   <img
-                    src={member.img}
+                    src={TEAM_IMAGES[index] ?? peopleInTransit}
                     alt={member.name}
                     className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-[1.03]"
                   />

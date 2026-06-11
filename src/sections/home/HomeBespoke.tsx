@@ -18,10 +18,6 @@ export function HomeBespoke() {
           loading="lazy"
           className="w-full h-full object-cover opacity-30"
           style={{ filter: 'saturate(0.25) hue-rotate(160deg)' }}
-          onError={(e) => {
-            (e.currentTarget as HTMLImageElement).src =
-              "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1920&q=80";
-          }}
         />
         <div
           className="absolute inset-0"

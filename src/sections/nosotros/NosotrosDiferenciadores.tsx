@@ -1,5 +1,6 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { useContent } from "@/context/LocaleContext";
+import { globalReachNetwork } from "@/assets/photos";
 
 export function NosotrosDiferenciadores() {
   const c = useContent().nosotros.diferenciadores;
@@ -25,7 +26,7 @@ export function NosotrosDiferenciadores() {
         {/* Left: full-height image */}
         <div className="lg:w-1/2 relative h-72 lg:h-auto min-h-120 overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1560472355-536de3962603?auto=format&fit=crop&w=1200&q=80"
+            src={globalReachNetwork}
             alt="Diferenciadores Santos & Becker"
             className="absolute inset-0 w-full h-full object-cover"
           />

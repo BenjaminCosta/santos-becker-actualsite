@@ -4,6 +4,7 @@ import { InclusionAlliances } from "@/sections/inclusion/InclusionAlliances";
 import { InclusionMethodology } from "@/sections/inclusion/InclusionMethodology";
 import { InclusionCta } from "@/sections/inclusion/InclusionCta";
 import { useContent } from "@/context/LocaleContext";
+import { internationalFlags } from "@/assets/photos";
 
 export function Inclusion() {
   const c = useContent().inclusion.hero;
@@ -11,7 +12,7 @@ export function Inclusion() {
   return (
     <div className="bg-background">
       <InternalPageHero
-        image="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1920&q=80"
+        image={internationalFlags}
         eyebrow={c.eyebrow}
         titleLine1={c.titleLine1}
         titleLine2={c.titleLine2}

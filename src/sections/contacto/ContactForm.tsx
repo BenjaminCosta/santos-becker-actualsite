@@ -159,7 +159,17 @@ export function ContactForm() {
                       {form.submitBtn}
                     </button>
                     <p className="font-sans text-sm text-muted-foreground mt-4">
-                      {form.privacyNote}
+                      {form.privacyNote.split("aviso de privacidad").length > 1 ? (
+                        <>
+                          {form.privacyNote.split("aviso de privacidad")[0]}
+                          <a href="/aviso-de-privacidad" className="underline hover:text-primary transition-colors">
+                            aviso de privacidad
+                          </a>
+                          {form.privacyNote.split("aviso de privacidad")[1]}
+                        </>
+                      ) : (
+                        form.privacyNote
+                      )}
                     </p>
                   </div>
 

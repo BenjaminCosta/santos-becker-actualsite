@@ -4,6 +4,7 @@ import { useContent } from "@/context/LocaleContext";
 
 export function HomeCta() {
   const c = useContent().home.cta;
+  const wa = useContent().global.whatsapp;
 
   function handleSubmit(e: { preventDefault: () => void }) {
     e.preventDefault();
@@ -27,7 +28,7 @@ export function HomeCta() {
               <span className="typo-eyebrow text-primary mb-6 block">{c.eyebrow}</span>
               <h2 className="typo-title text-4xl md:text-5xl text-foreground mb-8">
                 {c.titleLines[0]}
-                <span className="text-primary block">{c.titleLines[1]}</span>
+                {c.titleLines[1] && <span className="text-primary block">{c.titleLines[1]}</span>}
               </h2>
               <p className="font-sans text-base text-muted-foreground leading-relaxed mb-10">
                 {c.subtitle}
@@ -54,7 +55,7 @@ export function HomeCta() {
               </div>
 
               {/* Offices */}
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-2 gap-6 mb-10">
                 {c.offices.map((office, i) => (
                   <div key={i}>
                     <span className="font-heading text-sm uppercase tracking-widest text-foreground block mb-2">
@@ -66,6 +67,16 @@ export function HomeCta() {
                   </div>
                 ))}
               </div>
+
+              {/* WhatsApp secondary CTA */}
+              <a
+                href={`https://wa.me/${wa.number}?text=${encodeURIComponent(wa.message)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="section-cta-rect section-cta-rect-primary inline-flex"
+              >
+                {c.ctaWhatsApp}
+              </a>
             </div>
           </FadeIn>
 

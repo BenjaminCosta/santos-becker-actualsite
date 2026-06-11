@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { useContent } from "@/context/LocaleContext";
 import { SectionHeading } from "@/components/shared/SectionHeading";
+import { samAiAssistant } from "@/assets/photos";
 
 export function TecnologiaPlatforma() {
   const c = useContent().tecnologia.plataforma;
@@ -65,7 +66,7 @@ export function TecnologiaPlatforma() {
           </div>
           <div className="lg:w-1/2 relative min-h-[50vh] lg:min-h-full">
             <img
-              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&q=80"
+              src={samAiAssistant}
               alt="Plataforma Santos & Becker"
               className="absolute inset-0 w-full h-full object-cover"
             />

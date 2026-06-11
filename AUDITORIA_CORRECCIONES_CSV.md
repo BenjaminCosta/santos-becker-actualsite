@@ -8,7 +8,7 @@ Fecha de auditoria: 2026-06-10
 
 La mayor parte del contenido principal del CSV quedo implementado y sincronizado en `src/content/es.ts`, `src/content/en.ts` y `src/content/zh.ts`. Tambien se hicieron cambios estructurales en las paginas de Servicios, Tecnologia, Nosotros y Contacto.
 
-Quedan pendientes principalmente elementos que dependen de assets oficiales o definiciones no disponibles en el repo: logos externos, imagenes marcadas como `Picture`, video/canal de SAM, URLs reales de redes sociales, LinkedIn de socios y algunos ajustes visuales especificos.
+Las imagenes editoriales marcadas como `Imagen/Picture` ya quedaron cubiertas con assets locales en `src/assets/photos`, usando las fotos nuevas de `Propuesta - Fotos/New`. Quedan pendientes principalmente elementos que dependen de assets oficiales o definiciones no disponibles en el repo: logos externos de alianzas/afiliaciones, video/canal de SAM, URLs reales de redes sociales, LinkedIn de socios y algunos ajustes visuales especificos.
 
 Validaciones realizadas:
 
@@ -25,7 +25,7 @@ Nota: `.gitignore` aparece modificado en el worktree, pero no fue parte de esta 
 | Hero headline | Hecho | `home.hero.eyebrow` y `home.hero.lines` actualizados a `GLOBAL STRATEGIC IMMIGRATION CONSULTING & COMPLIANCE` y `Movilidad global estrategica sin complicaciones`. | Sin pendientes de copy. |
 | Hero subheadline | Hecho | Subtitle actualizado segun CSV. | Sin pendientes. |
 | CTA primario / secundario | Hecho | Botones existentes navegan a `/contacto` y `/servicios`. | Sin pendientes. |
-| Hero visual | Parcial | Sigue usando imagen placeholder de Unsplash con el mismo layout. | Falta asset oficial marcado como `Imagen/Picture`. |
+| Hero visual | Hecho | Reemplazado por `home-hero-global-mobility.webp` desde `src/assets/photos`. | Sin pendientes de imagen. |
 | Quienes somos texto | Hecho | Copy reemplazado en `home.about.body`; se elimino `boutique`. | Sin pendientes de copy. |
 | Quienes somos cifras | Hecho | Stats actualizados: `+25`, `+500`, `+10,000`, `95% NPS`, `4 oficinas`, `+25 firmas`. | Sin pendientes. |
 | Quienes somos CTA | Hecho | CTA a `/nosotros` con texto `Conoce nuestra historia`. | Sin pendientes. |
@@ -35,7 +35,7 @@ Nota: `.gitignore` aparece modificado en el worktree, pero no fue parte de esta 
 | 6 diferenciadores | Hecho | Los seis diferenciadores estan cargados en `home.differentiators.items` en el orden pedido. | Sin pendientes de copy. |
 | Servicios headline | Hecho | `Que hacemos` implementado como eyebrow y grilla de servicios. | Sin pendientes de headline. |
 | 4 cards de servicios Home | Parcial | Se muestran cuatro cards con titulo y resumen. | No se muestra la descripcion completa de cada card ni el CTA individual `Conocer mas`; todas navegan a `/servicios`. |
-| Tecnologia Home | Parcial | Headline, texto y CTA hacia `/tecnologia` implementados. | Falta video/asset de SAM del lado visual. |
+| Tecnologia Home | Hecho con fallback | Headline, texto y CTA hacia `/tecnologia` implementados; el lado visual usa `sam-ai-assistant.webp` mientras no haya video. | Falta video/URL de SAM si se quiere reemplazar la imagen. |
 | Colaboraciones / alianzas | Parcial | Se unificaron alianzas y afiliaciones en `PartnerLogos` con placeholders tipograficos. | Faltan logos reales, descripciones y links externos visibles. No hay carrusel; hay grid/flex de texto. |
 | Bespoke | Hecho | Texto actualizado a modelo de vinculacion estrategica, sin depender del termino `gestion`. | Sin pendientes de copy. |
 | CTA final / pre-footer | Parcial | Existe seccion de contacto con texto de disponibilidad y formulario. | El headline visible sigue siendo `Empieza hoy`, no `Contactanos`; no se muestran los botones finales `Contactanos` y `Escribir por WhatsApp` en esa seccion. |
@@ -77,7 +77,7 @@ Nota: `.gitignore` aparece modificado en el worktree, pero no fue parte de esta 
 | Oscar Santos bio | Hecho | Bio actualizada segun CSV. | Falta link real de LinkedIn. |
 | Cesar Becker bio | Hecho | Bio actualizada segun CSV. | Falta link real de LinkedIn. |
 | Equipo operativo intro | Hecho | Intro agregada arriba de las cards. | Sin pendientes de copy. |
-| Cards de equipo | Parcial | Hay cards con foto, nombre, cargo y bio. | Los integrantes/fotos son placeholders existentes; falta listado real si el cliente lo entrega. |
+| Cards de equipo | Parcial | Hay cards con foto, nombre, cargo y bio; las fotos son institucionales locales no identificatorias desde `src/assets/photos`. | Falta listado real/retratos reales si el cliente los entrega. |
 | Unete a la firma | Hecho | CTA `Enviar CV` y texto `Forma parte de nuestro equipo`. | Falta resolver `ajuste de doble logo inferior`, porque no hay especificacion visual ni asset claro. |
 
 ## Tecnologia
@@ -98,7 +98,7 @@ Nota: `.gitignore` aparece modificado en el worktree, pero no fue parte de esta 
 | Cifras clave / texto | Parcial | Texto central y pro bono estan implementados en `position.body`; stats muestran `100%`, `PRO BONO`, `360`. | No replica como bloque textual independiente; se adapta al layout existente. |
 | Accion concreta | Parcial | Consultoria pro bono, empleo directo y aliados estrategicos estan visibles. | Se removio capacitacion/talleres como card visible al adaptar el ajuste del CSV. |
 | Aliados estrategicos | Hecho | Lista ampliada: Invest Monterrey, CCI France Mexico, AILA, TENT, OIM, ACNUR, OIT, ASEM. | Sin pendientes de copy. |
-| Logos aliados | Pendiente | Se muestran textos, no logos. | Faltan logos oficiales. |
+| Logos aliados | Pendiente | Se muestran textos/wordmarks tipograficos, no logos. | Faltan logos oficiales; la carpeta subida no incluye archivos de logos de terceros. |
 | CTA cierre | Hecho | Texto y CTA a `/contacto` implementados. | Hay boton secundario extra `Ver servicios` en el componente, no solicitado por CSV. |
 
 ## Contacto
@@ -124,14 +124,14 @@ Nota: `.gitignore` aparece modificado en el worktree, pero no fue parte de esta 
 
 ## Pendientes priorizados
 
-1. Conseguir assets oficiales: hero/imagenes `Picture`, logos externos de alianzas/afiliaciones y video/URL de SAM.
+1. Conseguir assets oficiales que aun no estan disponibles: logos externos de alianzas/afiliaciones y video/URL de SAM.
 2. Definir destino real de `Hablar con SAM`; hoy los CTAs apuntan a `/contacto`.
 3. Agregar URLs reales de redes sociales y LinkedIn de Oscar/Cesar.
 4. Decidir si Home necesita mostrar el subheadline largo de `Por que elegirnos`.
 5. Decidir si Home Services debe mostrar descripcion completa + CTA individual por card.
 6. Ajustar CTA final de Home a headline literal `Contactanos` y botones `Contactanos` / `Escribir por WhatsApp`.
 7. Revisar footer: usar datos oficiales, logo real, redes sociales y consistencia con Contacto.
-8. Resolver el ajuste visual `doble logo inferior` en Equipo cuando haya referencia o asset.
+8. Resolver el ajuste visual `doble logo inferior` en Equipo cuando haya referencia o asset claro.
 
 ## Archivos principales tocados
 
