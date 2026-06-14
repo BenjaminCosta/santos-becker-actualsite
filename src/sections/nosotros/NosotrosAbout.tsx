@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { useContent } from "@/context/LocaleContext";
-import { cityStrategy } from "@/assets/photos";
+import { nosotrosImages } from "@/assets/site/siteImages";
 
 export function NosotrosAbout() {
   const c = useContent().nosotros.about;
@@ -31,10 +31,10 @@ export function NosotrosAbout() {
         <div className="lg:w-[55%] relative min-h-[60vh] lg:min-h-full">
           <FadeIn direction="left" className="absolute inset-0">
             <img
-              src={cityStrategy}
+              src={nosotrosImages.about}
               alt="Santos & Becker"
               loading="lazy"
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-cover object-center"
             />
             {/* Gradient from bottom */}
             <div className="absolute inset-0 bg-gradient-to-t from-dark-accent/92 via-dark-accent/25 to-transparent" />

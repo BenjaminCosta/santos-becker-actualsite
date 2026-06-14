@@ -28,32 +28,7 @@ function AnimatedContainer({
   );
 }
 
-const OFFICES = [
-  {
-    city: "CDMX",
-    address: "Paseo de la Reforma 222\nColonia Juárez, 06600",
-    phone: "+52 55 6617 7712",
-    email: "cdmx@santosbecker.com",
-  },
-  {
-    city: "Monterrey",
-    address: "Av. David Alfaro Siqueiros 104\nSan Pedro Garza García, 66269",
-    phone: "+52 81 8765 4321",
-    email: "mty@santosbecker.com",
-  },
-  {
-    city: "Guadalajara",
-    address: "Av. Américas 1500\nCountry Club, 44610",
-    phone: "+52 33 2468 1357",
-    email: "gdl@santosbecker.com",
-  },
-  {
-    city: "Cancún",
-    address: "Blvd. Kukulcan Km 12.5\nZona Hotelera, 77500",
-    phone: "+52 998 112 2334",
-    email: "cun@santosbecker.com",
-  },
-];
+const PRESENCE = ["Ciudad de México", "Monterrey", "Guadalajara", "Cancún"];
 
 export function Footer() {
   const { footer, nav } = useContent().global;
@@ -122,30 +97,21 @@ export function Footer() {
           </AnimatedContainer>
         </div>
 
-        {/* ── Office nodes grid ── */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-8 mb-28">
-          {OFFICES.map((o, i) => (
-            <AnimatedContainer key={o.city} delay={0.1 + i * 0.08}>
-              <div className="group border-t border-white/15 pt-8 hover:border-primary transition-colors duration-500">
-                <h3 className="font-heading text-[10px] font-bold tracking-[0.22em] uppercase text-white mb-5">
-                  {o.city} {footer.officeLabel}
-                </h3>
-                <address className="not-italic font-sans text-sm text-white/45 leading-loose group-hover:text-white/75 transition-colors duration-500">
-                  {o.address.split("\n").map((line, j) => (
-                    <span key={j} className="block">{line}</span>
-                  ))}
-                  <span className="block mt-2">{o.phone}</span>
-                  <a
-                    href={`mailto:${o.email}`}
-                    className="block hover:text-primary transition-colors"
-                  >
-                    {o.email}
-                  </a>
-                </address>
+        {/* ── Presence ── */}
+        <AnimatedContainer delay={0.1}>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-28 border-t border-white/15 pt-8">
+            {PRESENCE.map((city) => (
+              <div key={city}>
+                <p className="font-heading text-[9px] uppercase tracking-[0.22em] text-white/30 mb-2">
+                  {footer.officeLabel}
+                </p>
+                <p className="font-heading text-sm font-bold tracking-widest uppercase text-white/60">
+                  {city}
+                </p>
               </div>
-            </AnimatedContainer>
-          ))}
-        </div>
+            ))}
+          </div>
+        </AnimatedContainer>
 
         {/* ── Editorial block ── */}
         <AnimatedContainer delay={0.15}>
@@ -216,24 +182,24 @@ export function Footer() {
         {/* ── Bottom bar ── */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-10 border-t border-white/10 gap-6">
           <div className="flex flex-wrap gap-8">
-            <a
-              href="#"
+            <Link
+              href="/aviso-de-privacidad"
               className="font-heading text-[9px] tracking-[0.22em] uppercase text-white hover:text-primary transition-colors duration-300 border-b-2 border-accent/50 pb-0.5"
             >
               {footer.privacy}
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              href="/terminos-y-condiciones"
               className="font-heading text-[9px] tracking-[0.22em] uppercase text-white/40 hover:text-primary transition-colors duration-300"
             >
               {footer.terms}
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              href="/aviso-regulatorio"
               className="font-heading text-[9px] tracking-[0.22em] uppercase text-white/40 hover:text-primary transition-colors duration-300"
             >
               {footer.regulatory}
-            </a>
+            </Link>
           </div>
           <p className="font-sans text-xs text-white/30 md:text-right">
             © {new Date().getFullYear()} {footer.copyright}

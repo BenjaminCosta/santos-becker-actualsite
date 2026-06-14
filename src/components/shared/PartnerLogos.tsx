@@ -1,5 +1,6 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionHeading } from "@/components/shared/SectionHeading";
+import { resolvePartnerLogo } from "@/assets/site/siteImages";
 
 interface PartnerLogosProps {
   eyebrow?: string;
@@ -21,6 +22,29 @@ export function PartnerLogos({
   border = "border-y border-border",
 }: PartnerLogosProps) {
   const allLogos = [...alianzas, ...afiliaciones];
+  const renderLogo = (name: string, index: number) => {
+    const logo = resolvePartnerLogo(name);
+
+    return (
+      <div
+        key={`${name}-${index}`}
+        className="flex h-16 min-w-[120px] items-center justify-center px-2"
+      >
+        {logo ? (
+          <img
+            src={logo.src}
+            alt={logo.alt}
+            loading="lazy"
+            className="max-h-12 max-w-[170px] object-contain opacity-80 transition duration-300 hover:opacity-100"
+          />
+        ) : (
+          <span className="font-heading text-xl md:text-2xl font-bold tracking-widest text-foreground/35">
+            {name}
+          </span>
+        )}
+      </div>
+    );
+  };
 
   return (
     <section className={`py-24 px-6 ${border} ${bg}`}>
@@ -42,29 +66,17 @@ export function PartnerLogos({
 
           {alianzas.length > 0 && afiliaciones.length > 0 ? (
             <div className="space-y-10">
-              <div className="flex flex-wrap justify-center items-center gap-14 md:gap-20 opacity-30 grayscale">
-                {alianzas.map((logo, i) => (
-                  <span key={i} className="font-heading text-xl md:text-2xl font-bold tracking-widest">
-                    {logo}
-                  </span>
-                ))}
+              <div className="flex flex-wrap justify-center items-center gap-x-14 gap-y-8 md:gap-x-20">
+                {alianzas.map(renderLogo)}
               </div>
               <div className="w-16 h-px bg-border mx-auto" />
-              <div className="flex flex-wrap justify-center items-center gap-14 md:gap-20 opacity-30 grayscale">
-                {afiliaciones.map((logo, i) => (
-                  <span key={i} className="font-heading text-xl md:text-2xl font-bold tracking-widest">
-                    {logo}
-                  </span>
-                ))}
+              <div className="flex flex-wrap justify-center items-center gap-x-14 gap-y-8 md:gap-x-20">
+                {afiliaciones.map(renderLogo)}
               </div>
             </div>
           ) : (
-            <div className="flex flex-wrap justify-center items-center gap-14 md:gap-20 opacity-30 grayscale">
-              {allLogos.map((logo, i) => (
-                <span key={i} className="font-heading text-2xl md:text-3xl font-bold tracking-widest">
-                  {logo}
-                </span>
-              ))}
+            <div className="flex flex-wrap justify-center items-center gap-x-14 gap-y-8 md:gap-x-20">
+              {allLogos.map(renderLogo)}
             </div>
           )}
         </FadeIn>

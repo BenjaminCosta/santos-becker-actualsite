@@ -1,3 +1,5 @@
+import { teamMembersEs } from "./teamMembers";
+
 export const es = {
   global: {
     nav: {
@@ -53,10 +55,10 @@ export const es = {
         body: "Santos & Becker acompaña la movilidad global con precisión técnica, cumplimiento normativo y presencia estratégica en los principales corredores económicos de México.",
       },
       socials: [
-        { name: "LinkedIn", href: "#" },
-        { name: "Instagram", href: "#" },
+        { name: "LinkedIn", href: "https://www.linkedin.com/company/santos-becker/" },
+        { name: "Instagram", href: "https://www.instagram.com/santosbecker_sc/" },
         { name: "Facebook", href: "#" },
-        { name: "YouTube", href: "#" },
+        { name: "YouTube", href: "https://www.youtube.com/@SantosBeckerSIC" },
       ],
     },
     whatsapp: {
@@ -98,12 +100,12 @@ export const es = {
     purpose: {
       eyebrow: "Nuestro Propósito",
       titleLines: [
-        "Nuestro propósito es claro:",
-        "impactar de manera positiva",
+        "Estrategia migratoria con",
+        "impacto humano y visión empresarial",
       ],
       body: [
         "Nuestro propósito es claro: impactar de manera positiva a todas las personas que atendemos.",
-        "Diseñamos estrategias migratorias a la medida de cada empresa y cada persona, combinando modelos operativos claros, cumplimiento normativo y acompañamiento cercano en cada etapa.",
+        "A través del diseño de modelos operativos, diseñamos estrategias migratorias a la medida de cada empresa y cada persona, con un nivel de atención que solo es posible desde un modelo boutique.",
       ],
       cta: "Descubre cómo trabajamos",
     },
@@ -207,7 +209,7 @@ export const es = {
     },
 
     cta: {
-      eyebrow: "Contacto",
+      eyebrow: "Hablemos de tu proceso migratorio",
       titleLines: ["Contáctanos", ""],
       subtitle:
         "Nuestro equipo está disponible para analizar su caso y diseñar la estrategia migratoria que su empresa o situación requiere.",
@@ -484,7 +486,7 @@ export const es = {
       cta: "Agendar consulta",
     },
     closingCta: {
-      eyebrow: "Servicio a la medida",
+      eyebrow: "Consulta Especializada",
       title: "¿Necesitas un servicio a la medida?",
       subtitle:
         "Contáctanos. Cada caso es único y nuestro equipo puede diseñar una solución a la medida.",
@@ -495,8 +497,8 @@ export const es = {
   equipo: {
     hero: {
       eyebrow: "NUESTRO TALENTO",
-      titleLine1: "NUESTRO",
-      titleLine2: "TALENTO",
+      titleLine1: "Equipo especializado",
+      titleLine2: "para acompañarte en cada paso",
       subtitle: "Equipo especializado para acompañarte en cada paso.",
     },
     oscar: {
@@ -504,8 +506,7 @@ export const es = {
       name: "Oscar Santos",
       bio: [
         "Socio fundador de Santos & Becker y una de las figuras más reconocidas en consultoría migratoria corporativa en México. Con una visión orientada a la calidad del servicio y la construcción de relaciones de largo plazo, Oscar ha liderado la transformación de la práctica migratoria en el sector privado.",
-        "Anteriormente, fue socio líder de la práctica migratoria para Latinoamérica en Ernst & Young (EY) durante 13 años, donde impulsó un crecimiento sostenido a doble dígito.",
-        "Impulsa activamente iniciativas de inclusión laboral de talento migrante a través de alianzas estratégicas con la OIM y ACNUR.",
+        "Anteriormente, fue socio líder de la práctica migratoria para Latinoamérica en Ernst & Young (EY) durante 13 años, donde impulsó un crecimiento sostenido a doble dígito. Impulsa activamente iniciativas de inclusión laboral de talento migrante a través de alianzas estratégicas con la OIM y ACNUR.",
       ],
       email: "oscar.santos@santosbecker.com",
       linkedin: "#",
@@ -515,8 +516,7 @@ export const es = {
       name: "César Becker",
       bio: [
         "Socio fundador de Santos & Becker y referente en derecho migratorio con más de 25 años de ejercicio profesional. Su práctica combina dominio legal profundo con una capacidad única para construir vínculos de confianza con autoridades migratorias y actores clave del sector privado.",
-        "Comprometido con un ejercicio legal moderno e inclusivo, César ha enfocado parte de su trabajo en apoyar a emprendedores extranjeros que buscan integrarse y crecer en el entorno empresarial mexicano.",
-        "Su visión global y su compromiso con la inclusión lo han consolidado como un aliado estratégico para el talento internacional en el país.",
+        "Comprometido con un ejercicio legal moderno e inclusivo, César ha enfocado parte de su trabajo en apoyar a emprendedores extranjeros que buscan integrarse y crecer en el entorno empresarial mexicano. Su visión global y su compromiso con la inclusión lo han consolidado como un aliado estratégico para el talento internacional en el país.",
       ],
       email: "cesar.becker@santosbecker.com",
       linkedin: "#",
@@ -525,32 +525,7 @@ export const es = {
       eyebrow: "Equipo",
       title: "Equipo Operativo",
       intro: "Nuestro equipo está conformado por profesionales especializados en derecho migratorio, cumplimiento normativo y atención al cliente, cada uno con un rol clave en la experiencia que ofrecemos.",
-      members: [
-        {
-          name: "Carlos Mendoza",
-          role: "Director de Práctica",
-          bio: "Lidera las operaciones de visas corporativas y el enlace estratégico con autoridades gubernamentales.",
-          img: "people-in-transit",
-        },
-        {
-          name: "Elena Ríos",
-          role: "Head of Tech & Innovation",
-          bio: "Arquitecta de la plataforma propietaria y de los procesos de automatización jurídico-migratoria.",
-          img: "sam-ai-assistant",
-        },
-        {
-          name: "Roberto Garza",
-          role: "Senior Counsel",
-          bio: "Especialista en casos Bespoke e inversionistas de alto patrimonio en jurisdicciones internacionales.",
-          img: "legal-signature",
-        },
-        {
-          name: "Sofía Laurent",
-          role: "Asociada Senior",
-          bio: "Experta en inclusión laboral internacional y cumplimiento de normativas de contratación extranjera.",
-          img: "global-reach-network",
-        },
-      ],
+      members: teamMembersEs,
     },
     carreras: {
       eyebrow: "Carreras",
@@ -611,7 +586,7 @@ export const es = {
       mockA: "El plazo habitual es de 15 a 30 días hábiles, sujeto al tipo de empresa y documentación. ¿Desea iniciar el proceso?",
       cta: "Conoce a SAM, nuestra asistente virtual",
       youtubeCta: "Ver canal de YouTube",
-      youtubeHref: "#",
+      youtubeHref: "https://www.youtube.com/@SantosBeckerSIC",
     },
   },
 
@@ -735,10 +710,10 @@ export const es = {
       waLabel: "WhatsApp",
       socialEyebrow: "Redes sociales",
       socials: [
-        { name: "LinkedIn", label: "Santos & Becker", href: "#" },
-        { name: "Instagram", label: "@santosbecker_sc", href: "#" },
+        { name: "LinkedIn", label: "Santos & Becker", href: "https://www.linkedin.com/company/santos-becker/" },
+        { name: "Instagram", label: "@santosbecker_sc", href: "https://www.instagram.com/santosbecker_sc/" },
         { name: "Facebook", label: "Santos & Becker", href: "#" },
-        { name: "YouTube", label: "S&B YouTube Channel", href: "#" },
+        { name: "YouTube", label: "S&B YouTube Channel", href: "https://www.youtube.com/@SantosBeckerSIC" },
         { name: "WhatsApp", label: "+52 55 6617 7712", href: "https://wa.me/525566177712" },
       ],
       hoursLabel: "Horario de Atención",

@@ -1,6 +1,6 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { useContent } from "@/context/LocaleContext";
-import { peopleInTransit } from "@/assets/photos";
+import { nosotrosImages } from "@/assets/site/siteImages";
 
 export function NosotrosEnfoque() {
   const c = useContent().nosotros.enfoque;
@@ -13,9 +13,10 @@ export function NosotrosEnfoque() {
         <div className="lg:w-1/2 relative min-h-[55vh] lg:min-h-full">
           <FadeIn direction="right" className="absolute inset-0">
             <img
-              src={peopleInTransit}
+              src={nosotrosImages.enfoque}
               alt="Enfoque Santos & Becker"
-              className="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
+              className="absolute inset-0 w-full h-full object-cover object-center"
             />
             <div className="absolute inset-0 bg-dark-accent/45" />
             {/* Accent top line */}

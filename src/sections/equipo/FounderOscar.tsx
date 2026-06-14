@@ -1,6 +1,6 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { useContent } from "@/context/LocaleContext";
-import { legalSignature } from "@/assets/photos";
+import { teamImages } from "@/assets/site/siteImages";
 
 export function FounderOscar() {
   const c = useContent().equipo.oscar;
@@ -10,9 +10,10 @@ export function FounderOscar() {
       <div className="flex flex-col lg:flex-row min-h-[75vh]">
         <div className="lg:w-1/2 relative min-h-[50vh] lg:min-h-full">
           <img
-            src={legalSignature}
+            src={teamImages.founders.oscar}
             alt={c.name}
-            className="absolute inset-0 w-full h-full object-cover grayscale"
+            loading="lazy"
+            className="absolute inset-0 w-full h-full object-cover object-top"
           />
         </div>
         <div className="lg:w-1/2 px-8 md:px-16 py-24 flex flex-col justify-center bg-white">

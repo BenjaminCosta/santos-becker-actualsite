@@ -1,7 +1,7 @@
 import { InternalPageHero } from "@/components/shared/InternalPageHero";
 import { TecnologiaSam } from "@/sections/tecnologia/TecnologiaSam";
 import { useContent } from "@/context/LocaleContext";
-import { samAiAssistant } from "@/assets/photos";
+import { tecnologiaImages } from "@/assets/site/siteImages";
 
 export function Tecnologia() {
   const c = useContent().tecnologia.hero;
@@ -9,7 +9,7 @@ export function Tecnologia() {
   return (
     <div className="bg-background">
       <InternalPageHero
-        image={samAiAssistant}
+        image={tecnologiaImages.hero}
         eyebrow={c.eyebrow}
         titleLine1={c.titleLine1}
         titleLine2={c.titleLine2}

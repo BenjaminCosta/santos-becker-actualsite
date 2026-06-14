@@ -1,10 +1,10 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { useContent } from "@/context/LocaleContext";
-import { cityStrategy, internationalFlags, officeMapPins, runwayMobility } from "@/assets/photos";
+import { contactoImages } from "@/assets/site/siteImages";
 
 const OFFICE_IMAGES = [
   {
-    image: officeMapPins,
+    image: contactoImages.offices[0],
     badge: null,
     colClass: "md:col-span-7",
     aspect: "aspect-video",
@@ -12,7 +12,7 @@ const OFFICE_IMAGES = [
     offset: "",
   },
   {
-    image: cityStrategy,
+    image: contactoImages.offices[1],
     badge: null,
     colClass: "md:col-span-4 md:col-start-9",
     aspect: "aspect-[4/5]",
@@ -20,7 +20,7 @@ const OFFICE_IMAGES = [
     offset: "md:mt-48",
   },
   {
-    image: runwayMobility,
+    image: contactoImages.offices[2],
     badge: null,
     colClass: "md:col-span-5",
     aspect: "aspect-[3/2]",
@@ -28,7 +28,7 @@ const OFFICE_IMAGES = [
     offset: "md:mt-12",
   },
   {
-    image: internationalFlags,
+    image: contactoImages.offices[3],
     badge: null,
     colClass: "md:col-span-6 md:col-start-7",
     aspect: "aspect-video",
@@ -68,6 +68,7 @@ export function ContactOffices() {
                   <img
                     src={visual.image}
                     alt={office.city}
+                    loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0"
                   />
                   {visual.badge && (

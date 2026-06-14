@@ -1,3 +1,5 @@
+import { teamMembersZh } from "./teamMembers";
+
 export const zh = {
   global: {
     nav: {
@@ -53,10 +55,10 @@ export const zh = {
         body: "Santos & Becker以技术精准、合规标准和墨西哥主要经济走廊的战略布局，支持全球人才流动。",
       },
       socials: [
-        { name: "LinkedIn", href: "#" },
-        { name: "Instagram", href: "#" },
+        { name: "LinkedIn", href: "https://www.linkedin.com/company/santos-becker/" },
+        { name: "Instagram", href: "https://www.instagram.com/santosbecker_sc/" },
         { name: "Facebook", href: "#" },
-        { name: "YouTube", href: "#" },
+        { name: "YouTube", href: "https://www.youtube.com/@SantosBeckerSIC" },
       ],
     },
     whatsapp: {
@@ -525,32 +527,7 @@ export const zh = {
       eyebrow: "团队",
       title: "运营团队",
       intro: "我们的团队由移民法、合规和客户服务领域的专业人士组成，每个人都在我们提供的体验中承担关键角色。",
-      members: [
-        {
-          name: "Carlos Mendoza",
-          role: "业务主任",
-          bio: "领导企业签证运营及与政府当局的战略联络。",
-          img: "people-in-transit",
-        },
-        {
-          name: "Elena Ríos",
-          role: "技术与创新负责人",
-          bio: "专有平台及法律移民自动化流程的架构师。",
-          img: "sam-ai-assistant",
-        },
-        {
-          name: "Roberto Garza",
-          role: "高级顾问",
-          bio: "专注于跨国司法管辖区的Bespoke案件和高净值投资者。",
-          img: "legal-signature",
-        },
-        {
-          name: "Sofía Laurent",
-          role: "高级律师助理",
-          bio: "国际劳动力融合及外籍雇用法规合规专家。",
-          img: "global-reach-network",
-        },
-      ],
+      members: teamMembersZh,
     },
     carreras: {
       eyebrow: "职业机会",
@@ -611,7 +588,7 @@ export const zh = {
       mockA: "通常周期为15至30个工作日，取决于公司类型和文件情况。您想启动流程吗？",
       cta: "认识SAM，我们的虚拟助手",
       youtubeCta: "访问YouTube频道",
-      youtubeHref: "#",
+      youtubeHref: "https://www.youtube.com/@SantosBeckerSIC",
     },
   },
 
@@ -735,10 +712,10 @@ export const zh = {
       waLabel: "WhatsApp",
       socialEyebrow: "社交媒体",
       socials: [
-        { name: "LinkedIn", label: "Santos & Becker", href: "#" },
-        { name: "Instagram", label: "@santosbecker_sc", href: "#" },
+        { name: "LinkedIn", label: "Santos & Becker", href: "https://www.linkedin.com/company/santos-becker/" },
+        { name: "Instagram", label: "@santosbecker_sc", href: "https://www.instagram.com/santosbecker_sc/" },
         { name: "Facebook", label: "Santos & Becker", href: "#" },
-        { name: "YouTube", label: "S&B YouTube Channel", href: "#" },
+        { name: "YouTube", label: "S&B YouTube Channel", href: "https://www.youtube.com/@SantosBeckerSIC" },
         { name: "WhatsApp", label: "+52 55 6617 7712", href: "https://wa.me/525566177712" },
       ],
       hoursLabel: "服务时间",

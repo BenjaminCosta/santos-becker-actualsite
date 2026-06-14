@@ -6,6 +6,8 @@ interface InternalPageHeroProps {
   titleLine1: string;
   titleLine2: string;
   subtitle: string;
+  titleClassName?: string;
+  titleFontSize?: string;
 }
 
 export function InternalPageHero({
@@ -14,15 +16,21 @@ export function InternalPageHero({
   titleLine1,
   titleLine2,
   subtitle,
+  titleClassName = "mx-auto",
+  titleFontSize = "clamp(2.6rem, 6.5vw, 6.5rem)",
 }: InternalPageHeroProps) {
   return (
     <section className="relative h-[75vh] min-h-[600px] w-full flex items-center justify-center pt-28 md:pt-32 overflow-hidden">
       {/* Background */}
-      <div
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url("${image}")` }}
-      >
-        <div className="absolute inset-0 bg-black/55" />
+      <div className="absolute inset-0 z-0">
+        <img
+          src={image}
+          alt=""
+          loading="eager"
+          decoding="async"
+          className="h-full w-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-black/62" />
       </div>
 
       {/* Content */}
@@ -37,8 +45,8 @@ export function InternalPageHero({
 
         {/* Title */}
         <FadeIn delay={0.12} distance={14}>
-          <h1 className="font-heading font-bold tracking-[-0.01em] mb-10 mx-auto"
-              style={{ fontSize: 'clamp(2.6rem, 6.5vw, 6.5rem)', lineHeight: 0.9 }}>
+          <h1 className={`font-heading font-bold tracking-[-0.01em] mb-10 ${titleClassName}`}
+              style={{ fontSize: titleFontSize, lineHeight: 0.9 }}>
             <span className="block text-white">{titleLine1}</span>
             <span className="block text-accent">{titleLine2}</span>
           </h1>
@@ -55,7 +63,7 @@ export function InternalPageHero({
 
         {/* Subtitle */}
         <FadeIn delay={0.3} distance={10}>
-          <p className="font-sans text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+          <p className="font-sans text-base md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
             {subtitle}
           </p>
         </FadeIn>
@@ -70,4 +78,3 @@ export function InternalPageHero({
     </section>
   );
 }
-

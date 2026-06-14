@@ -1,6 +1,6 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { useContent } from "@/context/LocaleContext";
-import { globalReachNetwork, internationalFlags } from "@/assets/photos";
+import { inclusionImages } from "@/assets/site/siteImages";
 
 export function InclusionAlliances() {
   const c = useContent().inclusion.alliances;
@@ -18,8 +18,9 @@ export function InclusionAlliances() {
             {/* Large portrait image */}
             <div className="w-[88%] h-120 overflow-hidden ml-4">
               <img
-                src={internationalFlags}
+                src={inclusionImages.alliancesMain}
                 alt="Inclusión Laboral"
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -27,8 +28,9 @@ export function InclusionAlliances() {
             {/* Smaller overlapping image — bottom right */}
             <div className="absolute bottom-0 right-0 w-[52%] h-60 overflow-hidden border-4 border-white shadow-xl">
               <img
-                src={globalReachNetwork}
+                src={inclusionImages.alliancesSecondary}
                 alt="Alianzas corporativas"
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
             </div>

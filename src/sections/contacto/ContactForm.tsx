@@ -57,14 +57,6 @@ export function ContactForm() {
                   </a>
                 </div>
 
-                <div>
-                  <p className="font-heading text-[9px] uppercase tracking-[0.15em] text-muted-foreground mb-2">
-                    {contactInfo.hoursLabel}
-                  </p>
-                  <p className="font-sans text-lg text-foreground leading-relaxed whitespace-pre-line">
-                    {contactInfo.hours}
-                  </p>
-                </div>
               </div>
 
               {/* Social box */}

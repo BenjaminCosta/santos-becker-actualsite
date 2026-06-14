@@ -1,6 +1,7 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { useContent } from "@/context/LocaleContext";
 import { SectionHeading } from "@/components/shared/SectionHeading";
+import { nosotrosImages } from "@/assets/site/siteImages";
 
 export function NosotrosInstitucional() {
   const c = useContent().nosotros.institucional;
@@ -33,6 +34,24 @@ export function NosotrosInstitucional() {
               </FadeIn>
             ))}
           </div>
+
+          <FadeIn delay={0.12}>
+            <div className="relative mb-14 min-h-[360px] overflow-hidden bg-dark-accent">
+              <img
+                src={nosotrosImages.metodologia}
+                alt="Metodologia Santos & Becker"
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover object-center opacity-70"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-dark-accent/86 via-dark-accent/42 to-transparent" />
+              <div className="relative z-10 max-w-xl p-8 md:p-12">
+                <p className="typo-eyebrow text-accent mb-5">{c.eyebrow}</p>
+                <p className="font-sans text-xl text-white/78 leading-relaxed">
+                  {c.mission.desc}
+                </p>
+              </div>
+            </div>
+          </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 border-t border-l border-border bg-white">
             {c.values.map((value, index) => (

@@ -1,9 +1,8 @@
 import { InternalPageHero } from "@/components/shared/InternalPageHero";
 import { ContactForm } from "@/sections/contacto/ContactForm";
-import { ContactOffices } from "@/sections/contacto/ContactOffices";
 import { ContactAlternativeCta } from "@/sections/contacto/ContactAlternativeCta";
 import { useContent } from "@/context/LocaleContext";
-import { officeMapPins } from "@/assets/photos";
+import { contactoImages } from "@/assets/site/siteImages";
 
 export function Contacto() {
   const c = useContent().contacto.hero;
@@ -11,14 +10,13 @@ export function Contacto() {
   return (
     <div className="bg-background">
       <InternalPageHero
-        image={officeMapPins}
+        image={contactoImages.hero}
         eyebrow={c.eyebrow}
         titleLine1={c.titleLine1}
         titleLine2={c.titleLine2}
         subtitle={c.subtitle}
       />
       <ContactForm />
-      <ContactOffices />
       <ContactAlternativeCta />
     </div>
   );

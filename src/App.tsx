@@ -16,6 +16,9 @@ import { Tecnologia } from "@/pages/Tecnologia";
 import { Inclusion } from "@/pages/Inclusion";
 import { Equipo } from "@/pages/Equipo";
 import { Contacto } from "@/pages/Contacto";
+import { AvisoPrivacidad } from "@/pages/AvisoPrivacidad";
+import { TerminosCondiciones } from "@/pages/TerminosCondiciones";
+import { AvisoRegulatorio } from "@/pages/AvisoRegulatorio";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient();
@@ -31,6 +34,9 @@ function Router() {
         <Route path="/inclusion-laboral" component={Inclusion} />
         <Route path="/equipo" component={Equipo} />
         <Route path="/contacto" component={Contacto} />
+        <Route path="/aviso-de-privacidad" component={AvisoPrivacidad} />
+        <Route path="/terminos-y-condiciones" component={TerminosCondiciones} />
+        <Route path="/aviso-regulatorio" component={AvisoRegulatorio} />
         <Route component={NotFound} />
       </Switch>
     </PageLayout>

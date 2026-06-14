@@ -1,3 +1,5 @@
+import { teamMembersEn } from "./teamMembers";
+
 export const en = {
   global: {
     nav: {
@@ -53,10 +55,10 @@ export const en = {
         body: "Santos & Becker supports global mobility with technical precision, regulatory compliance, and strategic presence in Mexico's leading economic corridors.",
       },
       socials: [
-        { name: "LinkedIn", href: "#" },
-        { name: "Instagram", href: "#" },
+        { name: "LinkedIn", href: "https://www.linkedin.com/company/santos-becker/" },
+        { name: "Instagram", href: "https://www.instagram.com/santosbecker_sc/" },
         { name: "Facebook", href: "#" },
-        { name: "YouTube", href: "#" },
+        { name: "YouTube", href: "https://www.youtube.com/@SantosBeckerSIC" },
       ],
     },
     whatsapp: {
@@ -525,32 +527,7 @@ export const en = {
       eyebrow: "Team",
       title: "Operational Team",
       intro: "Our team is made up of professionals specialized in immigration law, regulatory compliance, and client service, each with a key role in the experience we provide.",
-      members: [
-        {
-          name: "Carlos Mendoza",
-          role: "Practice Director",
-          bio: "Leads corporate visa operations and strategic liaison with government authorities.",
-          img: "people-in-transit",
-        },
-        {
-          name: "Elena Ríos",
-          role: "Head of Tech & Innovation",
-          bio: "Architect of the proprietary platform and legal-immigration automation processes.",
-          img: "sam-ai-assistant",
-        },
-        {
-          name: "Roberto Garza",
-          role: "Senior Counsel",
-          bio: "Specialist in Bespoke cases and high-net-worth investors across international jurisdictions.",
-          img: "legal-signature",
-        },
-        {
-          name: "Sofía Laurent",
-          role: "Senior Associate",
-          bio: "Expert in international labor inclusion and compliance with foreign hiring regulations.",
-          img: "global-reach-network",
-        },
-      ],
+      members: teamMembersEn,
     },
     carreras: {
       eyebrow: "Careers",
@@ -611,7 +588,7 @@ export const en = {
       mockA: "The usual timeline is 15 to 30 business days, subject to company type and documentation. Would you like to start the process?",
       cta: "Meet SAM, our virtual assistant",
       youtubeCta: "Watch our YouTube channel",
-      youtubeHref: "#",
+      youtubeHref: "https://www.youtube.com/@SantosBeckerSIC",
     },
   },
 
@@ -735,10 +712,10 @@ export const en = {
       waLabel: "WhatsApp",
       socialEyebrow: "Social media",
       socials: [
-        { name: "LinkedIn", label: "Santos & Becker", href: "#" },
-        { name: "Instagram", label: "@santosbecker_sc", href: "#" },
+        { name: "LinkedIn", label: "Santos & Becker", href: "https://www.linkedin.com/company/santos-becker/" },
+        { name: "Instagram", label: "@santosbecker_sc", href: "https://www.instagram.com/santosbecker_sc/" },
         { name: "Facebook", label: "Santos & Becker", href: "#" },
-        { name: "YouTube", label: "S&B YouTube Channel", href: "#" },
+        { name: "YouTube", label: "S&B YouTube Channel", href: "https://www.youtube.com/@SantosBeckerSIC" },
         { name: "WhatsApp", label: "+52 55 6617 7712", href: "https://wa.me/525566177712" },
       ],
       hoursLabel: "Office Hours",

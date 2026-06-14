@@ -4,7 +4,7 @@ import { useInView } from "framer-motion";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { useContent } from "@/context/LocaleContext";
 import { SectionHeading } from "@/components/shared/SectionHeading";
-import { peopleInTransit } from "@/assets/photos";
+import { homeImages } from "@/assets/site/siteImages";
 import {
   Clock,
   Briefcase,
@@ -91,8 +91,8 @@ export function HomeAbout() {
       <div className="flex flex-col lg:flex-row min-h-[80vh]">
         <div className="lg:w-1/2 relative min-h-[50vh] lg:min-h-full">
           <img
-            src={peopleInTransit}
-            alt="Santos & Becker"
+            src={homeImages.about}
+            alt="Consultoria migratoria Santos & Becker"
             loading="lazy"
             className="absolute inset-0 w-full h-full object-cover"
           />

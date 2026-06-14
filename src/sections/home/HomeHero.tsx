@@ -1,19 +1,23 @@
 import { Link } from "wouter";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { useContent } from "@/context/LocaleContext";
-import { homeHeroGlobalMobility } from "@/assets/photos";
+import { homeImages } from "@/assets/site/siteImages";
 
 export function HomeHero() {
   const c = useContent().home.hero;
 
   return (
-    <section className="relative h-screen min-h-[700px] w-full flex items-center pt-28 md:pt-32 overflow-hidden">
+    <section className="relative min-h-[100dvh] w-full flex items-center pt-28 md:pt-32 overflow-hidden">
 
       {/* Background */}
-      <div
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url("${homeHeroGlobalMobility}")` }}
-      >
+      <div className="absolute inset-0 z-0">
+        <img
+          src={homeImages.hero}
+          alt="Movilidad global Santos & Becker"
+          loading="eager"
+          decoding="async"
+          className="h-full w-full object-cover object-center"
+        />
         <div className="absolute inset-0 bg-black/62" />
         <div
           className="absolute inset-0 pointer-events-none"
@@ -25,7 +29,7 @@ export function HomeHero() {
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-8 md:px-16">
 
         <FadeIn delay={0} distance={10}>
-          <p className="typo-eyebrow text-accent mb-8 flex items-center gap-3">
+          <p className="typo-eyebrow text-accent mb-8 flex items-center gap-3" style={{ fontSize: '0.8rem', letterSpacing: '0.18em' }}>
             <span className="inline-block w-5 h-px bg-accent" />
             {c.eyebrow}
           </p>
@@ -33,8 +37,8 @@ export function HomeHero() {
 
         <FadeIn delay={0.14} distance={22}>
           <h1
-            className="font-heading font-bold leading-[0.9] tracking-tight mb-8 text-white"
-            style={{ fontSize: 'clamp(3.6rem, 7.5vw, 7.5rem)', textTransform: 'none' }}
+            className="font-heading font-bold leading-[1.05] tracking-tight mb-8 text-white"
+            style={{ fontSize: 'clamp(2.15rem, 6vw, 6rem)', textTransform: 'none' }}
           >
             {c.lines.map((line, i) => (
               <span key={i} className="block uppercase">{line}</span>
@@ -47,7 +51,7 @@ export function HomeHero() {
         </FadeIn>
 
         <FadeIn delay={0.34} distance={14}>
-          <p className="font-sans text-lg md:text-xl text-white/80 max-w-[560px] mb-14 leading-relaxed">
+          <p className="font-sans text-base md:text-2xl text-white/85 max-w-[560px] mb-10 md:mb-14 leading-relaxed">
             {c.subtitle}
           </p>
         </FadeIn>

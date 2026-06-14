@@ -3,7 +3,8 @@ import { Check } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { useContent } from "@/context/LocaleContext";
 import { SectionHeading } from "@/components/shared/SectionHeading";
-import bespokeOffice from "@/assets/bespoke-office.jpg";
+import { serviciosImages } from "@/assets/site/siteImages";
+import bespokeVisual from "@/assets/site/home/hero.webp";
 
 export function HomeBespoke() {
   const c = useContent().home.bespoke;
@@ -13,7 +14,7 @@ export function HomeBespoke() {
       {/* Background image with overlay */}
       <div className="absolute inset-0">
         <img
-          src={bespokeOffice}
+          src={serviciosImages.items[3]}
           alt="Servicio Bespoke"
           loading="lazy"
           className="w-full h-full object-cover opacity-30"
@@ -67,18 +68,25 @@ export function HomeBespoke() {
             </div>
           </FadeIn>
 
-          {/* Right: Testimonial (desktop only) */}
+          {/* Right: editorial image */}
           <FadeIn delay={0.15}>
-            <div className="hidden lg:block relative">
-              <div className="absolute -top-10 -right-10 w-40 h-40 border border-accent/10" />
-              <div className="bg-white/5 backdrop-blur-md p-8 border-l-2 border-accent">
-                <span className="font-heading text-accent/20 text-[8rem] leading-none select-none block -mb-8">"</span>
-                <p className="font-sans text-lg text-white/80 italic mb-6">
-                  {c.testimonial.text}
-                </p>
-                <div>
-                  <span className="font-heading text-sm text-white block uppercase tracking-widest">{c.testimonial.role}</span>
-                  <span className="typo-eyebrow text-white/50">{c.testimonial.org}</span>
+            <div className="relative">
+              <div className="absolute -right-6 -top-6 hidden h-32 w-32 border border-accent/15 lg:block" />
+              <div className="absolute -bottom-6 -left-6 hidden h-28 w-28 bg-white/5 lg:block" />
+
+              <div className="group relative overflow-hidden border border-white/10 bg-white/[0.03] shadow-[0_28px_70px_-34px_rgba(0,0,0,0.85)]">
+                <img
+                  src={bespokeVisual}
+                  alt="Movilidad global para servicios Bespoke"
+                  loading="lazy"
+                  className="aspect-[16/11] w-full object-cover opacity-85 saturate-[0.8] transition duration-700 group-hover:scale-[1.025] group-hover:opacity-100"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-dark-accent/70 via-dark-accent/12 to-transparent" />
+                <div className="absolute inset-0 ring-1 ring-inset ring-white/10" />
+                <div className="absolute bottom-0 left-0 right-0 flex items-end justify-end p-6 md:p-8">
+                  <div className="hidden h-12 w-12 shrink-0 items-center justify-center border border-white/15 bg-white/10 text-accent backdrop-blur-md md:flex">
+                    <span className="font-heading text-lg leading-none">S&amp;B</span>
+                  </div>
                 </div>
               </div>
             </div>

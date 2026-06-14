@@ -2,19 +2,7 @@ import { Link } from "wouter";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { useContent } from "@/context/LocaleContext";
 import { SectionHeading } from "@/components/shared/SectionHeading";
-import {
-  legalSignature,
-  officeMapPins,
-  passportStamp,
-  runwayMobility,
-} from "@/assets/photos";
-
-const SERVICE_IMAGES = [
-  runwayMobility,
-  passportStamp,
-  legalSignature,
-  officeMapPins,
-];
+import { homeImages } from "@/assets/site/siteImages";
 
 export function HomeServices() {
   const c = useContent().home.services;
@@ -40,7 +28,7 @@ export function HomeServices() {
               <Link key={i} href="/servicios" className="group block relative h-[460px] overflow-hidden">
                 <div
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-[1.04]"
-                  style={{ backgroundImage: `url("${SERVICE_IMAGES[i]}")` }}
+                  style={{ backgroundImage: `url("${homeImages.services[i]}")` }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 p-8">

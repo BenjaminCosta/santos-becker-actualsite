@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { useContent } from "@/context/LocaleContext";
 import { SectionHeading } from "@/components/shared/SectionHeading";
-import { samAiAssistant } from "@/assets/photos";
+import { homeImages } from "@/assets/site/siteImages";
 
 export function HomeTechnology() {
   const c = useContent().home.technology;
@@ -42,7 +42,7 @@ export function HomeTechnology() {
             />
           ) : (
             <img
-              src={samAiAssistant}
+              src={homeImages.technology}
               alt="Tecnología Santos & Becker"
               loading="lazy"
               className="absolute inset-0 w-full h-full object-cover"

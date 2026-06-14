@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { useContent } from "@/context/LocaleContext";
-import { globalReachNetwork } from "@/assets/photos";
+import { inclusionImages } from "@/assets/site/siteImages";
 
 export function InclusionCta() {
   const c = useContent().inclusion.cta;
@@ -12,7 +12,7 @@ export function InclusionCta() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-fixed"
         style={{
-          backgroundImage: `url(${globalReachNetwork})`,
+          backgroundImage: `url(${inclusionImages.cta})`,
         }}
       />
       {/* Primary gradient overlay */}

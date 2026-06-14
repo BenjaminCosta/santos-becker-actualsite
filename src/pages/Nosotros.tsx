@@ -5,7 +5,7 @@ import { NosotrosInstitucional } from "@/sections/nosotros/NosotrosInstitucional
 import { NosotrosDiferenciadores } from "@/sections/nosotros/NosotrosDiferenciadores";
 import { PartnerLogos } from "@/components/shared/PartnerLogos";
 import { useContent } from "@/context/LocaleContext";
-import { globalReachNetwork } from "@/assets/photos";
+import { nosotrosImages } from "@/assets/site/siteImages";
 
 export function Nosotros() {
   const c = useContent().nosotros;
@@ -13,7 +13,7 @@ export function Nosotros() {
   return (
     <div className="bg-background">
       <InternalPageHero
-        image={globalReachNetwork}
+        image={nosotrosImages.hero}
         eyebrow={c.hero.eyebrow}
         titleLine1={c.hero.titleLine1}
         titleLine2={c.hero.titleLine2}

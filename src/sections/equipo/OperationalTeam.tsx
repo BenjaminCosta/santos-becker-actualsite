@@ -1,8 +1,8 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { useContent } from "@/context/LocaleContext";
-import { globalReachNetwork, legalSignature, peopleInTransit, samAiAssistant } from "@/assets/photos";
+import { teamImages } from "@/assets/site/siteImages";
 
-const TEAM_IMAGES = [peopleInTransit, samAiAssistant, legalSignature, globalReachNetwork];
+type TeamImageKey = keyof typeof teamImages.members;
 
 export function OperationalTeam() {
   const c = useContent().equipo;
@@ -20,15 +20,16 @@ export function OperationalTeam() {
           </div>
         </FadeIn>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-14">
           {c.team.members.map((member, index) => (
-            <FadeIn key={index} delay={index * 0.08}>
+            <FadeIn key={member.name} delay={(index % 8) * 0.04}>
               <div className="group cursor-pointer">
-                <div className="w-full h-95 overflow-hidden mb-5">
+                <div className="w-full aspect-[2/3] max-h-[460px] overflow-hidden mb-5 bg-gray-100">
                   <img
-                    src={TEAM_IMAGES[index] ?? peopleInTransit}
+                    src={teamImages.members[member.img as TeamImageKey] ?? teamImages.hero}
                     alt={member.name}
-                    className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-[1.03]"
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-[1.03]"
                   />
                 </div>
                 <h3 className="font-heading text-xl font-bold text-foreground group-hover:text-primary transition-colors mb-1">{member.name}</h3>
@@ -43,6 +44,12 @@ export function OperationalTeam() {
 
       {/* Careers CTA */}
       <section className="bg-dark-accent px-8 md:px-16 py-24 md:py-32 relative overflow-hidden">
+        {/* Subtle gradient */}
+        <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(135deg, rgba(235,215,35,0.04) 0%, transparent 60%)' }} />
+        {/* Accent shapes */}
+        <div className="absolute top-12 right-16 w-28 h-28 border border-accent/10 pointer-events-none" />
+        <div className="absolute bottom-12 left-16 w-16 h-16 border border-accent/8 pointer-events-none" />
+
         <FadeIn>
           <div className="relative z-10 max-w-200">
             <p className="typo-eyebrow text-accent mb-6">{c.carreras.eyebrow}</p>
@@ -56,8 +63,15 @@ export function OperationalTeam() {
             </a>
           </div>
         </FadeIn>
-        <div className="absolute right-0 bottom-0 opacity-5 pointer-events-none select-none overflow-hidden">
-          <span className="font-heading text-[28rem] leading-none tracking-tighter text-white block">S&B</span>
+
+        {/* Decorative vertical text */}
+        <div className="absolute right-10 top-1/2 -translate-y-1/2 hidden xl:block pointer-events-none">
+          <p
+            className="font-heading text-[10px] uppercase tracking-[0.4em] text-white/15"
+            style={{ writingMode: "vertical-rl" }}
+          >
+            Santos &amp; Becker — Únete al equipo
+          </p>
         </div>
       </section>
     </>

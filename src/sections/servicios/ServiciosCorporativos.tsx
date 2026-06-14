@@ -1,9 +1,9 @@
 import { Link } from "wouter";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { useContent } from "@/context/LocaleContext";
-import { legalSignature, officeMapPins, passportStamp, runwayMobility } from "@/assets/photos";
+import { serviciosImages } from "@/assets/site/siteImages";
 
-const IMAGES = [runwayMobility, passportStamp, legalSignature, officeMapPins];
+const IMAGES = serviciosImages.items;
 
 export function ServiciosCorporativos() {
   const c = useContent().servicios.corporate;
@@ -40,6 +40,7 @@ export function ServiciosCorporativos() {
               <img
                 src={IMAGES[index]}
                 alt={svc.title}
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
               <div className={`absolute inset-0 ${isDark ? "bg-black/20" : "bg-foreground/10"}`} />

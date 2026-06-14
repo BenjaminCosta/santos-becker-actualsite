@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { useContent } from "@/context/LocaleContext";
 import { SectionHeading } from "@/components/shared/SectionHeading";
-import purposeHandshake from "@/assets/purpose-handshake.jpg";
+import { homeImages } from "@/assets/site/siteImages";
 
 export function HomePurpose() {
   const c = useContent().home.purpose;
@@ -13,8 +13,8 @@ export function HomePurpose() {
       {/* Background image with overlay */}
       <div className="absolute inset-0">
         <img
-          src={purposeHandshake}
-          alt="Propósito"
+          src={homeImages.purpose}
+          alt="Estrategia migratoria con impacto humano"
           loading="lazy"
           className="w-full h-full object-cover opacity-30"
           style={{ filter: 'saturate(0.25) hue-rotate(160deg)' }}
