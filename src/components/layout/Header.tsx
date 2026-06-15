@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logos/S_S&B Logo2_Color.png";
+import logo from "@/assets/logos/S_S&B Logo_Blanco.png";
 import { useLocale, useContent } from "@/context/LocaleContext";
 import type { Locale } from "@/content/index";
 import {
@@ -42,10 +42,10 @@ export function Header() {
   ];
 
   const headerSurfaceClass = scrolled
-    ? "header-surface-solid border-b border-[#E2E2DF]"
+    ? "header-surface-solid border-b border-white/10"
     : "header-surface-transparent border-b border-transparent";
-  const textColorClass = scrolled ? "text-[#303336]" : "text-white";
-  const mutedTextColorClass = scrolled ? "text-[#303336]/72" : "text-white/78";
+  const textColorClass = scrolled ? "text-white" : "text-white";
+  const mutedTextColorClass = scrolled ? "text-white/72" : "text-white/78";
 
   return (
     <>
@@ -90,7 +90,7 @@ export function Header() {
               value={locale}
               onSelect={setLocale}
               label={c.languageLabel}
-              variant={scrolled ? "solid" : "transparent"}
+              variant="transparent"
             />
             <Link
               href="/contacto"

@@ -264,8 +264,8 @@
   }
 
   .header-surface-solid {
-    background: hsl(var(--background));
-    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    background: var(--color-dark-accent);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.28);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
   }
