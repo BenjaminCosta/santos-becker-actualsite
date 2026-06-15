@@ -73,7 +73,6 @@ export function HomeTechnology() {
           </FadeIn>
 
         </div>
-        </div>
       </div>
     </section>
   );
