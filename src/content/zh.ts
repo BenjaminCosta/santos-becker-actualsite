@@ -91,7 +91,7 @@ export const zh = {
         { value: 500, prefix: "+", suffix: "", label: "在册活跃企业" },
         { value: 10000, prefix: "+", suffix: "", label: "获得协助的外国人及其家属" },
         { value: 95, prefix: "", suffix: "% NPS", label: "客户满意度指数" },
-        { value: 4, prefix: "", suffix: " 个办事处", label: "墨西哥城 · 蒙特雷 · 瓜达拉哈拉 · 坎昆" },
+        { value: 1, prefix: "", suffix: " 个办事处", label: "墨西哥城，并协调全国及国际事务" },
         { value: 25, prefix: "+", suffix: " 家律所", label: "遍布全球的专业网络" },
       ],
       cta: "了解我们的故事",
@@ -122,7 +122,7 @@ export const zh = {
         },
         {
           title: "全国布局，全球覆盖",
-          desc: "我们在墨西哥四个城市（墨西哥城、蒙特雷、瓜达拉哈拉和坎昆）运营，拥有覆盖全国的本地团队。对于国际需求，我们是全球25多家专业移民法律所组成网络的创始成员。",
+          desc: "我们以墨西哥城为运营中心，由专业团队协调墨西哥全国范围内的流程。对于国际需求，我们是由全球25多家移民法专业机构组成的网络的创始成员。",
         },
         {
           title: "战略预判",
@@ -222,12 +222,8 @@ export const zh = {
       formTitle: "给我们发送消息",
       offices: [
         {
-          city: "墨西哥城",
-          address: "Torre Virreyes，34楼\nPedregal 24, Lomas de Chapultepec\n11040 CDMX",
-        },
-        {
-          city: "蒙特雷",
-          address: "Torre KOI，18楼\nAv. Fundidora 501, Obispado\n64060 Monterrey",
+          city: "CDMX",
+          address: "Avenida Prado Norte 135 Piso 2\nLomas - Virreyes, Lomas de Chapultepec\nMiguel Hidalgo, 11000\nCiudad de México, CDMX",
         },
       ],
       fields: {
@@ -720,30 +716,18 @@ export const zh = {
       ],
       hoursLabel: "服务时间",
       hours: "周一至周四：9:00 – 18:00\n周五：9:00 – 15:00",
-      officesEyebrow: "办事处",
+      officesEyebrow: "办公室",
       officesNote:
-        "我们在墨西哥四个城市运营，拥有覆盖全国的本地团队。",
+        "我们通过墨西哥城办公室服务客户，并由专业团队协调全国及国际事务。",
       offices: [
         {
-          city: "墨西哥城",
-          address: "Torre Virreyes，34楼\nPedregal 24, Lomas de Chapultepec\n11040 CDMX，墨西哥",
-        },
-        {
-          city: "蒙特雷",
-          address: "Torre KOI，18楼\nAv. Fundidora 501, Obispado\n64060 Monterrey, N.L.",
-        },
-        {
-          city: "瓜达拉哈拉",
-          address: "Av. Paseo Royal Country 4596\nTorre Andares，8楼\n45116 Zapopan, Jal.",
-        },
-        {
-          city: "坎昆",
-          address: "Blvd. Kukulcán Km 9\n酒店区\n77500 Cancún, Q.R.",
+          city: "CDMX",
+          address: "Avenida Prado Norte 135 Piso 2\nLomas - Virreyes, Lomas de Chapultepec\nMiguel Hidalgo, 11000\nCiudad de México, CDMX",
         },
       ],
       map: {
-        eyebrow: "全国布局",
-        title: "墨西哥办事处",
+        eyebrow: "位置",
+        title: "墨西哥城办公室",
         label: "Santos & Becker — 墨西哥城",
       },
     },

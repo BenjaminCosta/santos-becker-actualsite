@@ -54,14 +54,14 @@ export function HomeCta() {
                 </div>
               </div>
 
-              {/* Offices */}
-              <div className="grid grid-cols-2 gap-6 mb-10">
+              {/* Office */}
+              <div className="mb-10 max-w-md border-l-2 border-accent pl-6">
                 {c.offices.map((office, i) => (
                   <div key={i}>
-                    <span className="font-heading text-sm uppercase tracking-widest text-foreground block mb-2">
+                    <span className="typo-eyebrow text-muted-foreground block mb-2">
                       {office.city}
                     </span>
-                    <p className="font-sans text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
+                    <p className="font-sans text-base text-foreground leading-relaxed whitespace-pre-line">
                       {office.address}
                     </p>
                   </div>

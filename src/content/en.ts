@@ -91,7 +91,7 @@ export const en = {
         { value: 500, prefix: "+", suffix: "", label: "companies in active portfolio" },
         { value: 10000, prefix: "+", suffix: "", label: "foreigners assisted with their families" },
         { value: 95, prefix: "", suffix: "% NPS", label: "client satisfaction index" },
-        { value: 4, prefix: "", suffix: " offices", label: "nationwide: CDMX · Monterrey · Guadalajara · Cancún" },
+        { value: 1, prefix: "", suffix: " office", label: "CDMX with national and international coordination" },
         { value: 25, prefix: "+", suffix: " firms", label: "specialized around the world" },
       ],
       cta: "Learn our story",
@@ -122,7 +122,7 @@ export const en = {
         },
         {
           title: "National presence, global reach",
-          desc: "We operate from four offices in Mexico (Mexico City, Monterrey, Guadalajara, and Cancún) with local teams covering the entire country. For international requirements, we are founding members of a network of more than 25 firms specialized in immigration law around the world.",
+          desc: "We operate from Mexico City with a specialized team that coordinates processes throughout Mexico. For international requirements, we are founding members of a network of more than 25 firms specialized in immigration law around the world.",
         },
         {
           title: "Strategic anticipation",
@@ -222,12 +222,8 @@ export const en = {
       formTitle: "Send us a message",
       offices: [
         {
-          city: "Mexico City",
-          address: "Torre Virreyes, Floor 34\nPedregal 24, Lomas de Chapultepec\n11040 CDMX",
-        },
-        {
-          city: "Monterrey",
-          address: "Torre KOI, Floor 18\nAv. Fundidora 501, Obispado\n64060 Monterrey",
+          city: "CDMX",
+          address: "Avenida Prado Norte 135 Piso 2\nLomas - Virreyes, Lomas de Chapultepec\nMiguel Hidalgo, 11000\nCiudad de México, CDMX",
         },
       ],
       fields: {
@@ -318,7 +314,7 @@ export const en = {
         },
         {
           title: "National presence, global reach",
-          desc: "We operate from four offices in Mexico (Mexico City, Monterrey, Guadalajara, and Cancún) with local teams covering the entire country. For international requirements, we are founding members of a network of more than 25 firms specialized in immigration law around the world.",
+          desc: "We operate from Mexico City with a specialized team that coordinates processes throughout Mexico. For international requirements, we are founding members of a network of more than 25 firms specialized in immigration law around the world.",
         },
         {
           title: "Strategic anticipation",
@@ -720,30 +716,18 @@ export const en = {
       ],
       hoursLabel: "Office Hours",
       hours: "Monday to Thursday: 9:00 – 18:00\nFriday: 9:00 – 15:00",
-      officesEyebrow: "Offices",
+      officesEyebrow: "Office",
       officesNote:
-        "We operate from four cities in Mexico, with local teams covering the entire country.",
+        "We serve clients from our Mexico City office and coordinate national and international matters through our specialized team.",
       offices: [
         {
-          city: "Mexico City",
-          address: "Torre Virreyes, Floor 34\nPedregal 24, Lomas de Chapultepec\n11040 CDMX, Mexico",
-        },
-        {
-          city: "Monterrey",
-          address: "Torre KOI, Floor 18\nAv. Fundidora 501, Obispado\n64060 Monterrey, N.L.",
-        },
-        {
-          city: "Guadalajara",
-          address: "Av. Paseo Royal Country 4596\nTorre Andares, Floor 8\n45116 Zapopan, Jal.",
-        },
-        {
-          city: "Cancún",
-          address: "Blvd. Kukulcán Km 9\nZona Hotelera\n77500 Cancún, Q.R.",
+          city: "CDMX",
+          address: "Avenida Prado Norte 135 Piso 2\nLomas - Virreyes, Lomas de Chapultepec\nMiguel Hidalgo, 11000\nCiudad de México, CDMX",
         },
       ],
       map: {
-        eyebrow: "National presence",
-        title: "Offices in Mexico",
+        eyebrow: "Location",
+        title: "Mexico City Office",
         label: "Santos & Becker — CDMX",
       },
     },

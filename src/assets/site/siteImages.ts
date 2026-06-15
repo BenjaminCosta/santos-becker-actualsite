@@ -178,7 +178,7 @@ export const partnerLogos = {
   amcham: { src: amchamLogo, alt: "AMCHAM Mexico" },
   asem: { src: asemLogo, alt: "ASEM" },
   cciFranceMexico: { src: cciFranceMexicoLogo, alt: "CCI France Mexico" },
-  comce: { src: comceLogo, alt: "COMCE" },
+  comce: { src: comceLogo, alt: "COMCE", variant: "dark-mark" },
   ilo: { src: iloLogo, alt: "International Labour Organization" },
   investMonterrey: { src: investMonterreyLogo, alt: "Invest Monterrey" },
   iom: { src: iomLogo, alt: "IOM" },

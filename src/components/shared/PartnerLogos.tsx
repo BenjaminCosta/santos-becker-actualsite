@@ -24,6 +24,10 @@ export function PartnerLogos({
   const allLogos = [...alianzas, ...afiliaciones];
   const renderLogo = (name: string, index: number) => {
     const logo = resolvePartnerLogo(name);
+    const logoClass =
+      logo && "variant" in logo && logo.variant === "dark-mark"
+        ? "brightness-0 opacity-55 hover:opacity-80"
+        : "opacity-80 hover:opacity-100";
 
     return (
       <div
@@ -35,7 +39,7 @@ export function PartnerLogos({
             src={logo.src}
             alt={logo.alt}
             loading="lazy"
-            className="max-h-12 max-w-[170px] object-contain opacity-80 transition duration-300 hover:opacity-100"
+            className={`max-h-12 max-w-[170px] object-contain transition duration-300 ${logoClass}`}
           />
         ) : (
           <span className="font-heading text-xl md:text-2xl font-bold tracking-widest text-foreground/35">

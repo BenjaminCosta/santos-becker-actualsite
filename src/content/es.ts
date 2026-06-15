@@ -91,7 +91,7 @@ export const es = {
         { value: 500, prefix: "+", suffix: "", label: "empresas en cartera activa" },
         { value: 10000, prefix: "+", suffix: "", label: "extranjeros asistidos con sus familias" },
         { value: 95, prefix: "", suffix: "% NPS", label: "índice de satisfacción del cliente" },
-        { value: 4, prefix: "", suffix: " oficinas", label: "nacionales: CDMX · Monterrey · Guadalajara · Cancún" },
+        { value: 1, prefix: "", suffix: " oficina", label: "CDMX con coordinación nacional e internacional" },
         { value: 25, prefix: "+", suffix: " firmas", label: "especializadas alrededor del mundo" },
       ],
       cta: "Conoce nuestra historia",
@@ -122,7 +122,7 @@ export const es = {
         },
         {
           title: "Presencia nacional, alcance global",
-          desc: "Operamos desde cuatro oficinas en México (Ciudad de México, Monterrey, Guadalajara y Cancún) con equipos locales que cubren todo el territorio nacional. Para requerimientos internacionales, somos fundadores de una red de más de 25 firmas especializadas en derecho migratorio alrededor del mundo.",
+          desc: "Operamos desde Ciudad de México con un equipo especializado que coordina procesos en todo el territorio nacional. Para requerimientos internacionales, somos fundadores de una red de más de 25 firmas especializadas en derecho migratorio alrededor del mundo.",
         },
         {
           title: "Anticipación estratégica",
@@ -222,12 +222,8 @@ export const es = {
       formTitle: "Envíanos un mensaje",
       offices: [
         {
-          city: "Ciudad de México",
-          address: "Torre Virreyes, Piso 34\nPedregal 24, Lomas de Chapultepec\n11040 CDMX",
-        },
-        {
-          city: "Monterrey",
-          address: "Torre KOI, Piso 18\nAv. Fundidora 501, Obispado\n64060 Monterrey",
+          city: "CDMX",
+          address: "Avenida Prado Norte 135 Piso 2\nLomas - Virreyes, Lomas de Chapultepec\nMiguel Hidalgo, 11000\nCiudad de México, CDMX",
         },
       ],
       fields: {
@@ -318,7 +314,7 @@ export const es = {
         },
         {
           title: "Presencia nacional, alcance global",
-          desc: "Operamos desde cuatro oficinas en México (Ciudad de México, Monterrey, Guadalajara y Cancún) con equipos locales que cubren todo el territorio nacional. Para requerimientos internacionales, somos fundadores de una red de más de 25 firmas especializadas en derecho migratorio alrededor del mundo.",
+          desc: "Operamos desde Ciudad de México con un equipo especializado que coordina procesos en todo el territorio nacional. Para requerimientos internacionales, somos fundadores de una red de más de 25 firmas especializadas en derecho migratorio alrededor del mundo.",
         },
         {
           title: "Anticipación estratégica",
@@ -718,30 +714,18 @@ export const es = {
       ],
       hoursLabel: "Horario de Atención",
       hours: "Lunes a Jueves: 9:00 – 18:00\nViernes: 9:00 – 15:00",
-      officesEyebrow: "Oficinas",
+      officesEyebrow: "Oficina",
       officesNote:
-        "Operamos desde cuatro ciudades en México, con equipos locales que cubren todo el territorio nacional.",
+        "Atendemos desde nuestra oficina en Ciudad de México y coordinamos operaciones nacionales e internacionales con nuestro equipo especializado.",
       offices: [
         {
-          city: "Ciudad de México",
-          address: "Torre Virreyes, Piso 34\nPedregal 24, Lomas de Chapultepec\n11040 CDMX, México",
-        },
-        {
-          city: "Monterrey",
-          address: "Torre KOI, Piso 18\nAv. Fundidora 501, Obispado\n64060 Monterrey, N.L.",
-        },
-        {
-          city: "Guadalajara",
-          address: "Av. Paseo Royal Country 4596\nTorre Andares, Piso 8\n45116 Zapopan, Jal.",
-        },
-        {
-          city: "Cancún",
-          address: "Blvd. Kukulcán Km 9\nZona Hotelera\n77500 Cancún, Q.R.",
+          city: "CDMX",
+          address: "Avenida Prado Norte 135 Piso 2\nLomas - Virreyes, Lomas de Chapultepec\nMiguel Hidalgo, 11000\nCiudad de México, CDMX",
         },
       ],
       map: {
-        eyebrow: "Presencia nacional",
-        title: "Oficinas en México",
+        eyebrow: "Ubicación",
+        title: "Oficina en Ciudad de México",
         label: "Santos & Becker — CDMX",
       },
     },
