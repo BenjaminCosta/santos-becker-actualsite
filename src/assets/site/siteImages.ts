@@ -57,7 +57,7 @@ import mariaFernandaRico from "./equipo/maria-fernanda-rico.webp";
 import mariaJoseRamirez from "./equipo/maria-jose-ramirez.webp";
 import marioRivera from "./equipo/mario-rivera.webp";
 import miguelGodinez from "./equipo/miguel-godinez.webp";
-import minervaSierra from "./equipo/minerva-sierra.webp";
+import minervaSierra from "./equipo/minerva-sierra.jpg";
 import pedroMarquez from "./equipo/pedro-marquez.webp";
 import ricardoAngeles from "./equipo/ricardo-angeles.webp";
 import sofiaKargl from "./equipo/sofia-kargl.webp";
