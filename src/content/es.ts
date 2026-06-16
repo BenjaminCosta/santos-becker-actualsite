@@ -91,7 +91,7 @@ export const es = {
         { value: 500, prefix: "+", suffix: "", label: "empresas en cartera activa" },
         { value: 10000, prefix: "+", suffix: "", label: "extranjeros asistidos con sus familias" },
         { value: 95, prefix: "", suffix: "% NPS", label: "índice de satisfacción del cliente" },
-        { value: 1, prefix: "", suffix: " oficina", label: "CDMX con coordinación nacional e internacional" },
+        { value: 4, prefix: "", suffix: " oficinas", label: "nacionales: CDMX · Monterrey · Guadalajara · Cancún" },
         { value: 25, prefix: "+", suffix: " firmas", label: "especializadas alrededor del mundo" },
       ],
       cta: "Conoce nuestra historia",

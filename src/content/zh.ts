@@ -91,7 +91,7 @@ export const zh = {
         { value: 500, prefix: "+", suffix: "", label: "在册活跃企业" },
         { value: 10000, prefix: "+", suffix: "", label: "获得协助的外国人及其家属" },
         { value: 95, prefix: "", suffix: "% NPS", label: "客户满意度指数" },
-        { value: 1, prefix: "", suffix: " 个办事处", label: "墨西哥城，并协调全国及国际事务" },
+        { value: 4, prefix: "", suffix: " 个办事处", label: "全国：墨西哥城 · 蒙特雷 · 瓜达拉哈拉 · 坎昆" },
         { value: 25, prefix: "+", suffix: " 家律所", label: "遍布全球的专业网络" },
       ],
       cta: "了解我们的故事",

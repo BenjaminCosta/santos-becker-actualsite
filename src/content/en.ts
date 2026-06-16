@@ -91,7 +91,7 @@ export const en = {
         { value: 500, prefix: "+", suffix: "", label: "companies in active portfolio" },
         { value: 10000, prefix: "+", suffix: "", label: "foreigners assisted with their families" },
         { value: 95, prefix: "", suffix: "% NPS", label: "client satisfaction index" },
-        { value: 1, prefix: "", suffix: " office", label: "CDMX with national and international coordination" },
+        { value: 4, prefix: "", suffix: " offices", label: "nationwide: CDMX · Monterrey · Guadalajara · Cancún" },
         { value: 25, prefix: "+", suffix: " firms", label: "specialized around the world" },
       ],
       cta: "Learn our story",
