@@ -50,3 +50,5 @@ Thumbs.db
 # Imagenes
 Imagenes
 Propuesta - Fotos
+.vercel
+.env*

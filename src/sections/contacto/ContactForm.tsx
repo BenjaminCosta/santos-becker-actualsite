@@ -55,9 +55,7 @@ export function ContactForm() {
 
     formRef.current?.reset();
     setStatus("success");
-    setStatusMessage(
-      "Consulta enviada. Si es la primera vez que se usa el formulario, confirme el correo de autorización de FormSubmit.",
-    );
+    setStatusMessage("Consulta enviada.");
   }
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
