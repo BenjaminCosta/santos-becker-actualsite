@@ -57,6 +57,7 @@ export function TecnologiaSam() {
                 muted
                 loop
                 playsInline
+                controls
                 preload="metadata"
                 className="aspect-9/16 h-auto w-full object-cover"
               />

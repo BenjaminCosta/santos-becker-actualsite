@@ -1,5 +1,14 @@
+import { type FormEvent, useState } from "react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { useContent } from "@/context/LocaleContext";
+import { ArrowRight, ChevronDown } from "lucide-react";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaWhatsapp,
+  FaYoutube,
+} from "react-icons/fa";
 
 const FLOAT_LABEL = [
   "absolute left-0 -top-4",
@@ -14,12 +23,69 @@ const FLOAT_LABEL = [
 const FIELD =
   "peer w-full bg-transparent border-0 border-b border-border focus:ring-0 focus:border-primary py-3 transition-colors placeholder-transparent font-sans text-lg";
 
+const SOCIAL_ICONS = {
+  LinkedIn: FaLinkedinIn,
+  Instagram: FaInstagram,
+  Facebook: FaFacebookF,
+  YouTube: FaYoutube,
+  WhatsApp: FaWhatsapp,
+} as const;
+
+type SubmitStatus = "idle" | "submitting" | "success" | "error";
+
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/info@santosbecker.com";
+
 export function ContactForm() {
   const { form, contactInfo } = useContent().contacto;
+  const [status, setStatus] = useState<SubmitStatus>("idle");
+  const [statusMessage, setStatusMessage] = useState("");
 
-  function handleSubmit(e: { preventDefault: () => void }) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    alert(form.successMessage);
+    const formElement = e.currentTarget;
+    const formData = new FormData(formElement);
+
+    if (String(formData.get("botcheck") || "").trim()) {
+      return;
+    }
+
+    const payload = {
+      ...Object.fromEntries(formData),
+      _subject: "Nueva consulta desde santosbecker.com",
+      _template: "table",
+      _captcha: "false",
+      _replyto: String(formData.get("email") || ""),
+    };
+
+    setStatus("submitting");
+    setStatusMessage("");
+
+    try {
+      const response = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+      const result = await response.json().catch(() => null);
+
+      if (!response.ok || result?.success === false) {
+        throw new Error(result?.message || "No se pudo enviar la consulta.");
+      }
+
+      formElement.reset();
+      setStatus("success");
+      setStatusMessage(form.successMessage);
+    } catch (error) {
+      setStatus("error");
+      setStatusMessage(
+        error instanceof Error
+          ? error.message
+          : "No se pudo enviar la consulta. Inténtelo nuevamente.",
+      );
+    }
   }
 
   return (
@@ -63,22 +129,33 @@ export function ContactForm() {
               <div className="bg-gray-50 p-10 -mx-6 md:mx-0 mt-12">
                 <p className="typo-eyebrow text-primary mb-6">{contactInfo.socialEyebrow}</p>
                 <ul className="space-y-4 divide-y divide-border">
-                  {contactInfo.socials.map((s) => (
-                    <li key={s.name} className="pt-4 first:pt-0">
-                      <a
-                        href={s.href}
-                        target={s.href.startsWith("http") ? "_blank" : undefined}
-                        rel={s.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                        className="font-sans text-base text-foreground hover:text-primary transition-colors flex items-center justify-between group"
-                      >
-                        <span>
-                          {s.name}
-                          <span className="block text-sm text-muted-foreground">{s.label}</span>
-                        </span>
-                        <span className="transform group-hover:translate-x-1 transition-transform text-sm">→</span>
-                      </a>
-                    </li>
-                  ))}
+                  {contactInfo.socials.map((s) => {
+                    const Icon = SOCIAL_ICONS[s.name as keyof typeof SOCIAL_ICONS];
+
+                    return (
+                      <li key={s.name} className="pt-4 first:pt-0">
+                        <a
+                          href={s.href}
+                          target={s.href.startsWith("http") ? "_blank" : undefined}
+                          rel={s.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                          className="font-sans text-base text-foreground hover:text-primary transition-colors flex items-center justify-between gap-5 group"
+                        >
+                          <span className="flex items-center gap-4 min-w-0">
+                            {Icon ? (
+                              <span className="flex h-9 w-9 shrink-0 items-center justify-center border border-border bg-white text-foreground transition-colors group-hover:border-primary group-hover:text-primary">
+                                <Icon aria-hidden className="h-4 w-4" />
+                              </span>
+                            ) : null}
+                            <span className="min-w-0">
+                              {s.name}
+                              <span className="block text-sm text-muted-foreground truncate">{s.label}</span>
+                            </span>
+                          </span>
+                          <ArrowRight className="h-4 w-4 shrink-0 transform transition-transform group-hover:translate-x-1" aria-hidden />
+                        </a>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
 
@@ -96,35 +173,45 @@ export function ContactForm() {
 
                   {/* Name */}
                   <div className="relative">
-                    <input type="text" required placeholder=" " className={FIELD} />
-                    <label className={FLOAT_LABEL}>{form.labels.nombre}</label>
+                    <input id="contact-nombre" type="text" name="nombre" required placeholder=" " className={FIELD} />
+                    <label htmlFor="contact-nombre" className={FLOAT_LABEL}>{form.labels.nombre}</label>
                   </div>
 
                   {/* Company */}
                   <div className="relative">
-                    <input type="text" placeholder=" " className={FIELD} />
-                    <label className={FLOAT_LABEL}>{form.labels.empresa}</label>
+                    <input id="contact-empresa" type="text" name="empresa" placeholder=" " className={FIELD} />
+                    <label htmlFor="contact-empresa" className={FLOAT_LABEL}>{form.labels.empresa}</label>
                   </div>
 
                   {/* Email */}
                   <div className="relative">
-                    <input type="email" required placeholder=" " className={FIELD} />
-                    <label className={FLOAT_LABEL}>{form.labels.email}</label>
+                    <input id="contact-email" type="email" name="email" required placeholder=" " className={FIELD} />
+                    <label htmlFor="contact-email" className={FLOAT_LABEL}>{form.labels.email}</label>
                   </div>
 
                   {/* Phone */}
                   <div className="relative">
-                    <input type="tel" placeholder=" " className={FIELD} />
-                    <label className={FLOAT_LABEL}>{form.labels.telefono}</label>
+                    <input id="contact-telefono" type="tel" name="telefono" placeholder=" " className={FIELD} />
+                    <label htmlFor="contact-telefono" className={FLOAT_LABEL}>{form.labels.telefono}</label>
                   </div>
+
+                  <input
+                    type="checkbox"
+                    name="botcheck"
+                    className="hidden"
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
 
                   {/* Inquiry type */}
                   <div className="md:col-span-2">
-                    <label className="block font-heading text-[9px] uppercase tracking-[0.15em] text-muted-foreground mb-3">
+                    <label htmlFor="contact-tipo" className="block font-heading text-[9px] uppercase tracking-[0.15em] text-muted-foreground mb-3">
                       {form.labels.tipo}
                     </label>
                     <div className="relative">
                       <select
+                        id="contact-tipo"
+                        name="tipo_consulta"
                         className="w-full bg-transparent border-0 border-b border-border focus:ring-0 focus:border-primary py-3 font-sans text-lg text-foreground appearance-none cursor-pointer"
                         style={{ borderRadius: 0 }}
                       >
@@ -132,24 +219,35 @@ export function ContactForm() {
                           <option key={i}>{type}</option>
                         ))}
                       </select>
-                      <div className="absolute right-0 bottom-3.5 pointer-events-none text-muted-foreground text-sm">↓</div>
+                      <ChevronDown className="absolute right-0 bottom-3.5 h-4 w-4 pointer-events-none text-muted-foreground" aria-hidden />
                     </div>
                   </div>
 
                   {/* Message */}
                   <div className="md:col-span-2 relative">
-                    <textarea rows={4} required placeholder=" " className={`${FIELD} resize-none`} />
-                    <label className={FLOAT_LABEL}>{form.labels.mensaje}</label>
+                    <textarea id="contact-mensaje" name="mensaje" rows={4} required placeholder=" " className={`${FIELD} resize-none`} />
+                    <label htmlFor="contact-mensaje" className={FLOAT_LABEL}>{form.labels.mensaje}</label>
                   </div>
 
                   {/* Submit */}
                   <div className="md:col-span-2 pt-4">
                     <button
                       type="submit"
-                      className="w-full py-5 bg-primary text-white font-heading uppercase tracking-[0.2em] text-[11px] hover:bg-primary/90 transition-colors"
+                      disabled={status === "submitting"}
+                      className="w-full py-5 bg-primary text-white font-heading uppercase tracking-[0.2em] text-[11px] hover:bg-primary/90 active:translate-y-px disabled:cursor-wait disabled:opacity-70 transition-all"
                     >
-                      {form.submitBtn}
+                      {status === "submitting" ? "Enviando..." : form.submitBtn}
                     </button>
+                    {statusMessage ? (
+                      <p
+                        role="status"
+                        className={`font-sans text-sm mt-4 ${
+                          status === "success" ? "text-primary" : "text-red-700"
+                        }`}
+                      >
+                        {statusMessage}
+                      </p>
+                    ) : null}
                     <p className="font-sans text-sm text-muted-foreground mt-4">
                       {form.privacyNote.split("aviso de privacidad").length > 1 ? (
                         <>

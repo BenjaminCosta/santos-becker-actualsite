@@ -60,10 +60,12 @@ export function HomeTechnology() {
               >
                 <video
                   src={tecnologiaImages.samVideo}
+                  poster={tecnologiaImages.sam}
                   autoPlay
                   muted
                   loop
                   playsInline
+                  controls
                   preload="metadata"
                   className="aspect-9/16 w-full object-cover"
                 />

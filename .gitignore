@@ -24,6 +24,9 @@ node_modules
 .vscode/
 
 # misc
+/.env
+/.env.*
+!/.env.example
 /.sass-cache
 /connect.lock
 /coverage
@@ -47,4 +50,3 @@ Thumbs.db
 # Imagenes
 Imagenes
 Propuesta - Fotos
-

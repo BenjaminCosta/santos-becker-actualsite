@@ -18,7 +18,7 @@ export function NosotrosAbout() {
               {c.title}
             </h2>
             <div className="font-sans text-lg text-muted-foreground space-y-5 leading-relaxed border-l-2 border-accent/30 pl-6 mb-12">
-              {c.body.map((p, i) => <p key={i}>{p}</p>)}
+              {c.body.map((p, i) => <p key={i} className="editorial-copy">{p}</p>)}
             </div>
             <Link href="/equipo" className="section-cta-inline section-cta-inline-dark group">
               {c.cta}

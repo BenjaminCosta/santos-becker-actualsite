@@ -1,7 +1,6 @@
 import { InternalPageHero } from "@/components/shared/InternalPageHero";
 import { InclusionPosition } from "@/sections/inclusion/InclusionPosition";
 import { InclusionAlliances } from "@/sections/inclusion/InclusionAlliances";
-import { InclusionMethodology } from "@/sections/inclusion/InclusionMethodology";
 import { InclusionCta } from "@/sections/inclusion/InclusionCta";
 import { useContent } from "@/context/LocaleContext";
 import { inclusionImages } from "@/assets/site/siteImages";
@@ -20,7 +19,6 @@ export function Inclusion() {
       />
       <InclusionPosition />
       <InclusionAlliances />
-      <InclusionMethodology />
       <InclusionCta />
     </div>
   );

@@ -34,8 +34,7 @@ export function OperationalTeam() {
                 </div>
                 <h3 className="font-heading text-xl font-bold text-foreground group-hover:text-primary transition-colors mb-1">{member.name}</h3>
                 <div className="w-6 h-0.5 bg-accent my-2"></div>
-                <p className="font-heading uppercase tracking-[0.12em] text-[9px] text-muted-foreground mb-3">{member.role}</p>
-                <p className="font-sans text-base text-foreground/70 leading-relaxed">{member.bio}</p>
+                <p className="font-sans text-[17px] text-foreground/70 leading-relaxed editorial-copy">{member.bio}</p>
               </div>
             </FadeIn>
           ))}

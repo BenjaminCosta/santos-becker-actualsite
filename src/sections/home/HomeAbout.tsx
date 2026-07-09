@@ -104,7 +104,7 @@ export function HomeAbout() {
               title={c.title}
               description={
                 <div className="space-y-5">
-                  {c.body.map((p, i) => <p key={i}>{p}</p>)}
+                  {c.body.map((p, i) => <p key={i} className="editorial-copy">{p}</p>)}
                 </div>
               }
               className="mb-10"

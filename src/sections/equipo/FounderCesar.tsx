@@ -24,7 +24,7 @@ export function FounderCesar() {
             </h2>
             <div className="w-10 h-[2px] bg-accent mb-8"></div>
             <div className="font-sans text-xl text-muted-foreground space-y-5 leading-relaxed mb-10">
-              {c.bio.map((p, i) => <p key={i}>{p}</p>)}
+              {c.bio.map((p, i) => <p key={i} className="editorial-copy">{p}</p>)}
             </div>
             <div className="flex flex-wrap gap-4">
               <a href={`mailto:${c.email}`} className="font-heading text-[11px] uppercase tracking-[0.15em] text-muted-foreground hover:text-primary transition-colors">{c.email}</a>
