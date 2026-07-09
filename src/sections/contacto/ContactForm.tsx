@@ -1,4 +1,4 @@
-import { type FormEvent, useState } from "react";
+import { type FormEvent, useRef, useState } from "react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { useContent } from "@/context/LocaleContext";
 import { ArrowRight, ChevronDown } from "lucide-react";
@@ -33,59 +33,47 @@ const SOCIAL_ICONS = {
 
 type SubmitStatus = "idle" | "submitting" | "success" | "error";
 
-const FORM_ENDPOINT = "https://formsubmit.co/ajax/info@santosbecker.com";
+const FORM_ENDPOINT = "https://formsubmit.co/info@santosbecker.com";
+const FORM_TARGET = "formsubmit-contact-frame";
 
 export function ContactForm() {
   const { form, contactInfo } = useContent().contacto;
   const [status, setStatus] = useState<SubmitStatus>("idle");
   const [statusMessage, setStatusMessage] = useState("");
+  const formRef = useRef<HTMLFormElement | null>(null);
+  const hasSubmittedRef = useRef(false);
+  const fallbackTimerRef = useRef<number | null>(null);
 
-  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const formElement = e.currentTarget;
-    const formData = new FormData(formElement);
+  function finishSubmit() {
+    if (!hasSubmittedRef.current) return;
+
+    hasSubmittedRef.current = false;
+    if (fallbackTimerRef.current) {
+      window.clearTimeout(fallbackTimerRef.current);
+      fallbackTimerRef.current = null;
+    }
+
+    formRef.current?.reset();
+    setStatus("success");
+    setStatusMessage(
+      "Consulta enviada. Si es la primera vez que se usa el formulario, confirme el correo de autorización de FormSubmit.",
+    );
+  }
+
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    const formData = new FormData(e.currentTarget);
 
     if (String(formData.get("botcheck") || "").trim()) {
+      e.preventDefault();
       return;
     }
 
-    const payload = {
-      ...Object.fromEntries(formData),
-      _subject: "Nueva consulta desde santosbecker.com",
-      _template: "table",
-      _captcha: "false",
-      _replyto: String(formData.get("email") || ""),
-    };
-
+    hasSubmittedRef.current = true;
     setStatus("submitting");
     setStatusMessage("");
 
-    try {
-      const response = await fetch(FORM_ENDPOINT, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(payload),
-      });
-      const result = await response.json().catch(() => null);
-
-      if (!response.ok || result?.success === false) {
-        throw new Error(result?.message || "No se pudo enviar la consulta.");
-      }
-
-      formElement.reset();
-      setStatus("success");
-      setStatusMessage(form.successMessage);
-    } catch (error) {
-      setStatus("error");
-      setStatusMessage(
-        error instanceof Error
-          ? error.message
-          : "No se pudo enviar la consulta. Inténtelo nuevamente.",
-      );
-    }
+    if (fallbackTimerRef.current) window.clearTimeout(fallbackTimerRef.current);
+    fallbackTimerRef.current = window.setTimeout(finishSubmit, 5000);
   }
 
   return (
@@ -169,7 +157,24 @@ export function ContactForm() {
                 <p className="typo-eyebrow text-primary mb-3">{form.eyebrow}</p>
                 <h2 className="typo-title text-3xl md:text-4xl text-foreground mb-14">{form.title}</h2>
 
-                <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                <iframe
+                  name={FORM_TARGET}
+                  title="Envio de formulario"
+                  className="hidden"
+                  onLoad={finishSubmit}
+                />
+
+                <form
+                  ref={formRef}
+                  action={FORM_ENDPOINT}
+                  method="POST"
+                  target={FORM_TARGET}
+                  onSubmit={handleSubmit}
+                  className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10"
+                >
+                  <input type="hidden" name="_subject" value="Nueva consulta desde santosbecker.com" />
+                  <input type="hidden" name="_template" value="table" />
+                  <input type="hidden" name="_captcha" value="false" />
 
                   {/* Name */}
                   <div className="relative">
