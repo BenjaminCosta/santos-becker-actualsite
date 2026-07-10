@@ -341,3 +341,65 @@
 .animate-slide-down {
   animation: slide-down 2.4s linear infinite;
 }
+
+/* ─── Chatbot widget ────────────────────────────────────────────────
+   The site enforces `* { border-radius: 0 !important }` inside @layer base.
+   For !important declarations the cascade compares LAYERS before specificity,
+   so these overrides must live in the SAME `base` layer — there a class
+   selector (.sbr-*) outranks the universal `*` reset and re-enables rounded
+   corners just for the assistant, while the rest of the site stays square. */
+@layer base {
+  .sbr-full  { border-radius: 9999px !important; }
+  .sbr-2xl   { border-radius: 26px !important; }
+  .sbr-xl    { border-radius: 20px !important; }
+  .sbr-lg    { border-radius: 16px !important; }
+  .sbr-md    { border-radius: 12px !important; }
+  .sbr-bot   { border-radius: 6px 18px 18px 18px !important; }
+  .sbr-user  { border-radius: 18px 6px 18px 18px !important; }
+  .sbr-panel { border-radius: 26px 26px 0 0 !important; }
+  @media (min-width: 640px) {
+    .sbr-panel { border-radius: 24px !important; }
+  }
+}
+
+/* Apple-style dark glass — subtle frost, specular top edge, vivid backdrop.
+   The gradient sits over the blurred backdrop for the frosted-material look;
+   the inset box-shadows draw a hairline outline + a bright specular highlight
+   along the top edge (the "light catching glass" detail). */
+.sb-glass {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0) 46%),
+    rgba(20, 21, 24, 0.72);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.16),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+.sb-glass-strong {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0) 24%),
+    radial-gradient(120% 80% at 50% -10%, rgba(0, 176, 124, 0.12), transparent 60%),
+    rgba(16, 17, 20, 0.80);
+  backdrop-filter: blur(34px) saturate(185%);
+  -webkit-backdrop-filter: blur(34px) saturate(185%);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.14);
+}
+/* Frosted micro-surfaces inside the panel (bot bubbles, input) */
+.sb-surface {
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.09);
+}
+
+/* Pulsing "online" indicator */
+@keyframes sb-pulse-dot {
+  0%   { box-shadow: 0 0 0 0 rgba(0, 176, 124, 0.55); }
+  70%  { box-shadow: 0 0 0 7px rgba(0, 176, 124, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 176, 124, 0); }
+}
+.sb-pulse-dot { animation: sb-pulse-dot 2.2s ease-out infinite; }
+
+/* Hide scrollbar chrome inside the transcript for a cleaner look */
+.sb-scroll { scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.18) transparent; }
+.sb-scroll::-webkit-scrollbar { width: 6px; }
+.sb-scroll::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.18); border-radius: 9999px; }

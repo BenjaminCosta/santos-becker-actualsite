@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
-import { WhatsAppButton } from "./WhatsApp";
+import { ChatBot } from "./ChatBot";
 import { ScrollToTop } from "./ScrollToTop";
 
 export function PageLayout({ children }: { children: ReactNode }) {
@@ -13,7 +13,7 @@ export function PageLayout({ children }: { children: ReactNode }) {
         {children}
       </main>
       <Footer />
-      <WhatsAppButton />
+      <ChatBot />
     </div>
   );
 }

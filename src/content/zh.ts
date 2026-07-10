@@ -67,6 +67,68 @@ export const zh = {
         "您好，我想了解Santos & Becker的服务信息。",
       ariaLabel: "通过WhatsApp联系",
     },
+    chatbot: {
+      badge: "全新助手",
+      launchLabel: "打开咨询助手",
+      launchSubtitle: "有什么可以帮您？",
+      closeLabel: "关闭助手",
+      headerTitle: "助手",
+      headerSubtitle: "在线 · 即时回复",
+      welcome:
+        "您好，欢迎来到 Santos & Becker。请留下您的咨询内容和一些联系方式，以便我们的团队审阅您的案件，并由我们的一位顾问与您联系跟进。",
+      start: "开始",
+      steps: {
+        nombre: {
+          prompt: "首先，请问您的全名是？",
+          placeholder: "您的姓名",
+        },
+        nacionalidad: {
+          prompt: "谢谢。请问您的国籍是？",
+          placeholder: "您的国籍",
+        },
+        email: {
+          prompt: "我们可以通过哪个电子邮箱与您联系？",
+          placeholder: "email@example.com",
+        },
+        telefono: {
+          prompt: "请问您的电话号码是？",
+          placeholder: "+52 55 0000 0000",
+        },
+        tipo: {
+          prompt: "您需要就哪类咨询获得建议？",
+        },
+        mensaje: {
+          prompt: "最后，请简要告诉我们您的咨询内容或情况。",
+          placeholder: "描述您的咨询",
+        },
+      },
+      consultationTypes: [
+        "企业服务",
+        "个人服务",
+        "融合",
+        "其他",
+      ],
+      validation: {
+        required: "请填写此字段以继续。",
+        email: "请输入有效的电子邮箱地址。",
+      },
+      sendLabel: "发送咨询",
+      sending: "发送中…",
+      submitError:
+        "我们无法发送您的咨询。请重试或写信至 info@santosbecker.com。",
+      success:
+        "感谢您提供信息。我们的团队将审阅您的咨询，顾问会尽快与您联系跟进。",
+      restart: "发送另一条咨询",
+      emailSubject: "新咨询 — 助手 santosbecker.com",
+      fieldLabels: {
+        nombre: "姓名",
+        nacionalidad: "国籍",
+        email: "联系邮箱",
+        telefono: "电话",
+        tipo: "咨询类型",
+        mensaje: "留言",
+      },
+    },
   },
 
   home: {
