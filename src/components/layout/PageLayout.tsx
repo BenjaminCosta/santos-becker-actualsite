@@ -9,7 +9,7 @@ export function PageLayout({ children }: { children: ReactNode }) {
     <div className="min-h-screen flex flex-col">
       <ScrollToTop />
       <Header />
-      <main className="flex-grow">
+      <main className="site-content flex-grow">
         {children}
       </main>
       <Footer />

@@ -1,6 +1,6 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { useContent } from "@/context/LocaleContext";
-import { inclusionImages } from "@/assets/site/siteImages";
+import { inclusionImages, resolvePartnerLogo } from "@/assets/site/siteImages";
 
 export function InclusionAlliances() {
   const c = useContent().inclusion.alliances;
@@ -52,19 +52,34 @@ export function InclusionAlliances() {
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-8 gap-x-8 border-t border-border pt-10">
-              {c.items.map((org, i) => (
-                <div key={i} className="group">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="w-1 h-4 bg-accent shrink-0" />
-                    <p className="font-heading text-lg font-bold text-foreground group-hover:text-primary transition-colors">
-                      {org.name}
+              {c.items.map((org, i) => {
+                const logo = resolvePartnerLogo(org.name);
+
+                return (
+                  <div key={i} className="group border-b border-border/70 pb-5 last:border-b-0">
+                    <div className="flex items-center gap-3 mb-3">
+                      {logo ? (
+                        <div className="flex h-10 w-20 shrink-0 items-center justify-center border-r border-border pr-3">
+                          <img
+                            src={logo.src}
+                            alt={logo.alt}
+                            loading="lazy"
+                            className="max-h-8 max-w-16 object-contain opacity-80 transition-opacity group-hover:opacity-100"
+                          />
+                        </div>
+                      ) : (
+                        <span className="w-1 h-4 bg-accent shrink-0" />
+                      )}
+                      <p className="font-heading text-lg font-bold text-foreground group-hover:text-primary transition-colors">
+                        {org.name}
+                      </p>
+                    </div>
+                    <p className="font-sans text-sm text-muted-foreground leading-snug">
+                      {org.full}
                     </p>
                   </div>
-                  <p className="font-sans text-sm text-muted-foreground leading-snug pl-3">
-                    {org.full}
-                  </p>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </FadeIn>

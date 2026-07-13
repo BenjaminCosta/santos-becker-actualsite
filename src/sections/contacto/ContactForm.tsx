@@ -12,16 +12,16 @@ import {
 
 const FLOAT_LABEL = [
   "absolute left-0 -top-4",
-  "font-heading text-[9px] uppercase tracking-[0.15em] text-muted-foreground",
+  "font-heading text-[10px] uppercase tracking-[0.15em] text-muted-foreground",
   "transition-all pointer-events-none",
-  "peer-placeholder-shown:text-base peer-placeholder-shown:font-sans peer-placeholder-shown:normal-case",
+  "peer-placeholder-shown:text-[1.1875rem] peer-placeholder-shown:font-sans peer-placeholder-shown:normal-case",
   "peer-placeholder-shown:tracking-normal peer-placeholder-shown:top-3 peer-placeholder-shown:text-foreground/40",
-  "peer-focus:-top-4 peer-focus:text-[9px] peer-focus:font-heading peer-focus:uppercase",
+  "peer-focus:-top-4 peer-focus:text-[10px] peer-focus:font-heading peer-focus:uppercase",
   "peer-focus:tracking-[0.15em] peer-focus:text-primary",
 ].join(" ");
 
 const FIELD =
-  "peer w-full bg-transparent border-0 border-b border-border focus:ring-0 focus:border-primary py-3 transition-colors placeholder-transparent font-sans text-lg";
+  "peer w-full bg-transparent border-0 border-b border-border focus:ring-0 focus:border-primary py-3 transition-colors placeholder-transparent font-sans text-[1.1875rem]";
 
 const SOCIAL_ICONS = {
   LinkedIn: FaLinkedinIn,
@@ -208,14 +208,14 @@ export function ContactForm() {
 
                   {/* Inquiry type */}
                   <div className="md:col-span-2">
-                    <label htmlFor="contact-tipo" className="block font-heading text-[9px] uppercase tracking-[0.15em] text-muted-foreground mb-3">
+                    <label htmlFor="contact-tipo" className="block font-heading text-[10px] uppercase tracking-[0.15em] text-muted-foreground mb-3">
                       {form.labels.tipo}
                     </label>
                     <div className="relative">
                       <select
                         id="contact-tipo"
                         name="tipo_consulta"
-                        className="w-full bg-transparent border-0 border-b border-border focus:ring-0 focus:border-primary py-3 font-sans text-lg text-foreground appearance-none cursor-pointer"
+                        className="w-full bg-transparent border-0 border-b border-border focus:ring-0 focus:border-primary py-3 font-sans text-[1.1875rem] text-foreground appearance-none cursor-pointer"
                         style={{ borderRadius: 0 }}
                       >
                         {form.consultationTypes.map((type, i) => (
@@ -237,7 +237,7 @@ export function ContactForm() {
                     <button
                       type="submit"
                       disabled={status === "submitting"}
-                      className="w-full py-5 bg-primary text-white font-heading uppercase tracking-[0.2em] text-[11px] hover:bg-primary/90 active:translate-y-px disabled:cursor-wait disabled:opacity-70 transition-all"
+                      className="w-full py-5 bg-primary text-white font-heading uppercase tracking-[0.2em] text-[12px] hover:bg-primary/90 active:translate-y-px disabled:cursor-wait disabled:opacity-70 transition-all"
                     >
                       {status === "submitting" ? "Enviando..." : form.submitBtn}
                     </button>

@@ -262,10 +262,23 @@
     hyphens: auto;
   }
 
+  /* Keep long-form copy orderly throughout the site. Short labels, buttons and
+     centered hero copy retain their intended alignment. */
+  .site-content .font-sans.leading-relaxed {
+    text-wrap: pretty;
+    text-align: left;
+    hyphens: auto;
+  }
+
   @media (min-width: 768px) {
-    .editorial-copy {
+    .editorial-copy,
+    .site-content .font-sans.leading-relaxed {
       text-align: justify;
       text-justify: inter-word;
+    }
+
+    .site-content .text-center .font-sans.leading-relaxed:not(.text-left) {
+      text-align: center;
     }
   }
 
