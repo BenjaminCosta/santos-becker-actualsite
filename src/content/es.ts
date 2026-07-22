@@ -68,7 +68,6 @@ export const es = {
       ariaLabel: "Contactar por WhatsApp",
     },
     chatbot: {
-      badge: "Nuevo asistente",
       launchLabel: "Abrir asistente de consultas",
       launchSubtitle: "¿En qué podemos ayudarte?",
       closeLabel: "Cerrar asistente",
@@ -76,57 +75,39 @@ export const es = {
       headerSubtitle: "En línea · Respuesta inmediata",
       welcome:
         "Hola, bienvenido a Santos & Becker. Déjanos tu consulta y algunos datos de contacto para que nuestro equipo pueda revisar tu caso y uno de nuestros asesores te contacte para darle seguimiento.",
-      start: "Comenzar",
       steps: {
         nombre: {
-          prompt: "Para comenzar, ¿cuál es tu nombre completo?",
+          prompt: "Para comenzar, ¿cuál es tu nombre?",
           placeholder: "Tu nombre",
         },
-        nacionalidad: {
-          prompt: "Gracias. ¿Cuál es tu nacionalidad?",
-          placeholder: "Tu nacionalidad",
+        consulta: {
+          prompt:
+            "Mucho gusto, {name}. Cuéntanos brevemente de qué se trata tu consulta.",
+          placeholder: "Escribe tu consulta",
         },
-        email: {
-          prompt: "¿A qué correo electrónico podemos contactarte?",
-          placeholder: "correo@ejemplo.com",
-        },
-        telefono: {
-          prompt: "¿Cuál es tu número de teléfono?",
-          placeholder: "+52 55 0000 0000",
-        },
-        tipo: {
-          prompt: "¿Sobre qué tipo de consulta necesitas asesoría?",
-        },
-        mensaje: {
-          prompt: "Por último, cuéntanos brevemente tu consulta o situación.",
-          placeholder: "Describe tu consulta",
+        contacto: {
+          prompt:
+            "Muchas gracias. Por favor compártenos tu correo electrónico y teléfono para que una persona de nuestro equipo se ponga en contacto contigo.",
+          emailPlaceholder: "correo@ejemplo.com",
+          phonePlaceholder: "+52 55 0000 0000",
         },
       },
-      consultationTypes: [
-        "Servicios corporativos",
-        "Servicios personales",
-        "Inclusión",
-        "Otro",
-      ],
       validation: {
         required: "Por favor completa este campo para continuar.",
+        contact: "Completa tu correo y teléfono para continuar.",
         email: "Ingresa un correo electrónico válido.",
       },
       sendLabel: "Enviar consulta",
       sending: "Enviando…",
-      submitError:
-        "No pudimos enviar tu consulta. Intenta de nuevo o escríbenos a info@santosbecker.com.",
       success:
-        "Gracias por compartir tu información. Nuestro equipo revisará tu consulta y un asesor se pondrá en contacto contigo lo antes posible para dar seguimiento.",
+        "¡Gracias, {name}! Nuestro equipo revisará tu consulta y un asesor se pondrá en contacto contigo lo antes posible para dar seguimiento.",
       restart: "Enviar otra consulta",
       emailSubject: "Nueva consulta — Asistente santosbecker.com",
       fieldLabels: {
         nombre: "Nombre",
-        nacionalidad: "Nacionalidad",
         email: "Correo de contacto",
         telefono: "Teléfono",
-        tipo: "Tipo de consulta",
-        mensaje: "Mensaje",
+        consulta: "Consulta",
       },
     },
   },

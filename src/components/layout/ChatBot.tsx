@@ -8,16 +8,11 @@ import { es } from "@/content/index";
 const FORM_ENDPOINT = "https://formsubmit.co/info@santosbecker.com";
 const FORM_TARGET = "formsubmit-chatbot-frame";
 
-/* Ordered steps of the guided conversation */
-const STEP_ORDER = [
-  "nombre",
-  "nacionalidad",
-  "email",
-  "telefono",
-  "tipo",
-  "mensaje",
-] as const;
+/* Ordered steps of the guided conversation.
+   "contacto" is a single step that collects email + phone together. */
+const STEP_ORDER = ["nombre", "consulta", "contacto"] as const;
 type StepKey = (typeof STEP_ORDER)[number];
+type AnswerKey = "nombre" | "consulta" | "email" | "telefono";
 
 /* Spanish field names for the email — kept constant so the inbox at
    info@santosbecker.com always receives a consistent, ordered table
@@ -26,6 +21,9 @@ const MAIL_LABELS = es.global.chatbot.fieldLabels;
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const EASE = [0.16, 1, 0.3, 1] as const;
+
+/* First name only, for the personalised prompts ("Mucho gusto, Jesús…") */
+const firstNameOf = (full?: string) => (full ?? "").trim().split(/\s+/)[0] ?? "";
 
 type Phase = "collecting" | "sending" | "done";
 interface Message {
@@ -56,8 +54,10 @@ export function ChatBot() {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [stepIndex, setStepIndex] = useState(0);
-  const [answers, setAnswers] = useState<Partial<Record<StepKey, string>>>({});
+  const [answers, setAnswers] = useState<Partial<Record<AnswerKey, string>>>({});
   const [input, setInput] = useState("");
+  const [emailInput, setEmailInput] = useState("");
+  const [phoneInput, setPhoneInput] = useState("");
   const [error, setError] = useState("");
   const [botTyping, setBotTyping] = useState(false);
   const [phase, setPhase] = useState<Phase>("collecting");
@@ -65,13 +65,15 @@ export function ChatBot() {
   const msgId = useRef(0);
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const inputRef = useRef<HTMLTextAreaElement | null>(null);
+  const emailRef = useRef<HTMLInputElement | null>(null);
+  const phoneRef = useRef<HTMLInputElement | null>(null);
   const formRef = useRef<HTMLFormElement | null>(null);
   const hasSubmittedRef = useRef(false);
   const fallbackTimerRef = useRef<number | null>(null);
   const typingTimerRef = useRef<number | null>(null);
 
   const currentKey = STEP_ORDER[stepIndex] as StepKey | undefined;
-  const isTipoStep = currentKey === "tipo";
+  const isContactStep = currentKey === "contacto";
   const collecting = phase === "collecting" && stepIndex < STEP_ORDER.length;
 
   const nextId = () => {
@@ -84,13 +86,12 @@ export function ChatBot() {
   const pushUser = (text: string) =>
     setMessages((m) => [...m, { id: nextId(), role: "user", text }]);
 
-  /* Bot "types" for a beat, then reveals the next prompt */
-  const queuePrompt = (index: number) => {
+  /* Bot "types" for a beat, then reveals the given prompt */
+  const queueBot = (text: string) => {
     setBotTyping(true);
     if (typingTimerRef.current) window.clearTimeout(typingTimerRef.current);
     typingTimerRef.current = window.setTimeout(() => {
-      const key = STEP_ORDER[index];
-      pushBot(chatbot.steps[key].prompt);
+      pushBot(text);
       setBotTyping(false);
     }, 700);
   };
@@ -100,7 +101,7 @@ export function ChatBot() {
     setOpen(true);
     if (messages.length === 0) {
       pushBot(chatbot.welcome);
-      queuePrompt(0);
+      queueBot(chatbot.steps.nombre.prompt);
     }
   };
 
@@ -111,24 +112,23 @@ export function ChatBot() {
     setMessages([]);
     setAnswers({});
     setInput("");
+    setEmailInput("");
+    setPhoneInput("");
     setError("");
     setStepIndex(0);
     setPhase("collecting");
     msgId.current = 0;
     pushBot(chatbot.welcome);
-    queuePrompt(0);
+    queueBot(chatbot.steps.nombre.prompt);
   };
 
+  /* Text steps: nombre → consulta */
   const submitAnswer = (raw: string) => {
-    if (!collecting || botTyping || !currentKey) return;
+    if (!collecting || botTyping || !currentKey || isContactStep) return;
     const value = raw.trim();
 
     if (!value) {
       setError(chatbot.validation.required);
-      return;
-    }
-    if (currentKey === "email" && !EMAIL_RE.test(value)) {
-      setError(chatbot.validation.email);
       return;
     }
 
@@ -140,11 +140,36 @@ export function ChatBot() {
 
     const next = stepIndex + 1;
     setStepIndex(next);
-    if (next < STEP_ORDER.length) {
-      queuePrompt(next);
-    } else {
-      setPhase("sending");
+    const nextKey = STEP_ORDER[next];
+    if (nextKey === "consulta") {
+      queueBot(
+        chatbot.steps.consulta.prompt.replace("{name}", firstNameOf(nextAnswers.nombre)),
+      );
+    } else if (nextKey === "contacto") {
+      queueBot(chatbot.steps.contacto.prompt);
     }
+  };
+
+  /* Final step: email + phone together */
+  const submitContact = () => {
+    if (!collecting || botTyping || !isContactStep) return;
+    const email = emailInput.trim();
+    const phone = phoneInput.trim();
+
+    if (!email || !phone) {
+      setError(chatbot.validation.contact);
+      return;
+    }
+    if (!EMAIL_RE.test(email)) {
+      setError(chatbot.validation.email);
+      return;
+    }
+
+    setError("");
+    pushUser(`${email}\n${phone}`);
+    setAnswers((a) => ({ ...a, email, telefono: phone }));
+    setStepIndex(STEP_ORDER.length);
+    setPhase("sending");
   };
 
   /* Fire the hidden FormSubmit form once all answers are committed to the DOM */
@@ -165,7 +190,7 @@ export function ChatBot() {
       fallbackTimerRef.current = null;
     }
     setPhase("done");
-    pushBot(chatbot.success);
+    pushBot(chatbot.success.replace("{name}", firstNameOf(answers.nombre)));
   }
 
   /* Auto-scroll to the latest message */
@@ -176,19 +201,14 @@ export function ChatBot() {
     });
   }, [messages, botTyping, phase]);
 
-  /* Focus the text input when a new text step becomes active (desktop only —
+  /* Focus the active field when a new step appears (desktop only —
      avoid forcing the mobile keyboard open the instant a step appears) */
   useEffect(() => {
-    if (
-      open &&
-      collecting &&
-      !botTyping &&
-      !isTipoStep &&
-      window.matchMedia("(min-width: 640px)").matches
-    ) {
-      inputRef.current?.focus();
-    }
-  }, [open, collecting, botTyping, isTipoStep, stepIndex]);
+    if (!open || !collecting || botTyping) return;
+    if (!window.matchMedia("(min-width: 640px)").matches) return;
+    if (isContactStep) emailRef.current?.focus();
+    else inputRef.current?.focus();
+  }, [open, collecting, botTyping, isContactStep, stepIndex]);
 
   /* Escape closes the panel */
   useEffect(() => {
@@ -210,9 +230,12 @@ export function ChatBot() {
   );
 
   const progress = phase === "done" ? 1 : stepIndex / STEP_ORDER.length;
-  const stepContent = currentKey
-    ? (chatbot.steps[currentKey] as { prompt: string; placeholder?: string })
-    : undefined;
+  const textPlaceholder =
+    currentKey === "nombre"
+      ? chatbot.steps.nombre.placeholder
+      : currentKey === "consulta"
+        ? chatbot.steps.consulta.placeholder
+        : "";
   const inputDisabled = !collecting || botTyping;
 
   return (
@@ -225,11 +248,9 @@ export function ChatBot() {
         <input type="hidden" name="_captcha" value="false" readOnly />
         <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" readOnly value="" />
         <input type="hidden" name={MAIL_LABELS.nombre} value={answers.nombre ?? ""} readOnly />
-        <input type="hidden" name={MAIL_LABELS.nacionalidad} value={answers.nacionalidad ?? ""} readOnly />
         <input type="hidden" name={MAIL_LABELS.email} value={answers.email ?? ""} readOnly />
         <input type="hidden" name={MAIL_LABELS.telefono} value={answers.telefono ?? ""} readOnly />
-        <input type="hidden" name={MAIL_LABELS.tipo} value={answers.tipo ?? ""} readOnly />
-        <input type="hidden" name={MAIL_LABELS.mensaje} value={answers.mensaje ?? ""} readOnly />
+        <input type="hidden" name={MAIL_LABELS.consulta} value={answers.consulta ?? ""} readOnly />
       </form>
 
       {/* Launcher — modern glass pill */}
@@ -346,7 +367,7 @@ export function ChatBot() {
                     <p
                       className={
                         m.role === "user"
-                          ? "sbr-user max-w-[80%] bg-primary px-4 py-2.5 text-[15px] leading-relaxed text-white shadow-sm"
+                          ? "sbr-user max-w-[80%] whitespace-pre-line bg-primary px-4 py-2.5 text-[15px] leading-relaxed text-white shadow-sm"
                           : "sbr-bot sb-surface max-w-[82%] px-4 py-2.5 text-[15px] leading-relaxed text-white/90"
                       }
                     >
@@ -385,19 +406,65 @@ export function ChatBot() {
                     <Check className="h-4 w-4" strokeWidth={2} aria-hidden />
                     {chatbot.restart}
                   </button>
-                ) : isTipoStep && collecting && !botTyping ? (
-                  <div className="flex flex-wrap gap-2">
-                    {chatbot.consultationTypes.map((type) => (
-                      <button
-                        key={type}
-                        type="button"
-                        onClick={() => submitAnswer(type)}
-                        className="sbr-full border border-white/20 bg-white/[0.03] px-4 py-2.5 font-sans text-[14px] text-white/85 transition-colors hover:border-primary hover:bg-primary/15 hover:text-white"
+                ) : isContactStep && collecting && !botTyping ? (
+                  <>
+                    <div className="flex items-end gap-2">
+                      <div
+                        className={`sbr-2xl sb-surface min-w-0 flex-1 border px-4 transition-colors ${
+                          error ? "border-red-400/50" : "border-white/12 focus-within:border-primary/60"
+                        }`}
                       >
-                        {type}
+                        <input
+                          ref={emailRef}
+                          type="email"
+                          inputMode="email"
+                          autoComplete="email"
+                          value={emailInput}
+                          disabled={inputDisabled}
+                          placeholder={chatbot.steps.contacto.emailPlaceholder}
+                          onChange={(e) => setEmailInput(e.target.value)}
+                          onKeyDown={(e) => {
+                            if (e.key === "Enter") {
+                              e.preventDefault();
+                              phoneRef.current?.focus();
+                            }
+                          }}
+                          className="w-full border-b border-white/10 bg-transparent py-2.5 font-sans text-[16px] text-white placeholder-white/35 outline-none disabled:opacity-50"
+                        />
+                        <input
+                          ref={phoneRef}
+                          type="tel"
+                          inputMode="tel"
+                          autoComplete="tel"
+                          value={phoneInput}
+                          disabled={inputDisabled}
+                          placeholder={chatbot.steps.contacto.phonePlaceholder}
+                          onChange={(e) => setPhoneInput(e.target.value)}
+                          onKeyDown={(e) => {
+                            if (e.key === "Enter") {
+                              e.preventDefault();
+                              submitContact();
+                            }
+                          }}
+                          className="w-full bg-transparent py-2.5 font-sans text-[16px] text-white placeholder-white/35 outline-none disabled:opacity-50"
+                        />
+                      </div>
+                      <button
+                        type="button"
+                        onClick={submitContact}
+                        disabled={inputDisabled || !emailInput.trim() || !phoneInput.trim()}
+                        aria-label={chatbot.sendLabel}
+                        className="sbr-full mb-1 flex h-10 w-10 shrink-0 items-center justify-center bg-primary text-white transition hover:bg-primary/90 disabled:cursor-not-allowed disabled:bg-white/10 disabled:text-white/40"
+                      >
+                        <ArrowUp className="h-5 w-5" strokeWidth={2} aria-hidden />
                       </button>
-                    ))}
-                  </div>
+                    </div>
+                    {error && (
+                      <p role="alert" className="mt-2 px-1 font-sans text-[13px] text-red-400">
+                        {error}
+                      </p>
+                    )}
+                  </>
                 ) : (
                   <>
                     <div
@@ -410,7 +477,7 @@ export function ChatBot() {
                         rows={1}
                         value={input}
                         disabled={inputDisabled}
-                        placeholder={stepContent?.placeholder ?? ""}
+                        placeholder={textPlaceholder}
                         onChange={(e) => setInput(e.target.value)}
                         onKeyDown={(e) => {
                           if (e.key === "Enter" && !e.shiftKey) {

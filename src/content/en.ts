@@ -68,7 +68,6 @@ export const en = {
       ariaLabel: "Contact via WhatsApp",
     },
     chatbot: {
-      badge: "New assistant",
       launchLabel: "Open inquiry assistant",
       launchSubtitle: "How can we help you?",
       closeLabel: "Close assistant",
@@ -76,57 +75,39 @@ export const en = {
       headerSubtitle: "Online · Immediate response",
       welcome:
         "Hello, welcome to Santos & Becker. Leave us your inquiry and some contact details so our team can review your case and one of our advisors can reach out to follow up with you.",
-      start: "Get started",
       steps: {
         nombre: {
-          prompt: "To begin, what is your full name?",
+          prompt: "To begin, what is your name?",
           placeholder: "Your name",
         },
-        nacionalidad: {
-          prompt: "Thank you. What is your nationality?",
-          placeholder: "Your nationality",
-        },
-        email: {
-          prompt: "Which email address can we reach you at?",
-          placeholder: "email@example.com",
-        },
-        telefono: {
-          prompt: "What is your phone number?",
-          placeholder: "+52 55 0000 0000",
-        },
-        tipo: {
-          prompt: "What type of inquiry do you need advice on?",
-        },
-        mensaje: {
-          prompt: "Finally, briefly tell us about your inquiry or situation.",
+        consulta: {
+          prompt:
+            "Nice to meet you, {name}. Briefly tell us what your inquiry is about.",
           placeholder: "Describe your inquiry",
         },
+        contacto: {
+          prompt:
+            "Thank you. Please share your email address and phone number so a member of our team can get in touch with you.",
+          emailPlaceholder: "email@example.com",
+          phonePlaceholder: "+52 55 0000 0000",
+        },
       },
-      consultationTypes: [
-        "Corporate services",
-        "Personal services",
-        "Inclusion",
-        "Other",
-      ],
       validation: {
         required: "Please complete this field to continue.",
+        contact: "Enter your email and phone number to continue.",
         email: "Enter a valid email address.",
       },
       sendLabel: "Send inquiry",
       sending: "Sending…",
-      submitError:
-        "We couldn't send your inquiry. Please try again or write to us at info@santosbecker.com.",
       success:
-        "Thank you for sharing your information. Our team will review your inquiry and an advisor will get in touch with you as soon as possible to follow up.",
+        "Thank you, {name}! Our team will review your inquiry and an advisor will get in touch with you as soon as possible to follow up.",
       restart: "Send another inquiry",
       emailSubject: "New inquiry — Assistant santosbecker.com",
       fieldLabels: {
         nombre: "Name",
-        nacionalidad: "Nationality",
         email: "Contact email",
         telefono: "Phone",
-        tipo: "Inquiry type",
-        mensaje: "Message",
+        consulta: "Inquiry",
       },
     },
   },
