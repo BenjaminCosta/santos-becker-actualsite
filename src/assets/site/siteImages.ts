@@ -4,8 +4,8 @@ import homePurpose from "./home/purpose.webp";
 import homeTechnology from "./home/technology.webp";
 import homeServiceTramites from "./home/service-tramites.webp";
 import homeServiceMovilidad from "./home/service-movilidad.webp";
-import homeServiceCompliance from "./home/service-compliance.webp";
 import homeServiceComplementarios from "./home/service-complementarios.webp";
+import complianceImage from "../photos/COMPLIANCE.png";
 
 import nosotrosHero from "./nosotros/hero.webp";
 import nosotrosAbout from "./nosotros/about.webp";
@@ -16,7 +16,6 @@ import nosotrosDiferenciadores from "./nosotros/diferenciadores.webp";
 import serviciosHero from "./servicios/hero.webp";
 import serviciosMovilidad from "./servicios/movilidad.webp";
 import serviciosTramites from "./servicios/tramites.webp";
-import serviciosCompliance from "./servicios/compliance.webp";
 import serviciosComplementarios from "./servicios/complementarios.webp";
 
 import tecnologiaHero from "./tecnologia/hero.webp";
@@ -88,7 +87,7 @@ export const homeImages = {
   services: [
     homeServiceTramites,
     homeServiceMovilidad,
-    homeServiceCompliance,
+    complianceImage,
     homeServiceComplementarios,
   ],
 };
@@ -106,7 +105,7 @@ export const serviciosImages = {
   items: [
     serviciosMovilidad,
     serviciosTramites,
-    serviciosCompliance,
+    complianceImage,
     serviciosComplementarios,
   ],
 };
