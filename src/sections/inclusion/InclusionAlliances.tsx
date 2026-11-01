@@ -43,12 +43,15 @@ export function InclusionAlliances() {
         {/* Content — right */}
         <FadeIn direction="left" delay={0.12}>
           <div>
-            <p className="typo-eyebrow text-primary mb-5">{c.eyebrow}</p>
             <h2 className="typo-title text-4xl md:text-5xl text-foreground mb-8">
               {c.title}
             </h2>
-            <p className="font-sans text-xl text-muted-foreground leading-relaxed mb-14">
+            <p className="font-sans text-xl text-muted-foreground leading-relaxed mb-6">
               {c.subtitle}
+            </p>
+
+            <p className="font-sans text-xl text-foreground leading-relaxed border-l-2 border-accent pl-6 mb-14">
+              {c.unStatement}
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-8 gap-x-8 border-t border-border pt-10">

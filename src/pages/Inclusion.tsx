@@ -2,6 +2,7 @@ import { InternalPageHero } from "@/components/shared/InternalPageHero";
 import { InclusionPosition } from "@/sections/inclusion/InclusionPosition";
 import { InclusionAlliances } from "@/sections/inclusion/InclusionAlliances";
 import { InclusionCta } from "@/sections/inclusion/InclusionCta";
+import { InclusionInterview } from "@/sections/inclusion/InclusionInterview";
 import { useContent } from "@/context/LocaleContext";
 import { inclusionImages } from "@/assets/site/siteImages";
 
@@ -19,6 +20,7 @@ export function Inclusion() {
       />
       <InclusionPosition />
       <InclusionAlliances />
+      <InclusionInterview />
       <InclusionCta />
     </div>
   );

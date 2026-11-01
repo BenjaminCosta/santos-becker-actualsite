@@ -57,7 +57,6 @@ export const en = {
       socials: [
         { name: "LinkedIn", href: "https://www.linkedin.com/company/santos-becker/" },
         { name: "Instagram", href: "https://www.instagram.com/santosbecker_sc/" },
-        { name: "Facebook", href: "#" },
         { name: "YouTube", href: "https://www.youtube.com/@SantosBeckerSIC" },
       ],
     },
@@ -204,7 +203,7 @@ export const en = {
         },
         {
           title: "Complementary Services",
-          sub: "Tax ID · Social security · Apostilles · Visas",
+          sub: "Tax ID · Social security · Apostilles · Connections",
         },
       ],
       cta: "Explore each service in detail",
@@ -260,8 +259,6 @@ export const en = {
       email: "info@santosbecker.com",
       phoneLabel: "Phone",
       phone: "+52 55 6617 7712",
-      hoursLabel: "Hours",
-      hours: "Mon–Fri: 09:00–18:00",
       formTitle: "Send us a message",
       offices: [
         {
@@ -453,19 +450,19 @@ export const en = {
             "Specialized training for HR teams",
             "Sanctions and regularization support",
             "Monitoring of stay conditions",
+            "International tourism and business visas",
+            "Obtaining other nationalities in Mexico and abroad",
           ],
         },
         {
           num: "04",
           title: "Complementary Services",
-          desc: "Specialized services that complement immigration operations: tax documentation for foreign collaborators, business or tourism visas for other countries, and support for integration into Mexico.",
+          desc: "Specialized services that complement immigration operations: tax documentation, social security, document support, and connections with other specialist services companies require.",
           bullets: [
             "Obtaining RFC, FIEL, and Social Security",
+            "Strategic connections with any other specialist services companies require",
             "Apostilles, legalizations, and translations",
-            "International tourism and business visas",
             "No criminal record certificates",
-            "Obtaining other nationalities in Mexico and abroad",
-            "Strategic connection",
           ],
         },
       ],
@@ -573,7 +570,7 @@ export const en = {
       title: "Join the firm",
       desc: "Become part of our team.",
       cta: "Send CV",
-      email: "careers@santosbecker.com",
+      email: "info@santosbecker.com",
     },
   },
 
@@ -658,26 +655,31 @@ export const en = {
           desc: "Within our own firm, we have team members who arrived in the country as refugees and are now an integral part of our team.",
         },
         {
-          title: "Strategic allies",
+          title: "Affiliations",
           desc: "We support companies in integrating migrant talent with technical knowledge and strategic vision.",
         },
       ],
     },
     alliances: {
-      eyebrow: "Strategic allies",
-      title: "We support companies with strategic vision",
+      eyebrow: "Affiliations",
+      title: "Affiliations",
       subtitle:
-        "We support companies in integrating migrant talent with technical knowledge and strategic vision.",
+        "We make a positive difference in the lives of the people we support, providing pro bono assistance to those who had to leave their countries and chose Mexico as a place of refuge.",
+      unStatement: "Santos & Becker is the only Mexican immigration law firm with agreements with the UN.",
       items: [
-        { name: "Invest Monterrey", full: "Official investment promotion agency of the state of Nuevo León" },
-        { name: "CCI France México", full: "Franco-Mexican chamber of commerce focused on business, investment, and corporate connection" },
-        { name: "AILA", full: "Leading professional association for immigration law in the United States" },
         { name: "TENT Partnership for Refugees", full: "Global organization dedicated to refugee labor inclusion" },
         { name: "IOM", full: "UN agency specialized in migration" },
         { name: "UNHCR", full: "United Nations High Commissioner for Refugees" },
         { name: "ILO", full: "UN specialized agency focused on social justice, labor rights, and decent work" },
         { name: "ASEM", full: "Civil association representing entrepreneurs and promoting better conditions for doing business in Mexico" },
       ],
+    },
+    interview: {
+      eyebrow: "Stories of inclusion",
+      title: "Mexico adopted me",
+      body: "María Rico, a member of Santos & Becker, shares the challenges of finding work after arriving in Mexico, the opportunities that helped her move forward, and why she chose to build her future here. Her story illustrates the value of welcoming migrant talent and promoting workplace inclusion.",
+      cta: "Watch the interview here",
+      previewAlt: "Preview of the interview with María Rico: Mexico adopted me"
     },
     methodology: {
       eyebrow: "Methodology",
@@ -753,12 +755,9 @@ export const en = {
       socials: [
         { name: "LinkedIn", label: "Santos & Becker", href: "https://www.linkedin.com/company/santos-becker/" },
         { name: "Instagram", label: "@santosbecker_sc", href: "https://www.instagram.com/santosbecker_sc/" },
-        { name: "Facebook", label: "Santos & Becker", href: "#" },
         { name: "YouTube", label: "S&B YouTube Channel", href: "https://www.youtube.com/@SantosBeckerSIC" },
         { name: "WhatsApp", label: "+52 55 6617 7712", href: "https://wa.me/525566177712" },
       ],
-      hoursLabel: "Office Hours",
-      hours: "Monday to Thursday: 9:00 – 18:00\nFriday: 9:00 – 15:00",
       officesEyebrow: "Office",
       officesNote:
         "We serve clients from our Mexico City office and coordinate national and international matters through our specialized team.",

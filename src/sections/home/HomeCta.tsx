@@ -48,10 +48,6 @@ export function HomeCta() {
                     {c.phone}
                   </a>
                 </div>
-                <div className="border-l-2 border-accent pl-6">
-                  <span className="typo-eyebrow text-muted-foreground block mb-1">{c.hoursLabel}</span>
-                  <span className="font-sans text-lg text-foreground">{c.hours}</span>
-                </div>
               </div>
 
               {/* Office */}

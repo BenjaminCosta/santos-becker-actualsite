@@ -57,7 +57,6 @@ export const es = {
       socials: [
         { name: "LinkedIn", href: "https://www.linkedin.com/company/santos-becker/" },
         { name: "Instagram", href: "https://www.instagram.com/santosbecker_sc/" },
-        { name: "Facebook", href: "#" },
         { name: "YouTube", href: "https://www.youtube.com/@SantosBeckerSIC" },
       ],
     },
@@ -204,7 +203,7 @@ export const es = {
         },
         {
           title: "Servicios Complementarios",
-          sub: "RFC · Seguridad social · Apostillas · Visas",
+          sub: "RFC · Seguridad social · Apostillas · Vinculación",
         },
       ],
       cta: "Conoce el detalle de cada servicio",
@@ -260,8 +259,6 @@ export const es = {
       email: "info@santosbecker.com",
       phoneLabel: "Teléfono",
       phone: "+52 55 6617 7712",
-      hoursLabel: "Horario",
-      hours: "Lun–Vie: 09:00–18:00",
       formTitle: "Envíanos un mensaje",
       offices: [
         {
@@ -453,19 +450,19 @@ export const es = {
             "Capacitación especializada a equipos de RRHH",
             "Atención de sanciones y regularizaciones",
             "Monitoreo de condiciones de estancia",
+            "Visas internacionales de turismo y negocios",
+            "Obtención de otras nacionalidades en México y otras partes del mundo",
           ],
         },
         {
           num: "04",
           title: "Servicios Complementarios",
-          desc: "Servicios especializados que complementan la operación migratoria: documentación fiscal para colaboradores extranjeros, visados de negocios o turismo para otros países y apoyo en la integración al país.",
+          desc: "Servicios especializados que complementan la operación migratoria: documentación fiscal, seguridad social, apoyo documental y vinculación con otras especialidades que requieran las empresas.",
           bullets: [
             "Obtención de RFC, FIEL y Seguridad Social",
+            "Vinculación estratégica con cualquier otra especialidad que requieran las empresas",
             "Apostillas, legalizaciones y traducciones",
-            "Visas internacionales de turismo y negocios",
             "Constancias de No Antecedentes Penales",
-            "Obtención de otras nacionalidades en México y otras partes del mundo",
-            "Vinculación estratégica",
           ],
         },
       ],
@@ -571,7 +568,7 @@ export const es = {
       title: "Únete a la firma",
       desc: "Forma parte de nuestro equipo.",
       cta: "Enviar CV",
-      email: "careers@santosbecker.com",
+      email: "info@santosbecker.com",
     },
   },
 
@@ -656,26 +653,31 @@ export const es = {
           desc: "En nuestra propia firma, contamos con colaboradores que llegaron al país como refugiados y hoy forman parte integral de nuestro equipo.",
         },
         {
-          title: "Aliados estratégicos",
+          title: "Afiliaciones",
           desc: "Acompañamos a las empresas en la integración de talento migrante con conocimiento técnico y visión estratégica.",
         },
       ],
     },
     alliances: {
-      eyebrow: "Aliados estratégicos",
-      title: "Acompañamos a empresas con visión estratégica",
+      eyebrow: "Afiliaciones",
+      title: "Afiliaciones",
       subtitle:
-        "Acompañamos a las empresas en la integración de talento migrante con conocimiento técnico y visión estratégica.",
+        "Impactamos positivamente a las personas que acompañamos, con apoyo pro bono a quienes tuvieron que salir de sus países y eligieron México como refugio.",
+      unStatement: "Santos & Becker es el único despacho migratorio mexicano con convenios con la ONU.",
       items: [
-        { name: "Invest Monterrey", full: "Agencia oficial de promoción de inversión del estado de Nuevo León" },
-        { name: "CCI France México", full: "Cámara de comercio franco-mexicana orientada al impulso de negocios, inversión y vinculación empresarial" },
-        { name: "AILA", full: "Asociación profesional de referencia en derecho migratorio en Estados Unidos" },
         { name: "TENT Partnership for Refugees", full: "Organización global dedicada a la inclusión laboral de refugiados" },
         { name: "OIM", full: "Agencia de la ONU especializada en migración" },
         { name: "ACNUR", full: "Alto Comisionado de las Naciones Unidas para los Refugiados" },
         { name: "OIT", full: "Agencia especializada de Naciones Unidas enfocada en justicia social, derechos laborales y trabajo decente" },
         { name: "ASEM", full: "Asociación civil que representa a personas emprendedoras y promueve mejores condiciones para emprender en México" },
       ],
+    },
+    interview: {
+      eyebrow: "Historias de inclusión",
+      title: "México me adoptó",
+      body: "María Rico, integrante de Santos & Becker, comparte los retos de encontrar empleo al llegar a México, las oportunidades que le permitieron avanzar y por qué eligió construir aquí su futuro. Su testimonio refleja el valor de abrir las puertas al talento migrante y promover la inclusión laboral.",
+      cta: "Ver entrevista aquí",
+      previewAlt: "Vista previa de la entrevista con María Rico: México me adoptó"
     },
     methodology: {
       eyebrow: "Metodología",
@@ -751,12 +753,9 @@ export const es = {
       socials: [
         { name: "LinkedIn", label: "Santos & Becker", href: "https://www.linkedin.com/company/santos-becker/" },
         { name: "Instagram", label: "@santosbecker_sc", href: "https://www.instagram.com/santosbecker_sc/" },
-        { name: "Facebook", label: "Santos & Becker", href: "#" },
         { name: "YouTube", label: "S&B YouTube Channel", href: "https://www.youtube.com/@SantosBeckerSIC" },
         { name: "WhatsApp", label: "+52 55 6617 7712", href: "https://wa.me/525566177712" },
       ],
-      hoursLabel: "Horario de Atención",
-      hours: "Lunes a Jueves: 9:00 – 18:00\nViernes: 9:00 – 15:00",
       officesEyebrow: "Oficina",
       officesNote:
         "Atendemos desde nuestra oficina en Ciudad de México y coordinamos operaciones nacionales e internacionales con nuestro equipo especializado.",

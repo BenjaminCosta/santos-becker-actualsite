@@ -1,3 +1,11 @@
+import quetzaliGomez from "./equipo/quetzali-gomez.webp";
+import paulinaArmenta from "./equipo/paulina-armenta.webp";
+import nayeliVilchis from "./equipo/nayeli-vilchis.webp";
+import mariaMoran from "./equipo/maria-moran.webp";
+import hugoAguilar from "./equipo/hugo-aguilar.webp";
+import gabrielaAvila from "./equipo/gabriela-avila.webp";
+import cristalRodriguez from "./equipo/cristal-rodriguez.webp";
+import cesarMorgado from "./equipo/cesar-morgado.webp";
 import homeHero from "./home/hero.png";
 import homeAbout from "./home/about.webp";
 import homePurpose from "./home/purpose.webp";
@@ -60,7 +68,6 @@ import minervaSierra from "./equipo/minerva-sierra.jpg";
 import pedroMarquez from "./equipo/pedro-marquez.webp";
 import ricardoAngeles from "./equipo/ricardo-angeles.webp";
 import sofiaKargl from "./equipo/sofia-kargl.webp";
-import stephanyTorres from "./equipo/stephany-torres.webp";
 import teresaGalicia from "./equipo/teresa-galicia.webp";
 import yaelEscalona from "./equipo/yael-escalona.webp";
 
@@ -136,6 +143,14 @@ export const teamImages = {
     cesar: cesarBecker,
   },
   members: {
+    "quetzali-gomez": quetzaliGomez,
+    "paulina-armenta": paulinaArmenta,
+    "nayeli-vilchis": nayeliVilchis,
+    "maria-moran": mariaMoran,
+    "hugo-aguilar": hugoAguilar,
+    "gabriela-avila": gabrielaAvila,
+    "cristal-rodriguez": cristalRodriguez,
+    "cesar-morgado": cesarMorgado,
     "abigail-de-arcos": abigailDeArcos,
     "alejandra-lopez": alejandraLopez,
     "alexia-del-jobo": alexiaDelJobo,
@@ -165,7 +180,6 @@ export const teamImages = {
     "pedro-marquez": pedroMarquez,
     "ricardo-angeles": ricardoAngeles,
     "sofia-kargl": sofiaKargl,
-    "stephany-torres": stephanyTorres,
     "teresa-galicia": teresaGalicia,
     "yael-escalona": yaelEscalona,
   },

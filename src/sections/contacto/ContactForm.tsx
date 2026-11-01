@@ -3,7 +3,6 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { useContent } from "@/context/LocaleContext";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import {
-  FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
   FaWhatsapp,
@@ -26,7 +25,6 @@ const FIELD =
 const SOCIAL_ICONS = {
   LinkedIn: FaLinkedinIn,
   Instagram: FaInstagram,
-  Facebook: FaFacebookF,
   YouTube: FaYoutube,
   WhatsApp: FaWhatsapp,
 } as const;

@@ -57,7 +57,6 @@ export const zh = {
       socials: [
         { name: "LinkedIn", href: "https://www.linkedin.com/company/santos-becker/" },
         { name: "Instagram", href: "https://www.instagram.com/santosbecker_sc/" },
-        { name: "Facebook", href: "#" },
         { name: "YouTube", href: "https://www.youtube.com/@SantosBeckerSIC" },
       ],
     },
@@ -202,7 +201,7 @@ export const zh = {
         },
         {
           title: "附加服务",
-          sub: "税号 · 社保 · 认证 · 签证",
+          sub: "税号 · 社保 · 认证 · 专业对接",
         },
       ],
       cta: "了解每项服务详情",
@@ -258,8 +257,6 @@ export const zh = {
       email: "info@santosbecker.com",
       phoneLabel: "电话",
       phone: "+52 55 6617 7712",
-      hoursLabel: "工作时间",
-      hours: "周一至周五：09:00–18:00",
       formTitle: "给我们发送消息",
       offices: [
         {
@@ -451,19 +448,19 @@ export const zh = {
             "人力资源团队专项培训",
             "制裁和规范化支持",
             "停留条件监控",
+            "国际旅游和商务签证",
+            "在墨西哥及其他国家取得其他国籍",
           ],
         },
         {
           num: "04",
           title: "补充服务",
-          desc: "补充移民运营的专业服务：外国员工税务文件、其他国家商务或旅游签证，以及在墨西哥融入的支持。",
+          desc: "补充移民业务的专业服务：税务文件、社会保险、文件支持，以及对接企业所需的其他专业服务。",
           bullets: [
             "获取RFC、FIEL和社会保险",
+            "对接企业所需的其他专业服务",
             "认证、合法化和翻译",
-            "国际旅游和商务签证",
             "无犯罪记录证明",
-            "在墨西哥及其他国家取得其他国籍",
-            "战略连接",
           ],
         },
       ],
@@ -571,7 +568,7 @@ export const zh = {
       title: "加入我们",
       desc: "成为我们团队的一员。",
       cta: "发送简历",
-      email: "careers@santosbecker.com",
+      email: "info@santosbecker.com",
     },
   },
 
@@ -656,26 +653,31 @@ export const zh = {
           desc: "在我们自己的律所中，我们有以难民身份来到墨西哥、如今成为我们团队不可或缺一员的员工。",
         },
         {
-          title: "战略盟友",
+          title: "所属组织",
           desc: "我们以技术知识和战略视野，陪伴企业整合移民人才。",
         },
       ],
     },
     alliances: {
-      eyebrow: "战略盟友",
-      title: "以战略视野陪伴企业",
+      eyebrow: "所属组织",
+      title: "所属组织",
       subtitle:
-        "我们以技术知识和战略视野，陪伴企业整合移民人才。",
+        "我们致力于为所服务的人们带来积极影响，为因各种原因离开祖国、选择墨西哥作为庇护之地的人士提供公益法律支持。",
+      unStatement: "Santos & Becker 是墨西哥唯一与联合国签订合作协议的移民律师事务所。",
       items: [
-        { name: "Invest Monterrey", full: "新莱昂州官方投资促进机构" },
-        { name: "CCI France México", full: "促进法墨商业、投资和企业连接的商会" },
-        { name: "AILA", full: "美国移民法领域的重要专业协会" },
         { name: "TENT难民合作伙伴计划", full: "致力于难民劳动力融合的全球组织" },
         { name: "国际移民组织", full: "联合国专业移民机构" },
         { name: "联合国难民署", full: "联合国难民事务高级专员办事处" },
         { name: "OIT", full: "专注社会正义、劳动权利和体面工作的联合国专门机构" },
         { name: "ASEM", full: "代表创业者并推动墨西哥营商环境改善的民间组织" },
       ],
+    },
+    interview: {
+      eyebrow: "融合故事",
+      title: "墨西哥接纳了我",
+      body: "Santos & Becker 团队成员 María Rico 分享了初到墨西哥寻找工作的挑战、帮助她前行的机会，以及她选择在这里建设未来的原因。她的故事展现了接纳移民人才、推动职场融合的价值。",
+      cta: "点击观看访谈",
+      previewAlt: "María Rico 访谈预览：墨西哥接纳了我"
     },
     methodology: {
       eyebrow: "方法论",
@@ -751,12 +753,9 @@ export const zh = {
       socials: [
         { name: "LinkedIn", label: "Santos & Becker", href: "https://www.linkedin.com/company/santos-becker/" },
         { name: "Instagram", label: "@santosbecker_sc", href: "https://www.instagram.com/santosbecker_sc/" },
-        { name: "Facebook", label: "Santos & Becker", href: "#" },
         { name: "YouTube", label: "S&B YouTube Channel", href: "https://www.youtube.com/@SantosBeckerSIC" },
         { name: "WhatsApp", label: "+52 55 6617 7712", href: "https://wa.me/525566177712" },
       ],
-      hoursLabel: "服务时间",
-      hours: "周一至周四：9:00 – 18:00\n周五：9:00 – 15:00",
       officesEyebrow: "办公室",
       officesNote:
         "我们通过墨西哥城办公室服务客户，并由专业团队协调全国及国际事务。",
